@@ -52,10 +52,10 @@ const Hero = ({ title, number, text }) => {
     <div className={`section ${styles.hero}`} ref={heroRef}>
       <div className={styles.hero__canvas} ref={containerRef}></div>
       <div className={styles.hero__content} ref={contentRef}>
-        <h1>{title}</h1>
+        <h1 className={styles.hero__content__title}>{title}</h1>
         <div className={styles.hero__content__data}>
           <p className={styles.hero__content__data__number}>{number}</p>
-          <p>{text}</p>
+          <p className={styles.hero__content__data__text}>{text}</p>
         </div>
       </div>
     </div>

@@ -150,8 +150,20 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
                         styles.leaderboard__gallery__wrapper__item__viewers
                       }
                     >
-                      <p>{item.increment}</p>
-                      <p>{item.viewers}</p>
+                      <p
+                        className={
+                          styles.leaderboard__gallery__wrapper__item__viewers__increment
+                        }
+                      >
+                        {item.increment}
+                      </p>
+                      <p
+                        className={
+                          styles.leaderboard__gallery__wrapper__item__viewers__text
+                        }
+                      >
+                        {item.viewers}
+                      </p>
                     </div>
                   </div>
                 );
