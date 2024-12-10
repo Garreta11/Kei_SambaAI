@@ -1,0 +1,30 @@
+.anchors {
+  position: fixed;
+  top: 50%;
+  right: 0px;
+  transform: translate(0, -50%);
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 22px;
+  padding: 0px 10px;
+
+  &__item {
+    cursor: pointer;
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    opacity: 0.24;
+    border-radius: 50px;
+    transition: opacity 0.3s ease;
+
+    &__active {
+      opacity: 1;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

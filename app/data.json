@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "title": "Samba AI is the Heartbeat of Global Video",
+    "number": 34.009,
+    "text": "Videos processed in the last 24 hours"
+  },
+  "leaderboard": {
+    "headlines": [
+      "EVERY STREAM.",
+      "EVERY CHANNEL.",
+      "EVERY MOMENT.",
+      "INDEXED LIVE."
+    ],
+    "subtext": "We index everything happening across linear, cable, and streaming video - all in real-time",
+    "carousel": {
+      "title": "POPULAR IN THE LAST 7 DAYS",
+      "categories": [
+        "Streaming",
+        "Sport",
+        "News",
+        "Advertisements"
+      ],
+      "items": [
+        {
+          "title": "The Penguin S1",
+          "platform": "Netflix",
+          "category": "Streaming",
+          "increment": "+33%",
+          "viewers": "+27 Million monthly views",
+          "imgUrl": "/carousel-item-placeholder.jpg"
+        },
+        {
+          "title": "The Penguin S1",
+          "platform": "Netflix",
+          "category": "Streaming",
+          "increment": "+33%",
+          "viewers": "+27 Million monthly views",
+          "imgUrl": "/carousel-item-placeholder.jpg"
+        },
+        {
+          "title": "The Penguin S1",
+          "platform": "Netflix",
+          "category": "Streaming",
+          "increment": "+33%",
+          "viewers": "+27 Million monthly views",
+          "imgUrl": "/carousel-item-placeholder.jpg"
+        },
+        {
+          "title": "The Penguin S1",
+          "platform": "Netflix",
+          "category": "Sport",
+          "increment": "+33%",
+          "viewers": "+27 Million monthly views",
+          "imgUrl": "/carousel-item-placeholder.jpg"
+        },
+        {
+          "title": "The Penguin S1",
+          "platform": "Netflix",
+          "category": "Sport",
+          "increment": "+33%",
+          "viewers": "+27 Million monthly views",
+          "imgUrl": "/carousel-item-placeholder.jpg"
+        },
+        {
+          "title": "The Penguin S1",
+          "platform": "Netflix",
+          "category": "Sport",
+          "increment": "+33%",
+          "viewers": "+27 Million monthly views",
+          "imgUrl": "/carousel-item-placeholder.jpg"
+        },
+        {
+          "title": "The Penguin S1",
+          "platform": "Netflix",
+          "category": "News",
+          "increment": "+33%",
+          "viewers": "+27 Million monthly views",
+          "imgUrl": "/carousel-item-placeholder.jpg"
+        },
+        {
+          "title": "The Penguin S1",
+          "platform": "Netflix",
+          "category": "News",
+          "increment": "+33%",
+          "viewers": "+27 Million monthly views",
+          "imgUrl": "/carousel-item-placeholder.jpg"
+        },
+        {
+          "title": "The Penguin S1",
+          "platform": "Netflix",
+          "category": "News",
+          "increment": "+33%",
+          "viewers": "+27 Million monthly views",
+          "imgUrl": "/carousel-item-placeholder.jpg"
+        },
+        {
+          "title": "The Penguin S1",
+          "platform": "Netflix",
+          "category": "Advertisements",
+          "increment": "+33%",
+          "viewers": "+27 Million monthly views",
+          "imgUrl": "/carousel-item-placeholder.jpg"
+        },
+        {
+          "title": "The Penguin S1",
+          "platform": "Netflix",
+          "category": "Advertisements",
+          "increment": "+33%",
+          "viewers": "+27 Million monthly views",
+          "imgUrl": "/carousel-item-placeholder.jpg"
+        },
+        {
+          "title": "The Penguin S1",
+          "platform": "Netflix",
+          "category": "Advertisements",
+          "increment": "+33%",
+          "viewers": "+27 Million monthly views",
+          "imgUrl": "/carousel-item-placeholder.jpg"
+        }
+      ]
+    }
+  }
+}

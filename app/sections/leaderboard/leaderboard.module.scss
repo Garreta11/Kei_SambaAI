@@ -1,0 +1,85 @@
+.leaderboard {
+  min-height: 100svh;
+  background-image: url('/background-gradients/bg2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  padding: 0px 60px;
+  padding-bottom: 100px;
+
+  &__headlines {
+    padding-top: 500px;
+    font-size: 70px;
+    line-height: 1;
+  }
+
+  &__subwrapper {
+    opacity: 0;
+    transition: all ease 0.3s;
+    &__show {
+      opacity: 1;
+    }
+  }
+
+  &__subtext {
+    padding-top: 50px;
+    width: 50%;
+    font-size: 30px;
+  }
+
+  &__title {
+    font-size: 100px;
+  }
+
+  &__categories {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #50505a;
+    &__item {
+      cursor: pointer;
+      color: #50505a;
+      font-size: 50px;
+      &__selected {
+        color: white;
+      }
+    }
+  }
+
+  &__gallery {
+    &__wrapper {
+      width: fit-content;
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 33px;
+      &__item {
+        width: 423px;
+        opacity: 0.1;
+        transition: all ease 0.3s;
+
+        &__active {
+          opacity: 1;
+        }
+
+        &__index {
+          font-size: 50px;
+        }
+
+        &__header {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 30px;
+        }
+
+        &__image {
+          margin-bottom: 18px;
+        }
+
+        &__viewers {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
