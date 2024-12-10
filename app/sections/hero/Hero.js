@@ -29,7 +29,7 @@ const Hero = ({ title, number, text }) => {
       onUpdate: (self) => {
         const progress = self.progress; // Scroll position as a value between 0 and 1
 
-        // Update Three.js properties based on progress
+        // modify sphere based on progress
         if (outputRef.current.world.sphere) {
           outputRef.current.world.sphere.material.uniforms.uDistortionFrequency.value =
             2 - progress * 2;
@@ -39,10 +39,17 @@ const Hero = ({ title, number, text }) => {
             progress * 6 - 3;
         }
 
+        // blur text based on progress
         if (contentRef.current) {
-          // blur
           const blurValue = progress * 10;
           contentRef.current.style.filter = `blur(${blurValue}px)`;
+        }
+
+        // opacity container based in progress
+        if (heroRef.current) {
+          const opacity =
+            progress <= 0.9 ? 1 : Math.max(0, 1 - (progress - 0.9) / 0.1);
+          heroRef.current.style.opacity = opacity;
         }
       },
     });

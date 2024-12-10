@@ -10,6 +10,7 @@ import Leaderboard from './sections/leaderboard/Leaderboard';
 import data from './data.json';
 import Semasio from './sections/semasio/Semasio';
 import Background from './components/background/Background';
+import Video from './sections/video/Video';
 
 export default function Home() {
   return (
@@ -21,12 +22,14 @@ export default function Home() {
           number={data.hero.number}
           text={data.hero.text}
         />
+        <div style={{ height: '300svh' }}></div>
         <Leaderboard
           headlines={data.leaderboard.headlines}
           subtext={data.leaderboard.subtext}
           carousel={data.leaderboard.carousel}
         />
         <Semasio />
+        <Video />
       </PageWrapper>
     </div>
   );

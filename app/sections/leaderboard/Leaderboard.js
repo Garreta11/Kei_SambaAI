@@ -21,7 +21,7 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
     ScrollTrigger.create({
       trigger: headlinesRef.current,
       start: 'top top', // Adjust if needed
-      end: 'bottom top',
+      end: 'bottom-=100 top',
       onEnter: () => setShowGallerySubwrapper(false),
       onLeaveBack: () => setShowGallerySubwrapper(false),
       onLeave: () => setShowGallerySubwrapper(true),
@@ -44,7 +44,6 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
           const progress = self.progress; // 0 to 1
           const totalItems = itemRefs.current.length;
           const currentIndex = Math.round(progress * (totalItems - 1));
-          console.log(itemRefs.current[currentIndex].dataset.category);
           setActiveCategory(itemRefs.current[currentIndex].dataset.category);
         },
       },
@@ -73,7 +72,16 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
         })}
       </div>
       <div className={styles.leaderboard__wrapper} ref={galleryRef}>
-        <p className={styles.leaderboard__subtext}>{subtext}</p>
+        <div className={styles.leaderboard__wrapper__header}>
+          <p className={styles.leaderboard__subtext}>{subtext}</p>
+          <p
+            className={`${styles.leaderboard__title} ${
+              showGallerySubwrapper ? styles.leaderboard__title__show : ''
+            }`}
+          >
+            {carousel.title}
+          </p>
+        </div>
 
         <div
           className={`${styles.leaderboard__subwrapper} ${
@@ -81,8 +89,6 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
           }`}
           ref={gallerySubwrapperRef}
         >
-          <h3 className={styles.leaderboard__title}>{carousel.title}</h3>
-
           <div className={styles.leaderboard__categories}>
             {carousel.categories.map((category, index) => {
               return (
@@ -109,65 +115,69 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
               className={styles.leaderboard__gallery__wrapper}
               ref={galleryWrapperRef}
             >
-              {carousel.items.map((item, index) => {
-                return (
-                  <div
-                    key={index}
-                    ref={(el) => (itemRefs.current[index] = el)}
-                    className={`${styles.leaderboard__gallery__wrapper__item} ${
-                      activeCategory === item.category
-                        ? styles.leaderboard__gallery__wrapper__item__active
-                        : ''
-                    }`}
-                    data-category={item.category}
-                  >
-                    <p
-                      className={
-                        styles.leaderboard__gallery__wrapper__item__index
-                      }
-                    >
-                      {index + 1}
-                    </p>
+              {carousel.items
+                .filter((item) => item.category === activeCategory)
+                .map((item, index) => {
+                  return (
                     <div
-                      className={
-                        styles.leaderboard__gallery__wrapper__item__header
-                      }
-                    >
-                      <p>{item.title}</p>
-                      <p>{item.platform}</p>
-                    </div>
-                    <Image
-                      className={
-                        styles.leaderboard__gallery__wrapper__item__image
-                      }
-                      src={item.imgUrl}
-                      width={423}
-                      height={180}
-                      alt={`carousel-item-${index}`}
-                    />
-                    <div
-                      className={
-                        styles.leaderboard__gallery__wrapper__item__viewers
-                      }
+                      key={index}
+                      ref={(el) => (itemRefs.current[index] = el)}
+                      className={`${styles.leaderboard__gallery__wrapper__item}`}
+                      data-category={item.category}
                     >
                       <p
                         className={
-                          styles.leaderboard__gallery__wrapper__item__viewers__increment
+                          styles.leaderboard__gallery__wrapper__item__index
                         }
                       >
-                        {item.increment}
+                        {index + 1}
                       </p>
-                      <p
+                      <div
                         className={
-                          styles.leaderboard__gallery__wrapper__item__viewers__text
+                          styles.leaderboard__gallery__wrapper__item__header
                         }
                       >
-                        {item.viewers}
-                      </p>
+                        <p
+                          className={
+                            styles.leaderboard__gallery__wrapper__item__header__title
+                          }
+                        >
+                          {item.title}
+                        </p>
+                        <p>{item.platform}</p>
+                      </div>
+                      <Image
+                        className={
+                          styles.leaderboard__gallery__wrapper__item__image
+                        }
+                        src={item.imgUrl}
+                        width={423}
+                        height={180}
+                        alt={`carousel-item-${index}`}
+                      />
+                      <div
+                        className={
+                          styles.leaderboard__gallery__wrapper__item__viewers
+                        }
+                      >
+                        <p
+                          className={
+                            styles.leaderboard__gallery__wrapper__item__viewers__increment
+                          }
+                        >
+                          {item.increment}
+                        </p>
+                        <p
+                          className={
+                            styles.leaderboard__gallery__wrapper__item__viewers__text
+                          }
+                        >
+                          {item.viewers}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
             </div>
           </div>
         </div>

@@ -1,3 +1,21 @@
 .semasio {
   min-height: 100svh;
+  padding: 0px 60px;
+
+  &__wrapper {
+    padding-top: 500px;
+    width: 45%;
+  }
+
+  &__headline {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+  }
+
+  &__subtext {
+    font-size: 18px;
+    font-weight: 300;
+  }
 }
