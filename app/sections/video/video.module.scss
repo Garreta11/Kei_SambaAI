@@ -1,3 +1,5 @@
+@import '../../breakpoints';
+
 .video {
   min-height: 100svh;
   position: relative;
@@ -15,6 +17,9 @@
     align-items: center;
     justify-content: center;
     padding: 100px;
+    @include mobile-query {
+      padding: 20px;
+    }
     &__text {
       max-width: 1262px;
       margin: 0 auto;

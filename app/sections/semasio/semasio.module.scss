@@ -1,10 +1,19 @@
+@import '../../breakpoints';
 .semasio {
   min-height: 100svh;
   padding: 0px 60px;
 
+  @include mobile-query {
+    padding: 0px 20px;
+    padding-bottom: 40px;
+  }
+
   &__wrapper {
     padding-top: 500px;
     width: 45%;
+    @include mobile-query {
+      width: 100%;
+    }
   }
 
   &__headline {
@@ -12,10 +21,16 @@
     font-weight: 700;
     margin-bottom: 50px;
     text-transform: uppercase;
+    @include mobile-query {
+      font-size: 32px;
+    }
   }
 
   &__subtext {
     font-size: 18px;
     font-weight: 300;
+    @include mobile-query {
+      font-size: 18px;
+    }
   }
 }
