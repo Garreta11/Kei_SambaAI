@@ -7,7 +7,7 @@
   height: 100svh;
   z-index: -1;
 
-  background: linear-gradient(40deg, var(--color-bg1) 0%, var(--color-bg2) 65%);
+  background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
 
   &__container {
     filter: url(#goo) blur(40px);
