@@ -15,7 +15,7 @@ export default class Sphere {
 
     this.isPoints = false;
 
-    this.timeFrequency = 0.0003;
+    this.timeFrequency = 0.0001;
 
     if (this.debug) {
       this.debugFolder = this.debug.addFolder({
@@ -36,7 +36,7 @@ export default class Sphere {
   setLights() {
     this.lights = {};
 
-    // Light A
+    // Light A - blue
     this.lights.a = {};
     this.lights.a.intensity = 1;
     this.lights.a.color = {};
@@ -44,7 +44,7 @@ export default class Sphere {
     this.lights.a.color.instance = new THREE.Color(this.lights.a.color.value);
     this.lights.a.spherical = new THREE.Spherical(1, 0.672, 1.002);
 
-    // Light B
+    // Light B - pink
     this.lights.b = {};
     this.lights.b.intensity = 1;
     this.lights.b.color = {};
@@ -150,13 +150,13 @@ export default class Sphere {
 
         uScale: { value: 0 },
         uTime: { value: 0 },
-        uDistortionFrequency: { value: 2 },
-        uDistortionStrength: { value: 3.37 },
-        uDisplacementFrequency: { value: 0.543 },
-        uDisplacementStrength: { value: 0.087 },
+        uDistortionFrequency: { value: 0.978 },
+        uDistortionStrength: { value: 1.304 },
+        uDisplacementFrequency: { value: 1.467 },
+        uDisplacementStrength: { value: 0.022 },
 
-        uFresnelOffset: { value: -1.174 },
-        uFresnelMultiplier: { value: 2.989 },
+        uFresnelOffset: { value: 0.565 },
+        uFresnelMultiplier: { value: 2.717 },
         uFresnelPower: { value: 0.543 },
       },
       defines: {
@@ -263,12 +263,12 @@ export default class Sphere {
 
   update() {
     // Offset
-    this.offset.spherical.phi =
+    /* this.offset.spherical.phi =
       (Math.sin(1 - this.mouse.position.y) * 0.5 + 0.5) * Math.PI; // Map Y to [0, π]
     this.offset.spherical.theta =
       (Math.sin(this.mouse.position.x) * 0.5 + 0.5) * Math.PI; // Map X to [-π, π]
     this.offset.direction.setFromSpherical(this.offset.spherical);
-    this.offset.direction.multiplyScalar(0.004);
+    this.offset.direction.multiplyScalar(0.001); */
 
     this.material.uniforms.uOffset.value.add(this.offset.direction);
 

@@ -169,9 +169,9 @@ float perlin4d(vec4 P){
 vec3 getDisplacedPosition(vec3 _position) {
 
   vec3 distoredPosition = _position;
-  distoredPosition += perlin4d(vec4(distoredPosition * uDistortionFrequency + uOffset, uTime)) * uDistortionStrength;
+  distoredPosition += perlin4d(vec4(distoredPosition * uDistortionFrequency, uTime)) * uDistortionStrength;
 
-  float perlinStrength = perlin4d(vec4(distoredPosition * uDisplacementFrequency + uOffset, uTime));
+  float perlinStrength = perlin4d(vec4(distoredPosition * uDisplacementFrequency, uTime));
   
   vec3 displacedPosition = _position;
   displacedPosition += normalize(_position) * perlinStrength * uDisplacementStrength;
@@ -217,7 +217,7 @@ void main() {
   color = mix(color, uLightBColor, lightBIntensity);
   // white fresnel color
   vec3 fresnelColor = vec3(1.0);
-  color = mix(color, fresnelColor, clamp(pow(max(0.0, fresnel - 0.8), 3.0), 0.0, 1.0));
+  color = mix(color, fresnelColor, clamp(pow(max(0.0, fresnel - 0.9), 3.0), 0.0, 1.0));
 
   // Varying
   vNormal = normal;

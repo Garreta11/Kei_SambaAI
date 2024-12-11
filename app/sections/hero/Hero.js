@@ -36,7 +36,7 @@ const Hero = ({ title, number, text }) => {
           outputRef.current.world.sphere.material.uniforms.uScale.value =
             1 + progress * 5;
           outputRef.current.world.sphere.material.uniforms.uFresnelOffset.value =
-            progress * 6 - 3;
+            progress * 10 - 5;
         }
 
         // blur text based on progress

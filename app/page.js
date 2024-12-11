@@ -11,6 +11,8 @@ import data from './data.json';
 import Semasio from './sections/semasio/Semasio';
 import Background from './components/background/Background';
 import Video from './sections/video/Video';
+import Layers from './sections/layers/Layers';
+import TrackAdInsights from './sections/trackAdInsights/TrackAdInsights';
 
 export default function Home() {
   return (
@@ -22,14 +24,25 @@ export default function Home() {
           number={data.hero.number}
           text={data.hero.text}
         />
-        <div style={{ height: '300svh' }}></div>
         <Leaderboard
           headlines={data.leaderboard.headlines}
           subtext={data.leaderboard.subtext}
           carousel={data.leaderboard.carousel}
         />
-        <Semasio />
-        <Video />
+        <Semasio
+          headline={data.semasio.headline}
+          subtext={data.semasio.subtext}
+        />
+        <Video url={data.video.url} text={data.video.text} />
+
+        <Layers headline={data.layers.headline} subtext={data.layers.subtext} />
+
+        <TrackAdInsights
+          headline={data.track.headline}
+          subtext={data.track.subtext}
+        />
+
+        <div style={{ height: '300svh' }}></div>
       </PageWrapper>
     </div>
   );

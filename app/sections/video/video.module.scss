@@ -1,7 +1,26 @@
 .video {
   min-height: 100svh;
-
+  position: relative;
   video {
     object-fit: cover;
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    &__text {
+      max-width: 1262px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 32px;
+      font-weight: 300;
+    }
   }
 }

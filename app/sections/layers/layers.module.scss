@@ -1,0 +1,75 @@
+.layers {
+  min-height: 100svh;
+  padding: 0px 60px;
+
+  &__headline {
+    padding-top: 500px;
+    width: 45%;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__subtext {
+    width: 45%;
+    padding-top: 50px;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 80px;
+  }
+
+  &__content {
+    display: flex;
+    gap: 50px;
+    width: 100%;
+  }
+
+  &__cards {
+    position: relative;
+    width: 65%;
+    &__item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 16px;
+
+      width: 100%;
+      height: auto;
+
+      &__0 {
+        z-index: 3;
+        transform: perspective(100vw) rotateY(0deg) translateZ(0px);
+      }
+      &__1 {
+        z-index: 2;
+        transform: perspective(100vw) rotateY(0deg) translateZ(-50px);
+      }
+      &__2 {
+        z-index: 1;
+        transform: perspective(100vw) rotateY(0deg) translateZ(-100px);
+      }
+      &__3 {
+        z-index: 0;
+        transform: perspective(100vw) rotateY(0deg) translateZ(-150px);
+      }
+    }
+  }
+
+  &__texts {
+    width: 35%;
+    &__item {
+      margin-bottom: 100px;
+      opacity: 0;
+      &__title {
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+      &__text {
+        font-size: 16;
+        font-weight: 300;
+      }
+    }
+  }
+}

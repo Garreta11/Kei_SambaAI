@@ -343,5 +343,21 @@
         }
       ]
     }
+  },
+  "semasio": {
+    "headline": "3 Billion+ Web Pages. The Entire Internet's worth of video One Unified Intelligence Platform.",
+    "subtext": "With Samba's acquisition of Semasio, we now have one of the most extensive maps of user attention in the world"
+  },
+  "video": {
+    "url": "/video-template.mp4",
+    "text": "See What AI Sees: Each Scene, Brand, and Moment Decoded with DeepACR"
+  },
+  "layers": {
+    "headline": "The world's most advanced AI intent prediction engine",
+    "subtext": "Samba's AI identifies users intention like never before by mapping the all video watching history to the advertising graph"
+  },
+  "track": {
+    "headline": "Track every ad, across every market, while it's happening",
+    "subtext": "No one knows video advertising like Samba, our actionable insights and statistics help you put your message in just the right place."
   }
 }

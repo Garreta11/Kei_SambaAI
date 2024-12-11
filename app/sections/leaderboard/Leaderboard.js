@@ -118,6 +118,7 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
               {carousel.items
                 .filter((item) => item.category === activeCategory)
                 .map((item, index) => {
+                  const formattedIndex = String(index + 1).padStart(2, '0');
                   return (
                     <div
                       key={index}
@@ -130,7 +131,7 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
                           styles.leaderboard__gallery__wrapper__item__index
                         }
                       >
-                        {index + 1}
+                        {formattedIndex}
                       </p>
                       <div
                         className={
