@@ -27,6 +27,18 @@ const Video = ({ url, text }) => {
         end: '+=' + ammountToScroll,
         scrub: true,
         pin: true,
+        onEnter: () => {
+          outputRef.current.renderer.isPaused = false;
+        },
+        onLeave: () => {
+          outputRef.current.renderer.isPaused = true;
+        },
+        onEnterBack: () => {
+          outputRef.current.renderer.isPaused = false;
+        },
+        onLeaveBack: () => {
+          outputRef.current.renderer.isPaused = true;
+        },
       },
     });
 

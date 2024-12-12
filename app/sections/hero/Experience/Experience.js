@@ -102,7 +102,9 @@ export default class Experience {
       this.camera.instance,
       this.renderer.instance.domElement
     );
-    this.controls.enableDamping = true; // Enable smooth controls
+    this.controls.enableDamping = false; // Enable smooth controls
+    // to disable zoom
+    this.controls.enableZoom = false;
   }
 
   setResources() {

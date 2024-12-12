@@ -150,6 +150,7 @@ export default class Sphere {
 
         uScale: { value: 0 },
         uTime: { value: 0 },
+
         uDistortionFrequency: { value: 0.978 },
         uDistortionStrength: { value: 1.304 },
         uDisplacementFrequency: { value: 1.467 },

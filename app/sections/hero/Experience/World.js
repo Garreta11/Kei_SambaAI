@@ -1,4 +1,5 @@
 import Experience from './Experience';
+import Orb from './Orb';
 // import Particles from './Particles';
 import Sphere from './Sphere';
 
@@ -9,18 +10,16 @@ export default class World {
     this.scene = this.experience.scene;
     this.camera = this.experience.camera;
     this.resources = this.experience.resources;
-
-    /* this.resources.on('groupEnd', (_group) => {
-      if (_group.name === 'base') {
-        this.setSphere();
-        // this.setParticles();
-      }
-    }); */
-    this.setSphere();
+    // this.setSphere();
+    this.setOrb();
   }
 
   setSphere() {
     this.sphere = new Sphere();
+  }
+
+  setOrb() {
+    this.orb = new Orb();
   }
 
   setParticles() {
@@ -29,6 +28,7 @@ export default class World {
 
   update() {
     if (this.sphere) this.sphere.update();
+    if (this.orb) this.orb.update();
     if (this.particles) this.particles.update();
   }
 

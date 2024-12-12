@@ -9,6 +9,8 @@ export default class Renderer {
     this.scene = this.experience.scene;
     this.camera = this.experience.camera;
 
+    this.isPaused = false;
+
     this.setInstance();
   }
 
@@ -28,6 +30,8 @@ export default class Renderer {
   }
 
   update() {
-    this.instance.render(this.scene, this.camera.instance);
+    if (!this.isPaused) {
+      this.instance.render(this.scene, this.camera.instance);
+    }
   }
 }

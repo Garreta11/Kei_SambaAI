@@ -13,6 +13,8 @@ export default class Renderer {
     this.sizes = this.experience.sizes;
     this.debug = this.experience.debug;
 
+    this.isPaused = false;
+
     this.usePostprocess = false;
 
     if (this.debug) {
@@ -173,16 +175,18 @@ export default class Renderer {
   }
 
   update() {
-    if (this.stats) {
-      this.stats.beforeRender();
-    }
-    if (this.usePostprocess) {
-      this.postProcess.composer.render();
-    } else {
-      this.instance.render(this.scene, this.camera.instance);
-    }
-    if (this.stats) {
-      this.stats.afterRender();
+    if (!this.isPaused) {
+      if (this.stats) {
+        this.stats.beforeRender();
+      }
+      if (this.usePostprocess) {
+        this.postProcess.composer.render();
+      } else {
+        this.instance.render(this.scene, this.camera.instance);
+      }
+      if (this.stats) {
+        this.stats.afterRender();
+      }
     }
   }
 

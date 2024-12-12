@@ -19,40 +19,45 @@ const Hero = ({ title, number, text }) => {
 
     const ammountToScroll = 2 * window.innerHeight;
 
-    // ScrollTrigger setup
-    ScrollTrigger.create({
-      trigger: heroRef.current,
-      start: 'top top', // Start when the container is at the top of the viewport
-      end: '+=' + ammountToScroll,
-      scrub: true, // Smooth scrubbing
-      pin: true,
-      onUpdate: (self) => {
-        const progress = self.progress; // Scroll position as a value between 0 and 1
-
-        // modify sphere based on progress
-        if (outputRef.current.world.sphere) {
-          outputRef.current.world.sphere.material.uniforms.uDistortionFrequency.value =
-            2 - progress * 2;
-          outputRef.current.world.sphere.material.uniforms.uScale.value =
-            1 + progress * 5;
-          outputRef.current.world.sphere.material.uniforms.uFresnelOffset.value =
-            progress * 10 - 5;
-        }
-
-        // blur text based on progress
-        if (contentRef.current) {
-          const blurValue = progress * 10;
-          contentRef.current.style.filter = `blur(${blurValue}px)`;
-        }
-
-        // opacity container based in progress
-        if (heroRef.current) {
-          const opacity =
-            progress <= 0.9 ? 1 : Math.max(0, 1 - (progress - 0.9) / 0.1);
-          heroRef.current.style.opacity = opacity;
-        }
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: heroRef.current,
+        start: 'top top',
+        end: '+=' + ammountToScroll,
+        scrub: true,
+        pin: true,
+        onEnter: () => {
+          outputRef.current.renderer.isPaused = false;
+        },
+        onLeave: () => {
+          outputRef.current.renderer.isPaused = true;
+        },
+        onEnterBack: () => {
+          outputRef.current.renderer.isPaused = false;
+        },
+        onLeaveBack: () => {
+          outputRef.current.renderer.isPaused = true;
+        },
       },
     });
+
+    if (outputRef.current) {
+      timeline.to(outputRef.current.camera.instance.position, {
+        z: 2,
+      });
+    }
+
+    if (contentRef.current) {
+      timeline.to(contentRef.current, {
+        filter: 'blur(10px)',
+      });
+    }
+
+    if (heroRef.current) {
+      timeline.to(heroRef.current, {
+        opacity: 0,
+      });
+    }
   }, []);
 
   return (
