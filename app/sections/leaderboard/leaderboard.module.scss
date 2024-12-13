@@ -91,6 +91,14 @@
       &__selected {
         font-size: 64px;
         color: white;
+        border-bottom: 3px solid transparent;
+        border-image: linear-gradient(
+          0.25turn,
+          rgb(255 255 255 / 0%),
+          rgb(255 255 255),
+          rgba(255, 255, 255, 0)
+        );
+        border-image-slice: 1;
         @include mobile-query {
           font-size: 32px;
         }
@@ -111,6 +119,10 @@
         width: 423px;
         opacity: 1;
         transition: all ease 0.3s;
+
+        &__top {
+          margin-bottom: 30px;
+        }
 
         &__index {
           font-size: 64px;

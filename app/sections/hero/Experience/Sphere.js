@@ -148,17 +148,17 @@ export default class Sphere {
 
         uOffset: { value: new THREE.Vector3() },
 
-        uScale: { value: 0 },
-        uTime: { value: 0 },
+        uScale: { value: 0.779 },
+        uTime: { value: 0.000297 },
 
-        uDistortionFrequency: { value: 0.978 },
-        uDistortionStrength: { value: 1.304 },
-        uDisplacementFrequency: { value: 1.467 },
-        uDisplacementStrength: { value: 0.022 },
+        uDistortionFrequency: { value: 2.101 },
+        uDistortionStrength: { value: 0.906 },
+        uDisplacementFrequency: { value: 1.159 },
+        uDisplacementStrength: { value: 0.058 },
 
-        uFresnelOffset: { value: 0.565 },
-        uFresnelMultiplier: { value: 2.717 },
-        uFresnelPower: { value: 0.543 },
+        uFresnelOffset: { value: 0.971 },
+        uFresnelMultiplier: { value: 2.409 },
+        uFresnelPower: { value: 0.399 },
       },
       defines: {
         USE_TANGENT: '',

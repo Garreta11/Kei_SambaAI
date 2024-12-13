@@ -147,12 +147,12 @@ float snoise(vec4 v)
 float fbm(vec4 p) {
   float sum = 0.;
   float amp = 1.;
-  float scale = .8;
+  float scale = 1.;
   for(int i = 0; i < NUM_OCTAVES; i++) {
     sum += amp * snoise(p * scale );
     // p.w += 100.;
-    amp *= 0.5;
-    scale *= 2.;
+    amp *= 0.1;
+    scale *= .1;
   }
   return sum;
 }
@@ -160,10 +160,10 @@ float fbm(vec4 p) {
 void main() {
   vec3 color = vec3(0.0);
 
-  vec4 p = vec4(vPosition, uTime * 0.005);
+  vec4 p = vec4(vPosition, uTime * 0.1);
 
   vec4 q = vec4(0.);
-  q.x = 1.* fbm( p + 0.1 * uTime);
+  q.x = fbm( p + fbm(p + fbm(p * 0.001)));
   //q.y = fbm( p + vec4(1.0));
 
   // vec4 r = vec4(0.);

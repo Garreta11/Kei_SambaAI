@@ -14,6 +14,7 @@ import Background from './components/background/Background';
 import Video from './sections/video/Video';
 import Layers from './sections/layers/Layers';
 import TrackAdInsights from './sections/trackAdInsights/TrackAdInsights';
+import VideoCanvas from './sections/videoCanvas/VideoCanvas';
 
 export default function Home() {
   return (
@@ -34,7 +35,8 @@ export default function Home() {
           headline={data.semasio.headline}
           subtext={data.semasio.subtext}
         />
-        <Video url={data.video.url} text={data.video.text} />
+        {/* <Video url={data.video.url} text={data.video.text} /> */}
+        <VideoCanvas videoSrc={data.video.url} />
 
         <Layers headline={data.layers.headline} subtext={data.layers.subtext} />
 

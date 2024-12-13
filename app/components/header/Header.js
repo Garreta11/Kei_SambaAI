@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className={styles.header}>
       <Image
-        src='samba_logo_white.svg'
+        src='/samba_logo_white.svg'
         width={37.41}
         height={36}
         alt='amba-logo'

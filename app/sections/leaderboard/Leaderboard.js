@@ -122,7 +122,11 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
                       className={`${styles.leaderboard__gallery__wrapper__item}`}
                       data-category={item.category}
                     >
-                      <div>
+                      <div
+                        className={
+                          styles.leaderboard__gallery__wrapper__item__top
+                        }
+                      >
                         <p
                           className={
                             styles.leaderboard__gallery__wrapper__item__index

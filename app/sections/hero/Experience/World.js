@@ -10,8 +10,8 @@ export default class World {
     this.scene = this.experience.scene;
     this.camera = this.experience.camera;
     this.resources = this.experience.resources;
-    // this.setSphere();
-    this.setOrb();
+    this.setSphere();
+    // this.setOrb();
   }
 
   setSphere() {

@@ -64,7 +64,7 @@ export default class Orb {
   }
 
   setGeometry() {
-    this.geometry = new THREE.SphereGeometry(1, 512, 512);
+    this.geometry = new THREE.SphereGeometry(1, 32, 32);
   }
 
   setMaterial() {
@@ -78,13 +78,21 @@ export default class Orb {
         uFrequency: { value: 0.2 },
         uAmplitude: { value: 1 },
 
+        /* // Distortion
+        uDistortionFrequency: { value: 0 },
+        uDistortionStrength: { value: 0 },
+        // Displacement
+        uDisplacementFrequency: { value: 0 },
+        uDisplacementStrength: { value: 0 },
+        uSpeedDeform: { value: 0.0 },
+        uSpeedLights: { value: 0.3 }, */
         // Distortion
         uDistortionFrequency: { value: 1.051 },
         uDistortionStrength: { value: 0.87 },
         // Displacement
         uDisplacementFrequency: { value: 0.58 },
         uDisplacementStrength: { value: 0.098 },
-        uSpeedDeform: { value: 0.5 },
+        uSpeedDeform: { value: 0.1 },
         uSpeedLights: { value: 0.2 },
 
         // Lights
