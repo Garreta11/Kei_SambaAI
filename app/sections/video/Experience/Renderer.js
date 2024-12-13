@@ -9,7 +9,7 @@ export default class Renderer {
     this.scene = this.experience.scene;
     this.camera = this.experience.camera;
 
-    this.isPaused = false;
+    this.isPaused = true;
 
     this.setInstance();
   }

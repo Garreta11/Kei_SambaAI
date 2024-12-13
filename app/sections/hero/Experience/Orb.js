@@ -80,12 +80,12 @@ export default class Orb {
 
         // Distortion
         uDistortionFrequency: { value: 1.051 },
-        uDistortionStrength: { value: 1.377 },
+        uDistortionStrength: { value: 0.87 },
         // Displacement
         uDisplacementFrequency: { value: 0.58 },
-        uDisplacementStrength: { value: 0.105 },
+        uDisplacementStrength: { value: 0.098 },
         uSpeedDeform: { value: 0.5 },
-        uSpeedLights: { value: 0.3 },
+        uSpeedLights: { value: 0.2 },
 
         // Lights
         uLightAColor: { value: this.lights.a.color.instance },
@@ -112,7 +112,7 @@ export default class Orb {
         // Fresnel
         uFresnelOffset: { value: 0.71 },
         uFresnelMultiplier: { value: 1.812 },
-        uFresnelPower: { value: 0.507 },
+        uFresnelPower: { value: 0.761 },
       },
       vertexShader: vertexShader,
       fragmentShader: fragmentShader,
@@ -210,7 +210,7 @@ export default class Orb {
         }
       );
 
-      for (const _lightName in this.lights) {
+      /* for (const _lightName in this.lights) {
         const light = this.lights[_lightName];
         const lightFolder = this.lightsFolder.addFolder({
           title: 'Light ' + _lightName,
@@ -279,7 +279,7 @@ export default class Orb {
               `uLight${_lightName.toUpperCase()}Frequency`
             ].value = light.frequency;
           });
-      }
+      } */
 
       // fresnel
       this.debugFresnel = this.lightsFolder.addFolder({

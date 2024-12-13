@@ -50,7 +50,7 @@ vec3 fetch(vec3 o) {
     o.y += 0.1 * sin(o.x * 10.0 + deform);
     
     // float object = sphere(o, 0.5);
-    float object = sphere(o, 0.5);
+    float object = sphere(o, 0.6);
     if (object < 0.0) {
         vec3 color = vec3(
             (sin(o.x * 10.0 + time * 10.22) + 1.0) * 0.012 + 0.02,
@@ -69,7 +69,7 @@ void main() {
     vec3 o = vec3(0.0, 0.0, -.5);
     vec3 d = normalize(vPosition);
     float t = 0.0;
-    for (int i = 0; i < 150; i++) {
+    for (int i = 0; i < 80; i++) {
         t += 0.01;
         light += fetch(d * t + o);
     }

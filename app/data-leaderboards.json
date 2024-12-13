@@ -1,0 +1,1133 @@
+{
+  "carousel": {
+    "title": "POPULAR IN THE LAST 7 DAYS",
+    "categories": [
+      "Streaming",
+      "Sport",
+      "News",
+      "Advertisements"
+    ],
+    "items": [
+      {
+        "title": "The Penguin S1",
+        "platform": "Netflix",
+        "category": "Streaming",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            33,
+            53,
+            85,
+            41,
+            44,
+            65,
+            32
+          ]
+        }
+      },
+      {
+        "title": "The Penguin S1",
+        "platform": "Netflix",
+        "category": "Streaming",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "The Penguin S1",
+        "platform": "Netflix",
+        "category": "Streaming",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            32,
+            65,
+            85,
+            41,
+            44
+          ]
+        }
+      },
+      {
+        "title": "The Penguin S1",
+        "platform": "Netflix",
+        "category": "Streaming",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            85,
+            33,
+            41,
+            65,
+            53,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "The Penguin S1",
+        "platform": "Netflix",
+        "category": "Streaming",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            41,
+            65,
+            33,
+            44,
+            32,
+            85
+          ]
+        }
+      },
+      {
+        "title": "The Penguin S1",
+        "platform": "Netflix",
+        "category": "Streaming",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            33,
+            85,
+            41,
+            44,
+            65,
+            53,
+            32
+          ]
+        }
+      },
+      {
+        "title": "The Penguin S1",
+        "platform": "Netflix",
+        "category": "Streaming",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            85,
+            33,
+            53,
+            65,
+            44,
+            41,
+            32
+          ]
+        }
+      },
+      {
+        "title": "The Penguin S1",
+        "platform": "Netflix",
+        "category": "Streaming",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            33,
+            85,
+            41,
+            65,
+            53,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "The Penguin S1",
+        "platform": "Netflix",
+        "category": "Streaming",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            44,
+            85,
+            32
+          ]
+        }
+      },
+      {
+        "title": "The Penguin S1",
+        "platform": "Netflix",
+        "category": "Streaming",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            44,
+            32,
+            85
+          ]
+        }
+      },
+      {
+        "title": "The Lincoln Lawyer",
+        "platform": "HBO Max",
+        "category": "Sport",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item2-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "The Lincoln Lawyer",
+        "platform": "HBO Max",
+        "category": "Sport",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item2-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "The Lincoln Lawyer",
+        "platform": "HBO Max",
+        "category": "Sport",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item2-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "The Lincoln Lawyer",
+        "platform": "HBO Max",
+        "category": "Sport",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item2-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "The Lincoln Lawyer",
+        "platform": "HBO Max",
+        "category": "Sport",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item2-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "The Lincoln Lawyer",
+        "platform": "HBO Max",
+        "category": "Sport",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item2-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "The Lincoln Lawyer",
+        "platform": "HBO Max",
+        "category": "Sport",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item2-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "The Lincoln Lawyer",
+        "platform": "HBO Max",
+        "category": "Sport",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item2-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "The Lincoln Lawyer",
+        "platform": "HBO Max",
+        "category": "Sport",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item2-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "The Lincoln Lawyer",
+        "platform": "HBO Max",
+        "category": "Sport",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item2-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "Tulsa King",
+        "platform": "Netflix",
+        "category": "News",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item3-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "Tulsa King",
+        "platform": "Netflix",
+        "category": "News",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item3-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "Tulsa King",
+        "platform": "Netflix",
+        "category": "News",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item3-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "Tulsa King",
+        "platform": "Netflix",
+        "category": "News",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item3-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "Tulsa King",
+        "platform": "Netflix",
+        "category": "News",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item3-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "Tulsa King",
+        "platform": "Netflix",
+        "category": "News",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item3-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "Tulsa King",
+        "platform": "Netflix",
+        "category": "News",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item3-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "Tulsa King",
+        "platform": "Netflix",
+        "category": "News",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item3-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "Tulsa King",
+        "platform": "Netflix",
+        "category": "News",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item3-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "Tulsa King",
+        "platform": "Netflix",
+        "category": "News",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item3-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "The Penguin S1",
+        "platform": "Netflix",
+        "category": "Advertisements",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "The Penguin S1",
+        "platform": "Netflix",
+        "category": "Advertisements",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "The Penguin S1",
+        "platform": "Netflix",
+        "category": "Advertisements",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "The Penguin S1",
+        "platform": "Netflix",
+        "category": "Advertisements",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "The Penguin S1",
+        "platform": "Netflix",
+        "category": "Advertisements",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "The Penguin S1",
+        "platform": "Netflix",
+        "category": "Advertisements",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "The Penguin S1",
+        "platform": "Netflix",
+        "category": "Advertisements",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "The Penguin S1",
+        "platform": "Netflix",
+        "category": "Advertisements",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "The Penguin S1",
+        "platform": "Netflix",
+        "category": "Advertisements",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "The Penguin S1",
+        "platform": "Netflix",
+        "category": "Advertisements",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "/carousel-item-placeholder.jpg",
+        "data": {
+          "labels": [
+            "11/24",
+            "12/24",
+            "13/24",
+            "14/24",
+            "15/24",
+            "16/24",
+            "17/24"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      }
+    ]
+  }
+}

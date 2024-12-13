@@ -5,6 +5,7 @@ import Image from 'next/image';
 
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import Graph from '@/app/components/graph/Graph';
 gsap.registerPlugin(ScrollTrigger);
 
 const Leaderboard = ({ headlines, subtext, carousel }) => {
@@ -51,15 +52,10 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
   }, []);
 
   const scrollToCategory = (category) => {
-    const targetItem = itemRefs.current.find(
-      (item) => item.dataset.category === category
-    );
-    if (targetItem) {
-      const targetX = -targetItem.offsetLeft; // Calculate the scroll position
-      gsap.to(galleryWrapperRef.current, {
-        x: targetX,
-        duration: 1,
-        ease: 'power3.out',
+    if (galleryRef.current) {
+      galleryRef.current.scrollTo({
+        left: 0,
+        behavior: 'smooth',
       });
     }
   };
@@ -126,56 +122,60 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
                       className={`${styles.leaderboard__gallery__wrapper__item}`}
                       data-category={item.category}
                     >
-                      <p
-                        className={
-                          styles.leaderboard__gallery__wrapper__item__index
-                        }
-                      >
-                        {formattedIndex}
-                      </p>
-                      <div
-                        className={
-                          styles.leaderboard__gallery__wrapper__item__header
-                        }
-                      >
+                      <div>
                         <p
                           className={
-                            styles.leaderboard__gallery__wrapper__item__header__title
+                            styles.leaderboard__gallery__wrapper__item__index
                           }
                         >
-                          {item.title}
+                          {formattedIndex}
                         </p>
-                        <p>{item.platform}</p>
+                        <div
+                          className={
+                            styles.leaderboard__gallery__wrapper__item__header
+                          }
+                        >
+                          <p
+                            className={
+                              styles.leaderboard__gallery__wrapper__item__header__title
+                            }
+                          >
+                            {item.title}
+                          </p>
+                          <p>{item.platform}</p>
+                        </div>
+                        <Image
+                          className={
+                            styles.leaderboard__gallery__wrapper__item__image
+                          }
+                          src={item.imgUrl}
+                          width={423}
+                          height={180}
+                          alt={`carousel-item-${index}`}
+                        />
+                        <div
+                          className={
+                            styles.leaderboard__gallery__wrapper__item__viewers
+                          }
+                        >
+                          <p
+                            className={
+                              styles.leaderboard__gallery__wrapper__item__viewers__increment
+                            }
+                          >
+                            {item.increment}
+                          </p>
+                          <p
+                            className={
+                              styles.leaderboard__gallery__wrapper__item__viewers__text
+                            }
+                          >
+                            {item.viewers}
+                          </p>
+                        </div>
                       </div>
-                      <Image
-                        className={
-                          styles.leaderboard__gallery__wrapper__item__image
-                        }
-                        src={item.imgUrl}
-                        width={423}
-                        height={180}
-                        alt={`carousel-item-${index}`}
-                      />
-                      <div
-                        className={
-                          styles.leaderboard__gallery__wrapper__item__viewers
-                        }
-                      >
-                        <p
-                          className={
-                            styles.leaderboard__gallery__wrapper__item__viewers__increment
-                          }
-                        >
-                          {item.increment}
-                        </p>
-                        <p
-                          className={
-                            styles.leaderboard__gallery__wrapper__item__viewers__text
-                          }
-                        >
-                          {item.viewers}
-                        </p>
-                      </div>
+
+                      {item.data && <Graph dataset={item.data} />}
                     </div>
                   );
                 })}

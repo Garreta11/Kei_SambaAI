@@ -8,6 +8,7 @@ import Leaderboard from './sections/leaderboard/Leaderboard';
 
 // Import data from the JSON file
 import data from './data.json';
+import dataLeaderboards from './data-leaderboards.json';
 import Semasio from './sections/semasio/Semasio';
 import Background from './components/background/Background';
 import Video from './sections/video/Video';
@@ -27,7 +28,7 @@ export default function Home() {
         <Leaderboard
           headlines={data.leaderboard.headlines}
           subtext={data.leaderboard.subtext}
-          carousel={data.leaderboard.carousel}
+          carousel={dataLeaderboards.carousel}
         />
         <Semasio
           headline={data.semasio.headline}

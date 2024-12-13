@@ -13,7 +13,7 @@ export default class Renderer {
     this.sizes = this.experience.sizes;
     this.debug = this.experience.debug;
 
-    this.isPaused = false;
+    this.isPaused = true;
 
     this.usePostprocess = false;
 

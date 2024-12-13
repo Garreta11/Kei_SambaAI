@@ -3,6 +3,7 @@
 .hero {
   width: 100svw;
   height: 100svh;
+  position: fixed;
   &__canvas {
     position: absolute;
     top: 0;
