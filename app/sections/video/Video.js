@@ -18,7 +18,7 @@ const Video = ({ url, text }) => {
       videoUrl: url,
     });
 
-    const ammountToScroll = 4 * window.innerHeight;
+    const ammountToScroll = 8 * window.innerHeight;
 
     const timeline = gsap.timeline({
       scrollTrigger: {
@@ -31,13 +31,28 @@ const Video = ({ url, text }) => {
           outputRef.current.renderer.isPaused = false;
         },
         onLeave: () => {
-          outputRef.current.renderer.isPaused = true;
+          gsap.to(outputRef.current.world.plane.material.uniforms.uPixel, {
+            value: 500,
+            onComplete: () => {
+              outputRef.current.renderer.isPaused = true;
+            },
+          });
         },
         onEnterBack: () => {
-          outputRef.current.renderer.isPaused = false;
+          gsap.to(outputRef.current.world.plane.material.uniforms.uPixel, {
+            value: 500,
+            onComplete: () => {
+              outputRef.current.renderer.isPaused = false;
+            },
+          });
         },
         onLeaveBack: () => {
-          outputRef.current.renderer.isPaused = true;
+          gsap.to(outputRef.current.world.plane.material.uniforms.uPixel, {
+            value: 2,
+            onComplete: () => {
+              outputRef.current.renderer.isPaused = true;
+            },
+          });
         },
       },
     });

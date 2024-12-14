@@ -1,7 +1,7 @@
 @import '../../breakpoints';
 
 .layers {
-  min-height: 100svh;
+  min-height: 100vh;
   padding: 0px 60px;
 
   @include mobile-query {

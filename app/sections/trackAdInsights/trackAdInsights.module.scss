@@ -1,7 +1,7 @@
 @import '../../breakpoints';
 
 .track {
-  min-height: 100svh;
+  min-height: 100vh;
   padding: 0px 60px;
   @include mobile-query {
     padding: 0px 20px;

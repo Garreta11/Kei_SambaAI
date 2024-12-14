@@ -42,15 +42,35 @@ const Hero = ({ title, number, text }) => {
     });
 
     if (outputRef.current) {
-      timeline.to(outputRef.current.camera.instance.position, {
-        z: 2,
-      });
+      console.log(outputRef.current);
+      timeline
+        .add('start')
+        .to(
+          outputRef.current.camera.instance.position,
+          {
+            z: 1,
+          },
+          'start'
+        )
+        .to(
+          outputRef.current.world.sphere.material.uniforms.uFresnelOffset,
+          {
+            value: 5,
+          },
+          'start'
+        );
     }
 
     if (contentRef.current) {
-      timeline.to(contentRef.current, {
-        filter: 'blur(10px)',
-      });
+      timeline.to(
+        contentRef.current,
+        {
+          filter: 'blur(10px)',
+          paddingTop: 0,
+          paddingBottom: 0,
+        },
+        'start'
+      );
     }
 
     if (heroRef.current) {
