@@ -66,7 +66,7 @@ const VideoCanvas = ({ videoSrc, pixelSize = 10 }) => {
         autoPlay={true}
         muted
         loop
-        style={{ display: 'block' }}
+        style={{ display: 'none' }}
       >
         <source src={videoSrc} type='video/mp4' />
       </video>
