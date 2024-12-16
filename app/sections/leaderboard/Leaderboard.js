@@ -58,7 +58,6 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
         });
       },
       '(max-width: 1024px)': function () {
-        console.log('Mobile view triggered');
         setShowGallerySubwrapper(true);
       },
     });

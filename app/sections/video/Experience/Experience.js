@@ -3,6 +3,7 @@ import * as THREE from 'three';
 import Camera from './Camera';
 import Renderer from './Renderer';
 import World from './World';
+import Sizes from './Utils/Sizes';
 
 export default class Experience {
   static instance;
@@ -19,6 +20,8 @@ export default class Experience {
       return;
     }
 
+    this.sizes = new Sizes();
+
     this.videoUrl = _options.videoUrl;
 
     this.setConfig();
@@ -27,6 +30,10 @@ export default class Experience {
     this.setRenderer();
     this.setWorld();
 
+    // Resize event listener
+    this.setResizeListener();
+
+    // update
     this.update();
   }
 
@@ -61,6 +68,24 @@ export default class Experience {
 
   setWorld() {
     this.world = new World();
+  }
+
+  setResizeListener() {
+    this.sizes.on('resize', () => {
+      // Update camera aspect ratio and projection matrix
+      if (this.camera) {
+        this.camera.instance.aspect = this.sizes.width / this.sizes.height;
+        this.camera.instance.updateProjectionMatrix();
+      }
+
+      // Update renderer size
+      if (this.renderer) {
+        this.renderer.instance.setSize(this.sizes.width, this.sizes.height);
+        this.renderer.instance.setPixelRatio(
+          Math.min(window.devicePixelRatio, 2)
+        );
+      }
+    });
   }
 
   update() {
