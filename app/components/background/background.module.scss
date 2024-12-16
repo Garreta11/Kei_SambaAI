@@ -3,9 +3,9 @@
   overflow: hidden;
   top: 0;
   left: 0;
-  width: 100svw;
-  height: 100svh;
-  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
 
   background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
 

@@ -5,7 +5,11 @@ import Image from 'next/image';
 
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+
 import Graph from '@/app/components/graph/Graph';
+import TitleReveal from '@/app/components/titleReveal/TitleReveal';
+import TextReveal from '@/app/components/textReveal/TextReveal';
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Leaderboard = ({ headlines, subtext, carousel }) => {
@@ -18,37 +22,48 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
   const [showGallerySubwrapper, setShowGallerySubwrapper] = useState(false);
 
   useEffect(() => {
-    // Toggle gallerySubwrapper visibility
-    ScrollTrigger.create({
-      trigger: headlinesRef.current,
-      start: 'top top', // Adjust if needed
-      end: 'bottom-=100 top',
-      onEnter: () => setShowGallerySubwrapper(false),
-      onLeaveBack: () => setShowGallerySubwrapper(false),
-      onLeave: () => setShowGallerySubwrapper(true),
-    });
-
     // Horizontal carousel
-    const gallery = galleryWrapperRef.current;
-    const galleryWidth = gallery.offsetWidth;
-    const ammountToScroll = galleryWidth - window.innerWidth;
-    gsap.to(gallery, {
-      x: -ammountToScroll,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: galleryRef.current,
-        start: 'top top',
-        end: '+=' + ammountToScroll,
-        pin: true,
-        scrub: true,
-        onUpdate: (self) => {
-          const progress = self.progress; // 0 to 1
-          const totalItems = itemRefs.current.length;
-          const currentIndex = Math.round(progress * (totalItems - 1));
-          setActiveCategory(itemRefs.current[currentIndex].dataset.category);
-        },
+    ScrollTrigger.matchMedia({
+      '(min-width: 1024px)': function () {
+        // Toggle gallerySubwrapper visibility
+        ScrollTrigger.create({
+          trigger: headlinesRef.current,
+          start: 'top top', // Adjust if needed
+          end: 'bottom-=100 top',
+          onEnter: () => setShowGallerySubwrapper(false),
+          onLeaveBack: () => setShowGallerySubwrapper(false),
+          onLeave: () => setShowGallerySubwrapper(true),
+        });
+        const gallery = galleryWrapperRef.current;
+        const galleryWidth = gallery.offsetWidth;
+        const ammountToScroll = galleryWidth - window.innerWidth;
+        gsap.to(gallery, {
+          x: -ammountToScroll,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: galleryRef.current,
+            start: 'top top',
+            end: '+=' + ammountToScroll,
+            pin: true,
+            scrub: true,
+            onUpdate: (self) => {
+              const progress = self.progress; // 0 to 1
+              const totalItems = itemRefs.current.length;
+              const currentIndex = Math.round(progress * (totalItems - 1));
+              setActiveCategory(
+                itemRefs.current[currentIndex].dataset.category
+              );
+            },
+          },
+        });
+      },
+      '(max-width: 1024px)': function () {
+        console.log('Mobile view triggered');
+        setShowGallerySubwrapper(true);
       },
     });
+
+    return () => ScrollTrigger.getAll().forEach((st) => st.kill());
   }, []);
 
   const scrollToCategory = (category) => {
@@ -64,12 +79,12 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
     <div className={`section ${styles.leaderboard}`}>
       <div className={styles.leaderboard__headlines} ref={headlinesRef}>
         {headlines.map((headline, index) => {
-          return <p key={index}>{headline}</p>;
+          return <TitleReveal key={index} text={headline} />;
         })}
       </div>
       <div className={styles.leaderboard__wrapper} ref={galleryRef}>
         <div className={styles.leaderboard__wrapper__header}>
-          <p className={styles.leaderboard__subtext}>{subtext}</p>
+          <TextReveal text={subtext} className={styles.leaderboard__subtext} />
           <p
             className={`${styles.leaderboard__title} ${
               showGallerySubwrapper ? styles.leaderboard__title__show : ''

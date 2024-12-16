@@ -2,14 +2,16 @@
 
 varying vec3 vNormal;
 varying vec3 vColor;
+uniform mat4 uModelMatrix;
 
 uniform float uTime;
 uniform float uScale;
 uniform vec2 uSubdivision;
 
-// Offset
-uniform vec3 uOffset;
+// Mouse
+uniform vec2 uMouse;
 
+// Distortion and Displacement
 uniform float uDistortionFrequency;
 uniform float uDistortionStrength;
 uniform float uDisplacementFrequency;
@@ -28,6 +30,7 @@ uniform float uLightBIntensity;
 uniform float uFresnelOffset;
 uniform float uFresnelMultiplier;
 uniform float uFresnelPower;
+
         
 vec4 permute(vec4 x){return mod(((x*34.0)+1.0)*x, 289.0);}
 vec4 taylorInvSqrt(vec4 r){return 1.79284291400159 - 0.85373472095314 * r;}
@@ -166,10 +169,10 @@ float perlin4d(vec4 P){
   return 2.2 * n_xyzw;
 }
 
-vec3 getDisplacedPosition(vec3 _position) {
+vec3 getDisplacedPosition(vec3 _position, float dist) {
 
   vec3 distoredPosition = _position;
-  distoredPosition += perlin4d(vec4(distoredPosition * uDistortionFrequency, uTime)) * uDistortionStrength;
+  distoredPosition += perlin4d(vec4(distoredPosition * uDistortionFrequency * dist, uTime)) * uDistortionStrength;
 
   float perlinStrength = perlin4d(vec4(distoredPosition * uDisplacementFrequency, uTime));
   
@@ -181,11 +184,17 @@ vec3 getDisplacedPosition(vec3 _position) {
 
 void main() {
 
+
   vec3 scaledPosition = position * uScale;
+  // Transform the vertex position to screen space
+  vec3 screenPos = (uModelMatrix * vec4(scaledPosition, 1.0)).xyz;
+  // Compute the distance between mouse and vertex position in screen space
+  float dist = distance(vec2(screenPos.xy), uMouse);
+  dist = 1.5 - dist;
 
   // Position
-  vec3 displacedPosition = getDisplacedPosition(scaledPosition);
-  vec4 viewPosition = viewMatrix * vec4(position, 1.0);
+  vec3 displacedPosition = getDisplacedPosition(scaledPosition, dist);
+  vec4 viewPosition = viewMatrix * uModelMatrix * vec4(position, 1.0);
   gl_Position = projectionMatrix * viewPosition;
 
   // Bi Tangent
@@ -195,10 +204,10 @@ void main() {
   vec3 biTangent = cross(normal, tangent.xyz);
   
   vec3 positionA = scaledPosition + tangent.xyz * distanceA;
-  vec3 displacedPositionA = getDisplacedPosition(positionA);
+  vec3 displacedPositionA = getDisplacedPosition(positionA, dist);
 
   vec3 positionB = scaledPosition + biTangent.xyz * distanceB;
-  vec3 displacePositionB = getDisplacedPosition(positionB);
+  vec3 displacePositionB = getDisplacedPosition(positionB, dist);
 
   vec3 computedNormal = cross(displacedPositionA - displacedPosition, displacePositionB - displacedPosition);
   computedNormal = normalize(computedNormal);

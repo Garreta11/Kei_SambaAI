@@ -42,7 +42,6 @@ const Hero = ({ title, number, text }) => {
     });
 
     if (outputRef.current) {
-      console.log(outputRef.current);
       timeline
         .add('start')
         .to(
@@ -78,6 +77,9 @@ const Hero = ({ title, number, text }) => {
         opacity: 0,
       });
     }
+
+    // Cleanup ScrollTrigger when component is unmounted
+    return () => ScrollTrigger.getAll().forEach((st) => st.kill());
   }, []);
 
   return (

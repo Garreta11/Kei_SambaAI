@@ -2,6 +2,7 @@
 
 .layers {
   min-height: 100vh;
+  margin-top: -200vh;
   padding: 0px 60px;
 
   @include mobile-query {
@@ -25,7 +26,7 @@
     width: 45%;
     padding-top: 50px;
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 200;
     margin-bottom: 80px;
     @include mobile-query {
       width: 100%;
@@ -83,7 +84,6 @@
     }
     &__item {
       margin-bottom: 100px;
-      opacity: 0;
       @include mobile-query {
         margin-bottom: 30px;
       }
@@ -94,8 +94,8 @@
         margin-bottom: 10px;
       }
       &__text {
-        font-size: 16;
-        font-weight: 300;
+        font-size: 16px;
+        font-weight: 200;
       }
     }
   }

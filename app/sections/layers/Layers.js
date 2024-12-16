@@ -5,10 +5,13 @@ import Image from 'next/image';
 
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import TitleReveal from '@/app/components/titleReveal/TitleReveal';
+import TextReveal from '@/app/components/textReveal/TextReveal';
 gsap.registerPlugin(ScrollTrigger);
 
 const Layers = ({ headline, subtext }) => {
   const layersRef = useRef();
+  const contentRef = useRef();
   const layers = useRef([
     {
       ref: useRef(),
@@ -49,17 +52,31 @@ const Layers = ({ headline, subtext }) => {
   ]);
 
   useEffect(() => {
-    const ammountToScroll = 8 * window.innerHeight;
-
-    const timeline = gsap.timeline({
+    gsap.from(contentRef.current, {
       scrollTrigger: {
         trigger: layersRef.current,
-        start: 'top top',
-        end: '+=' + ammountToScroll,
+        start: 'top 20%',
+        end: 'top 10%',
         scrub: true,
-        pin: true,
       },
+      x: 100,
+      opacity: 0.0,
+      filter: 'blur(100px)',
     });
+
+    // timeline
+    const ammountToScroll = 8 * window.innerHeight;
+    const timeline = gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: layersRef.current,
+          start: 'top top',
+          end: '+=' + ammountToScroll,
+          scrub: true,
+          pin: true,
+        },
+      })
+      .add('layer');
 
     // Initial transformation: Apply perspective and rotation during scroll
     layers.current
@@ -91,12 +108,13 @@ const Layers = ({ headline, subtext }) => {
         `+=${reverseIndex * 0.3}` // Delay each layer sequentially
       );
 
-      timeline.to(
+      timeline.from(
         layer.textRef.current,
         {
-          opacity: 1,
+          opacity: 0,
+          filter: 'blur(100px)',
         },
-        `+=${reverseIndex * 0.3}` // Delay each layer sequentially
+        `+=${reverseIndex * 0.15}` // Delay each layer sequentially
       );
 
       timeline.to(
@@ -116,13 +134,13 @@ const Layers = ({ headline, subtext }) => {
   return (
     <div className={`section ${styles.layers}`}>
       <div className={styles.layers__headline}>
-        <p>{headline}</p>
+        <TitleReveal text={headline} />
       </div>
 
       <div className={styles.layers__wrapper} ref={layersRef}>
-        <p className={styles.layers__subtext}>{subtext}</p>
+        <TextReveal className={styles.layers__subtext} text={subtext} />
 
-        <div className={styles.layers__content}>
+        <div className={styles.layers__content} ref={contentRef}>
           <div className={styles.layers__cards}>
             {layers.current.map((layer, index) => (
               <Image

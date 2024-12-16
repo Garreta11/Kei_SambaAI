@@ -2,6 +2,7 @@ import localFont from 'next/font/local';
 import './globals.scss';
 import Header from './components/header/Header';
 import Anchors from './components/anchors/Anchors';
+import Background from './components/background/Background';
 
 // Adding MoneumentExtended with different weights and styles
 const monumentExtended = localFont({
@@ -40,6 +41,7 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body className={`${monumentExtended.variable}`}>
         <Header />
+        <Background />
         {children}
         <Anchors />
       </body>

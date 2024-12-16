@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <PageWrapper>
-        <Background />
+        {/* <Background /> */}
         <Hero
           title={data.hero.title}
           number={data.hero.number}

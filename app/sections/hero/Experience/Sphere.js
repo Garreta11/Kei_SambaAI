@@ -15,7 +15,7 @@ export default class Sphere {
 
     this.isPoints = false;
 
-    this.timeFrequency = 0.0001;
+    this.timeFrequency = 0.0002;
 
     if (this.debug) {
       this.debugFolder = this.debug.addFolder({
@@ -23,14 +23,10 @@ export default class Sphere {
         expanded: false,
       });
     }
-
-    this.setOffset();
     this.setGeometry();
     this.setLights();
     this.setMaterial();
     this.setMesh();
-
-    this.initAnimation();
   }
 
   setLights() {
@@ -111,18 +107,6 @@ export default class Sphere {
     }
   }
 
-  setOffset() {
-    this.offset = {};
-    this.offset.spherical = new THREE.Spherical(
-      1,
-      Math.random() * Math.PI,
-      Math.random() * Math.PI * 2
-    );
-    this.offset.direction = new THREE.Vector3();
-    this.offset.direction.setFromSpherical(this.offset.spherical);
-    this.offset.speed = 2;
-  }
-
   setGeometry() {
     this.geometry = new THREE.SphereGeometry(0.5, 512, 512);
     this.geometry.computeTangents();
@@ -131,6 +115,10 @@ export default class Sphere {
   setMaterial() {
     this.material = new THREE.ShaderMaterial({
       uniforms: {
+        uModelMatrix: { value: new THREE.Matrix4() },
+
+        uMouse: { value: new THREE.Vector2(0, 0) },
+
         uLightAColor: { value: this.lights.a.color.instance },
         uLightAPosition: { value: new THREE.Vector3(1, 1, 1) },
         uLightAIntensity: { value: this.lights.a.intensity },
@@ -145,8 +133,6 @@ export default class Sphere {
             this.geometry.parameters.heightSegments
           ),
         },
-
-        uOffset: { value: new THREE.Vector3() },
 
         uScale: { value: 0.779 },
         uTime: { value: 0.000297 },
@@ -248,31 +234,22 @@ export default class Sphere {
     this.scene.add(this.mesh);
   }
 
-  initAnimation() {
-    gsap.fromTo(
-      this.material.uniforms.uScale,
-      {
-        value: 0,
-      },
-      {
-        value: 1,
-        duration: 2,
-        delay: 1,
-      }
-    );
-  }
-
   update() {
-    // Offset
-    /* this.offset.spherical.phi =
-      (Math.sin(1 - this.mouse.position.y) * 0.5 + 0.5) * Math.PI; // Map Y to [0, π]
-    this.offset.spherical.theta =
-      (Math.sin(this.mouse.position.x) * 0.5 + 0.5) * Math.PI; // Map X to [-π, π]
-    this.offset.direction.setFromSpherical(this.offset.spherical);
-    this.offset.direction.multiplyScalar(0.001); */
-
-    this.material.uniforms.uOffset.value.add(this.offset.direction);
-
     this.material.uniforms.uTime.value += this.time.delta * this.timeFrequency;
+
+    const targetRotationX = -this.mouse.position.y * 0.25 * Math.PI;
+    const targetRotationY = this.mouse.position.x * 0.25 * Math.PI;
+
+    this.mesh.rotation.x += (targetRotationX - this.mesh.rotation.x) * 0.05;
+    this.mesh.rotation.y += (targetRotationY - this.mesh.rotation.y) * 0.05;
+
+    // Update the model matrix uniform
+    this.material.uniforms.uModelMatrix.value.copy(this.mesh.matrixWorld);
+
+    // mouse
+    this.material.uniforms.uMouse.value = new THREE.Vector2(
+      this.mouse.position.x,
+      this.mouse.position.y
+    );
   }
 }

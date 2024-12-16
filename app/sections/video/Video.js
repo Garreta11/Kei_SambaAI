@@ -11,6 +11,7 @@ import Experience from './Experience/Experience';
 const Video = ({ url, text }) => {
   const containerRef = useRef(null);
   const outputRef = useRef(null);
+  const textRef = useRef(null);
 
   useEffect(() => {
     outputRef.current = new Experience({
@@ -57,6 +58,16 @@ const Video = ({ url, text }) => {
       },
     });
 
+    timeline.from(textRef.current, {
+      opacity: 0,
+      filter: 'blur(100px)',
+    });
+
+    timeline.to(textRef.current, {
+      y: '-50vh',
+      opacity: 0,
+    });
+
     timeline.to(outputRef.current.world.plane.material.uniforms.uPixel, {
       value: 500,
     });
@@ -71,9 +82,9 @@ const Video = ({ url, text }) => {
   }, []);
 
   return (
-    <div className={`section ${styles.video}`}>
-      <div className={styles.video__canvas} ref={containerRef}></div>
-      <div className={styles.video__content}>
+    <div className={`section ${styles.video}`} ref={containerRef}>
+      <div className={styles.video__canvas}></div>
+      <div className={styles.video__content} ref={textRef}>
         <p className={styles.video__content__text}>{text}</p>
       </div>
     </div>

@@ -39,6 +39,9 @@
   &__subwrapper {
     opacity: 0;
     transition: all ease 0.3s;
+    @include mobile-query {
+      opacity: 1;
+    }
     &__show {
       opacity: 1;
     }
@@ -47,7 +50,7 @@
   &__subtext {
     width: 40%;
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 200;
 
     @include mobile-query {
       width: 100%;
@@ -64,6 +67,7 @@
     }
     @include mobile-query {
       font-size: 16px;
+      opacity: 1;
     }
   }
 
@@ -113,12 +117,17 @@
       flex-wrap: nowrap;
       gap: 33px;
       @include mobile-query {
+        width: 100%;
         flex-direction: column;
       }
       &__item {
         width: 423px;
         opacity: 1;
         transition: all ease 0.3s;
+
+        @include mobile-query {
+          width: 100%;
+        }
 
         &__top {
           margin-bottom: 30px;
@@ -142,6 +151,8 @@
 
         &__image {
           margin-bottom: 18px;
+          width: 100%;
+          height: auto;
         }
 
         &__viewers {
@@ -156,7 +167,7 @@
 
           &__text {
             font-size: 14px;
-            font-weight: 300;
+            font-weight: 200;
             color: #50505a;
           }
         }
