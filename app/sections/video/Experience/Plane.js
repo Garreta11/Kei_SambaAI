@@ -8,12 +8,16 @@ export default class Plane {
   constructor() {
     this.experience = new Experience();
     this.scene = this.experience.scene;
+    this.loaded = this.experience.loaded;
 
     this.setVideo();
+    this.loaded = true;
     this.setTexture();
     this.setGeometry();
     this.setMaterial();
-    this.setMesh();
+    this.video.addEventListener('loadedmetadata', (e) => {
+      this.setMesh();
+    });
   }
 
   setVideo() {
@@ -34,8 +38,8 @@ export default class Plane {
   setGeometry() {
     this.geometry = new THREE.PlaneGeometry(2, 2);
   }
+
   setMaterial() {
-    // this.material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
     this.material = new THREE.ShaderMaterial({
       uniforms: {
         uPixel: { value: 2.0 },

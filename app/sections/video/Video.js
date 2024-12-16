@@ -70,6 +70,7 @@ const Video = ({ url, text }) => {
 
     timeline.to(outputRef.current.world.plane.material.uniforms.uPixel, {
       value: 500,
+      ease: 'power4.in',
     });
 
     timeline.to(containerRef.current, {

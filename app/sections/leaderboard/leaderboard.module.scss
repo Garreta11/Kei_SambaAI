@@ -6,6 +6,8 @@
   padding: 0px 60px;
   padding-bottom: 100px;
 
+  position: relative;
+
   @include mobile-query {
     padding: 0px 20px;
   }
@@ -37,14 +39,8 @@
   }
 
   &__subwrapper {
-    opacity: 0;
+    opacity: 1;
     transition: all ease 0.3s;
-    @include mobile-query {
-      opacity: 1;
-    }
-    &__show {
-      opacity: 1;
-    }
   }
 
   &__subtext {
@@ -60,7 +56,7 @@
   &__title {
     font-size: 34px;
     font-weight: 700;
-    opacity: 0;
+    opacity: 1;
     transition: all ease 0.3s;
     &__show {
       opacity: 1;

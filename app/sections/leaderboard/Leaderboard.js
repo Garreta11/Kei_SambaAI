@@ -15,14 +15,14 @@ gsap.registerPlugin(ScrollTrigger);
 const Leaderboard = ({ headlines, subtext, carousel }) => {
   const headlinesRef = useRef(null);
   const galleryRef = useRef();
+  const titleRef = useRef();
   const galleryWrapperRef = useRef(null);
   const gallerySubwrapperRef = useRef(null);
   const itemRefs = useRef([]);
   const [activeCategory, setActiveCategory] = useState(carousel.categories[0]);
-  const [showGallerySubwrapper, setShowGallerySubwrapper] = useState(false);
 
   useEffect(() => {
-    // Horizontal carousel
+    // Horizontal carousel only for Desktop
     ScrollTrigger.matchMedia({
       '(min-width: 1024px)': function () {
         // Toggle gallerySubwrapper visibility
@@ -30,9 +30,6 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
           trigger: headlinesRef.current,
           start: 'top top', // Adjust if needed
           end: 'bottom-=100 top',
-          onEnter: () => setShowGallerySubwrapper(false),
-          onLeaveBack: () => setShowGallerySubwrapper(false),
-          onLeave: () => setShowGallerySubwrapper(true),
         });
         const gallery = galleryWrapperRef.current;
         const galleryWidth = gallery.offsetWidth;
@@ -57,9 +54,27 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
           },
         });
       },
-      '(max-width: 1024px)': function () {
-        setShowGallerySubwrapper(true);
+    });
+
+    gsap.from(gallerySubwrapperRef.current, {
+      scrollTrigger: {
+        trigger: galleryRef.current,
+        start: 'top 20%',
+        end: 'end end',
+        scrub: true,
       },
+      opacity: 0,
+      filter: 'blur(100px)',
+    });
+    gsap.from(titleRef.current, {
+      scrollTrigger: {
+        trigger: galleryRef.current,
+        start: 'top 20%',
+        end: 'end end',
+        scrub: true,
+      },
+      opacity: 0,
+      filter: 'blur(100px)',
     });
 
     return () => ScrollTrigger.getAll().forEach((st) => st.kill());
@@ -84,19 +99,13 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
       <div className={styles.leaderboard__wrapper} ref={galleryRef}>
         <div className={styles.leaderboard__wrapper__header}>
           <TextReveal text={subtext} className={styles.leaderboard__subtext} />
-          <p
-            className={`${styles.leaderboard__title} ${
-              showGallerySubwrapper ? styles.leaderboard__title__show : ''
-            }`}
-          >
+          <p className={`${styles.leaderboard__title}`} ref={titleRef}>
             {carousel.title}
           </p>
         </div>
 
         <div
-          className={`${styles.leaderboard__subwrapper} ${
-            showGallerySubwrapper ? styles.leaderboard__subwrapper__show : ''
-          }`}
+          className={`${styles.leaderboard__subwrapper}`}
           ref={gallerySubwrapperRef}
         >
           <div className={styles.leaderboard__categories}>
