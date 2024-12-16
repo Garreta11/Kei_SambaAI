@@ -15,7 +15,7 @@ export default class Sphere {
 
     this.isPoints = false;
 
-    this.timeFrequency = 0.0002;
+    this.timeFrequency = 0.0003;
 
     if (this.debug) {
       this.debugFolder = this.debug.addFolder({

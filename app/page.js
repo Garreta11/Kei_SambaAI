@@ -10,17 +10,14 @@ import Leaderboard from './sections/leaderboard/Leaderboard';
 import data from './data.json';
 import dataLeaderboards from './data-leaderboards.json';
 import Semasio from './sections/semasio/Semasio';
-import Background from './components/background/Background';
 import Video from './sections/video/Video';
 import Layers from './sections/layers/Layers';
 import TrackAdInsights from './sections/trackAdInsights/TrackAdInsights';
-import VideoCanvas from './sections/videoCanvas/VideoCanvas';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
+    <div className={`${styles.page}`}>
       <PageWrapper>
-        {/* <Background /> */}
         <Hero
           title={data.hero.title}
           number={data.hero.number}
@@ -36,7 +33,6 @@ export default function Home() {
           subtext={data.semasio.subtext}
         />
         <Video url={data.video.url} text={data.video.text} />
-        {/* <VideoCanvas videoSrc={data.video.url} /> */}
 
         <Layers headline={data.layers.headline} subtext={data.layers.subtext} />
 
