@@ -1,0 +1,28 @@
+.scroll {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: center;
+  gap: 20px;
+  display: none;
+
+  &__show {
+    animation: fadeIn 0.8s ease forwards;
+    display: flex;
+  }
+
+  &__text {
+    font-weight: 200;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    bottom: 0px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 10px;
+  }
+}

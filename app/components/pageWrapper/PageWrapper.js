@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect } from 'react';
+import { DataProvider } from '@/app/context';
 import Lenis from 'lenis';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
@@ -23,7 +24,7 @@ const PageWrapper = ({ children }) => {
     gsap.ticker.lagSmoothing(0);
   }, []);
 
-  return <>{children}</>;
+  return <DataProvider>{children}</DataProvider>;
 };
 
 export default PageWrapper;

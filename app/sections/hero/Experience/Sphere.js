@@ -27,6 +27,8 @@ export default class Sphere {
     this.setLights();
     this.setMaterial();
     this.setMesh();
+
+    this.initAnimation();
   }
 
   setLights() {
@@ -231,7 +233,16 @@ export default class Sphere {
     } else {
       this.mesh = new THREE.Mesh(this.geometry, this.material);
     }
+    this.mesh.position.z = -100;
     this.scene.add(this.mesh);
+  }
+
+  initAnimation() {
+    gsap.to(this.mesh.position, {
+      z: 0,
+      duration: 2,
+      ease: 'power1.out',
+    });
   }
 
   update() {

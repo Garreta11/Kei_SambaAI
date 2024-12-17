@@ -3,7 +3,8 @@
 .anchors {
   position: fixed;
   top: 50%;
-  right: 0px;
+  right: -100px;
+  opacity: 0;
   transform: translate(0, -50%);
   height: 50%;
   display: flex;
@@ -11,6 +12,8 @@
   justify-content: center;
   gap: 22px;
   padding: 0px 10px;
+
+  animation: showAnchors 0.5s 3s ease forwards;
 
   @include mobile-query {
     display: none;
@@ -32,5 +35,16 @@
     &:hover {
       opacity: 1;
     }
+  }
+}
+
+@keyframes showAnchors {
+  0% {
+    opacity: 0;
+    right: -100px;
+  }
+  100% {
+    opacity: 1;
+    right: 0px;
   }
 }

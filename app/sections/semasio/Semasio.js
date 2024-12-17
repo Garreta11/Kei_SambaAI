@@ -4,40 +4,61 @@ import styles from './semasio.module.scss';
 import TitleReveal from '@/app/components/titleReveal/TitleReveal';
 import TextReveal from '@/app/components/textReveal/TextReveal';
 
+import SplitType from 'split-type';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import Image from 'next/image';
 gsap.registerPlugin(ScrollTrigger);
 
 const Semasio = ({ headline, subtext }) => {
   const contentRef = useRef();
   const itemsRef = useRef();
   const slidersRef = useRef();
+  const subContentRef = useRef();
+  const imageRef = useRef();
 
   const items = useRef([
     {
       ref: useRef(),
       dotRef: useRef(),
+      textRef: useRef(),
       text: 'Investing',
+      dotColor: 'blue',
     },
     {
       ref: useRef(),
       dotRef: useRef(),
+      textRef: useRef(),
       text: 'Stock Market',
+      dotColor: 'blue',
     },
     {
       ref: useRef(),
       dotRef: useRef(),
+      textRef: useRef(),
       text: 'Real State',
+      dotColor: 'pink',
     },
     {
       ref: useRef(),
       dotRef: useRef(),
+      textRef: useRef(),
       text: 'Finance',
+      dotColor: 'blue',
     },
     {
       ref: useRef(),
       dotRef: useRef(),
+      textRef: useRef(),
+      text: 'Watch collecting',
+      dotColor: 'pink',
+    },
+    {
+      ref: useRef(),
+      dotRef: useRef(),
+      textRef: useRef(),
       text: 'Crypto',
+      dotColor: 'blue',
     },
   ]);
 
@@ -47,6 +68,7 @@ const Semasio = ({ headline, subtext }) => {
       text: 'Sentiment',
       triangleRef: useRef(),
       trianglePos: '30%',
+      triangleStartPos: '90%',
       triangleEndPos: '90%',
     },
     {
@@ -54,19 +76,22 @@ const Semasio = ({ headline, subtext }) => {
       text: 'Behavious',
       triangleRef: useRef(),
       trianglePos: '70%',
-      triangleEndPos: '20%',
+      triangleStartPos: '20%',
+      triangleEndPos: '50%',
     },
     {
       ref: useRef(),
       text: 'Preferences',
       triangleRef: useRef(),
       trianglePos: '40%',
-      triangleEndPos: '10%',
+      triangleStartPos: '10%',
+      triangleEndPos: '70%',
     },
   ]);
 
   useEffect(() => {
     const ammountToScroll = 4 * window.innerHeight;
+    const totalStates = 3; // Total snapping states
 
     const timeline = gsap.timeline({
       scrollTrigger: {
@@ -75,27 +100,40 @@ const Semasio = ({ headline, subtext }) => {
         end: '+=' + ammountToScroll,
         pin: true,
         scrub: true,
-        snap: 0.5,
+        snap: {
+          snapTo: [0.778, 0.858, 0.928, 0.965, 1], // Two states: 0 (start) and 1 (end)
+          duration: { min: 0.2, max: 0.8 }, // Optional snapping animation duration
+          delay: 0, // No delay
+        },
       },
     });
 
+    // Show boxes
     items.current.forEach((item, index) => {
+      // show boxes
       timeline.fromTo(
         item.ref.current,
         {
           autoAlpha: 0,
           y: -100,
-          scale: 1 - 0.1 * index,
           x: 0,
         },
         {
           autoAlpha: 1,
           y: 0,
-          x: -index * 100,
+          x: index * 100,
         }
       );
+
+      // typing text
+      const text = new SplitType(item.textRef.current, { types: 'chars' });
+      timeline.from(text.chars, {
+        opacity: 0,
+        stagger: 0.1,
+      });
     });
 
+    // Small boxes and sliders appear
     timeline.add('show-two');
     items.current.forEach((item, index) => {
       timeline.to(
@@ -136,15 +174,77 @@ const Semasio = ({ headline, subtext }) => {
       'show-two'
     );
 
+    // move triangels sliders #1
     timeline.add('triangles');
+    sliders.current.forEach((item, index) => {
+      timeline.to(
+        item.triangleRef.current,
+        {
+          left: item.triangleStartPos,
+        },
+        'triangles'
+      );
+    });
+
+    // move triangels sliders #2 & remove pink items
+    timeline.add('triangles2');
+    items.current.forEach((item, index) => {
+      if (item.dotColor === 'pink') {
+        timeline.to(
+          item.ref.current,
+          {
+            autoAlpha: 0,
+            x: -window.innerWidth,
+            padding: 0,
+            margin: 0,
+            overflow: 'hidden',
+            height: 0,
+            borderWidth: 0,
+          },
+          'triangles2'
+        );
+      }
+    });
     sliders.current.forEach((item, index) => {
       timeline.to(
         item.triangleRef.current,
         {
           left: item.triangleEndPos,
         },
-        'triangles'
+        'triangle2'
       );
+    });
+
+    // show image
+    timeline.add('showImage');
+    timeline.to(
+      imageRef.current,
+      {
+        maxWidth: window.innerWidth,
+      },
+      'showImage'
+    );
+    timeline.to(
+      slidersRef.current,
+      {
+        width: 0,
+        padding: 0,
+        opacity: 0,
+        borderWidth: 0,
+      },
+      'showImage'
+    );
+    timeline.to(
+      itemsRef.current,
+      {
+        width: 'auto',
+      },
+      'showImage'
+    );
+
+    timeline.to(subContentRef.current, {
+      y: -window.innerHeight,
+      opacity: 0,
     });
   }, []);
 
@@ -154,7 +254,7 @@ const Semasio = ({ headline, subtext }) => {
       <div className={styles.semasio__wrapper} ref={contentRef}>
         <TextReveal text={subtext} className={styles.semasio__subtext} />
 
-        <div className={styles.semasio__content}>
+        <div className={styles.semasio__content} ref={subContentRef}>
           <div ref={itemsRef} className={styles.semasio__content__items}>
             {items.current.map((item, index) => (
               <div
@@ -164,9 +264,13 @@ const Semasio = ({ headline, subtext }) => {
               >
                 <div
                   ref={item.dotRef}
-                  className={styles.semasio__content__items__item__dot}
+                  className={`${styles.semasio__content__items__item__dot} ${
+                    item.dotColor === 'blue'
+                      ? styles.semasio__content__items__item__dot__blue
+                      : styles.semasio__content__items__item__dot__pink
+                  }`}
                 />
-                <p>{item.text}</p>
+                <p ref={item.textRef}>{item.text}</p>
               </div>
             ))}
           </div>
@@ -195,24 +299,10 @@ const Semasio = ({ headline, subtext }) => {
                 </div>
               </div>
             ))}
-            {/* <div className={styles.semasio__content__sliders__item}>
-              <p className={styles.semasio__content__sliders__item__title}>
-                Sentiment
-              </p>
-              <div className={styles.semasio__content__sliders__item__slider} />
-            </div>
-            <div className={styles.semasio__content__sliders__item}>
-              <p className={styles.semasio__content__sliders__item__title}>
-                Behaviour
-              </p>
-              <div className={styles.semasio__content__sliders__item__slider} />
-            </div>
-            <div className={styles.semasio__content__sliders__item}>
-              <p className={styles.semasio__content__sliders__item__title}>
-                Preferences
-              </p>
-              <div className={styles.semasio__content__sliders__item__slider} />
-            </div> */}
+          </div>
+
+          <div ref={imageRef} className={styles.semasio__content__image}>
+            <Image src='/semasio.png' width={748} height={464} alt='semasio' />
           </div>
         </div>
       </div>

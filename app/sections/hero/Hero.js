@@ -1,11 +1,13 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useContext } from 'react';
+import { DataContext } from '@/app/context';
 import styles from './hero.module.scss';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 import Experience from './Experience/Experience';
+import Glitch from '@/app/components/glitch/Glitch';
 
 const Hero = ({ title, number, text }) => {
   const heroRef = useRef(null);
@@ -13,17 +15,20 @@ const Hero = ({ title, number, text }) => {
   const outputRef = useRef(null);
   const contentRef = useRef(null);
 
+  const { setLoading, loading } = useContext(DataContext);
+
   useEffect(() => {
     // Wait until the container element is available
     if (containerRef.current) {
       outputRef.current = new Experience({
         targetElement: containerRef.current,
       });
+      setLoading(true);
     }
 
     // Check if the Experience instance is ready before proceeding with GSAP animations
     if (outputRef.current) {
-      const ammountToScroll = 2 * window.innerHeight;
+      const ammountToScroll = 1 * window.innerHeight;
 
       const timeline = gsap.timeline({
         scrollTrigger: {
@@ -32,6 +37,11 @@ const Hero = ({ title, number, text }) => {
           end: '+=' + ammountToScroll,
           scrub: true,
           pin: true,
+          snap: {
+            snapTo: [0, 1], // Two states: 0 (start) and 1 (end)
+            duration: { min: 0.2, max: 0.8 }, // Optional snapping animation duration
+            delay: 0, // No delay
+          },
           onEnter: () => {
             outputRef.current.renderer.isPaused = false;
           },
@@ -87,18 +97,23 @@ const Hero = ({ title, number, text }) => {
 
     // Cleanup ScrollTrigger when component is unmounted
     return () => ScrollTrigger.getAll().forEach((st) => st.kill());
-  }, []); // Only run the effect when Experience is ready
+  }, [setLoading]); // Only run the effect when Experience is ready
 
   return (
     <div className={`section ${styles.hero}`} ref={heroRef}>
       <div className={styles.hero__canvas} ref={containerRef}></div>
-      <div className={styles.hero__content} ref={contentRef}>
-        <h1 className={styles.hero__content__title}>{title}</h1>
-        <div className={styles.hero__content__data}>
-          <p className={styles.hero__content__data__number}>{number}</p>
-          <p className={styles.hero__content__data__text}>{text}</p>
+      {loading && (
+        <div className={styles.hero__content} ref={contentRef}>
+          <h1 className={styles.hero__content__title}>{title}</h1>
+          <div className={styles.hero__content__data}>
+            {/* <p className={styles.hero__content__data__number}>{number}</p> */}
+            <Glitch className={styles.hero__content__data__number}>
+              {number}
+            </Glitch>
+            <p className={styles.hero__content__data__text}>{text}</p>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

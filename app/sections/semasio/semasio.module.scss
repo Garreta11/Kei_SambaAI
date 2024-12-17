@@ -37,7 +37,7 @@
   &__content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     height: 85vh;
     overflow: hidden;
@@ -46,7 +46,6 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      align-items: center;
 
       &__item {
         display: flex;
@@ -59,7 +58,7 @@
         border-radius: 160px;
         padding: 42px 45px;
         font-size: 27px;
-        margin-bottom: 24px;
+        margin-bottom: 10px;
         backdrop-filter: blur(10px);
         background: linear-gradient(
           0deg,
@@ -70,16 +69,22 @@
 
         &__dot {
           display: block;
-          background-color: #339afa;
           width: 18px;
           height: 18px;
           border-radius: 50%;
+          &__blue {
+            background-color: #339afa;
+          }
+          &__pink {
+            background-color: #cd4ed6;
+          }
         }
       }
     }
 
     &__sliders {
       width: 0%;
+      overflow: hidden;
 
       border: 1px solid white;
       border-radius: 40px;
@@ -125,6 +130,14 @@
           left: -1%;
           top: 12px;
         }
+      }
+    }
+
+    &__image {
+      max-width: 0;
+      overflow: hidden;
+      img {
+        margin-top: 20px;
       }
     }
   }

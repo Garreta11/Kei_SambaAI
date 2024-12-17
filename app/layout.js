@@ -3,6 +3,7 @@ import './globals.scss';
 import Header from './components/header/Header';
 import Anchors from './components/anchors/Anchors';
 import Background from './components/background/Background';
+import KeepScrolling from './components/keepScrolling/KeepScrolling';
 
 // Adding MoneumentExtended with different weights and styles
 const monumentExtended = localFont({
@@ -43,6 +44,7 @@ export default function RootLayout({ children }) {
         <Header />
         <Background />
         {children}
+        <KeepScrolling />
         <Anchors />
       </body>
     </html>
