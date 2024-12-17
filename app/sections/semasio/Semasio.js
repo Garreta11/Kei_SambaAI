@@ -90,8 +90,7 @@ const Semasio = ({ headline, subtext }) => {
   ]);
 
   useEffect(() => {
-    const ammountToScroll = 4 * window.innerHeight;
-    const totalStates = 3; // Total snapping states
+    const ammountToScroll = 8 * window.innerHeight;
 
     const timeline = gsap.timeline({
       scrollTrigger: {
@@ -121,7 +120,7 @@ const Semasio = ({ headline, subtext }) => {
         {
           autoAlpha: 1,
           y: 0,
-          x: index * 100,
+          x: index * 50,
         }
       );
 

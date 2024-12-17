@@ -14,6 +14,7 @@ import dataLeaderboards from './data-leaderboards.json';
 
 import PageWrapper from './components/pageWrapper/PageWrapper';
 import PageContent from './components/pageContent/PageContent';
+import VideoCanvas from './sections/videoCanvas/VideoCanvas';
 
 export default function Home() {
   return (
@@ -34,7 +35,9 @@ export default function Home() {
             headline={data.semasio.headline}
             subtext={data.semasio.subtext}
           />
+
           <Video url={data.video.url} text={data.video.text} />
+          {/* <VideoCanvas videoSrc={data.video.url} /> */}
 
           <Layers
             headline={data.layers.headline}

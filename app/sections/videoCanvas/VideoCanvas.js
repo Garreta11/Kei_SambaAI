@@ -1,84 +1,80 @@
 'use client';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import styles from './videoCanvas.module.scss';
 
-const VideoCanvas = ({ videoSrc, pixelSize = 10 }) => {
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
+const VideoCanvas = ({ videoSrc }) => {
+  const containerRef = useRef(null);
   const videoRef = useRef(null);
-  const canvasRef = useRef(null);
+  const blurContainerRef = useRef(null);
+
+  const [visibleCells, setVisibleCells] = useState(2); // Initial number of visible cells
 
   useEffect(() => {
-    const video = videoRef.current;
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
+    const ammountToScroll = 8 * window.innerHeight;
 
-    if (!video || !ctx) {
-      console.error('Video or Canvas context is missing');
-      return;
-    }
+    // Set up the ScrollTrigger
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: 'top top',
+        end: '+=' + ammountToScroll,
+        scrub: true,
+        pin: true,
+        onUpdate: (self) => {
+          // Dynamically adjust the number of cells based on scroll progress
+          const maxCells = 100; // Maximum number of cells
+          const minCells = 2; // Minimum number of cells
+          let newCellCount = Math.floor(
+            minCells + self.progress * (maxCells - minCells)
+          );
 
-    const handleLoadedData = () => {
-      console.log('** LOad data');
-      canvas.width = video.videoWidth;
-      canvas.height = video.videoHeight;
+          // Ensure the newCellCount is even
+          if (newCellCount % 2 !== 0) {
+            newCellCount += 1; // Make it even
+          }
 
-      const drawPixelatedVideo = () => {
-        // Clear the canvas
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+          setVisibleCells(newCellCount);
 
-        // Scale down to low resolution
-        const scaledWidth = canvas.width / pixelSize;
-        const scaledHeight = canvas.height / pixelSize;
+          // Update grid-template-columns and rows
+          if (blurContainerRef.current) {
+            const columns = Math.ceil(Math.sqrt(newCellCount));
+            const rows = Math.ceil(newCellCount / columns);
 
-        ctx.drawImage(video, 0, 0, scaledWidth, scaledHeight);
+            blurContainerRef.current.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
+            blurContainerRef.current.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
+          }
+        },
+      },
+    });
 
-        // Scale back up to full size
-        ctx.drawImage(
-          canvas,
-          0,
-          0,
-          scaledWidth,
-          scaledHeight,
-          0,
-          0,
-          canvas.width,
-          canvas.height
-        );
-
-        requestAnimationFrame(drawPixelatedVideo);
-      };
-
-      drawPixelatedVideo();
-    };
-
-    video.addEventListener('loadeddata', handleLoadedData);
-
+    // Cleanup on unmount
     return () => {
-      video.removeEventListener('loadeddata', handleLoadedData);
+      ScrollTrigger.kill();
     };
-  }, [pixelSize]);
+  }, []);
 
   return (
-    <div className={`section ${styles.videoCanvas}`}>
-      {/* Video element is hidden */}
+    <div className={`section ${styles.videoCanvas}`} ref={containerRef}>
       <video
         ref={videoRef}
-        controls={true}
+        controls={false}
         autoPlay={true}
         muted
         loop
-        style={{ display: 'none' }}
+        style={{ display: 'block' }}
       >
         <source src={videoSrc} type='video/mp4' />
       </video>
-      {/* Canvas for displaying the pixelated video */}
-      <canvas
-        ref={canvasRef}
-        style={{
-          imageRendering: 'pixelated', // Ensures sharp pixelation
-          width: '100%', // Optional: Adjust to your layout
-          height: '100%',
-        }}
-      ></canvas>
+
+      <div className={styles.videoCanvas__blur} ref={blurContainerRef}>
+        {Array.from({ length: visibleCells }).map((_, index) => (
+          <div key={index} className={styles.videoCanvas__blur__item} />
+        ))}
+      </div>
     </div>
   );
 };

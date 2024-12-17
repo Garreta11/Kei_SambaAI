@@ -29,8 +29,8 @@ const Video = ({ url, text }) => {
         scrub: true,
         pin: true,
         snap: {
-          snapTo: [0, 0.25, 0.75, 0.89, 1], // Snap points (percentages of the timeline progress)
-          duration: 3, // Smooth snap duration
+          snapTo: [0, 0.25, 0.75, 1], // Snap points (percentages of the timeline progress)
+          duration: 1, // Smooth snap duration
         },
         onEnter: () => {
           outputRef.current.renderer.isPaused = false;
