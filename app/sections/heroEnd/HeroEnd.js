@@ -7,9 +7,8 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 import Experience from './Experience/Experience';
-import Glitch from '@/app/components/glitch/Glitch';
 
-const Hero = ({ title, number, text }) => {
+const HeroEnd = ({ title, number, text }) => {
   const heroRef = useRef(null);
   const containerRef = useRef(null);
   const outputRef = useRef(null);
@@ -44,53 +43,62 @@ const Hero = ({ title, number, text }) => {
           onEnter: () => {
             outputRef.current.renderer.isPaused = false;
           },
-          onLeave: () => {
-            outputRef.current.renderer.isPaused = true;
-          },
-          onEnterBack: () => {
-            outputRef.current.renderer.isPaused = false;
-          },
           onLeaveBack: () => {
             outputRef.current.renderer.isPaused = true;
           },
         },
       });
 
+      timeline.fromTo(
+        heroRef.current,
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+        }
+      );
+
       if (outputRef.current) {
         timeline
           .add('start')
-          .to(
+          .fromTo(
             outputRef.current.camera.instance.position,
             {
               z: 1,
             },
+            {
+              z: 6,
+            },
             'start'
           )
-          .to(
+          .fromTo(
             outputRef.current.world.sphere.material.uniforms.uFresnelOffset,
             {
               value: 5,
+            },
+            {
+              value: 0.971,
             },
             'start'
           );
       }
 
       if (contentRef.current) {
-        timeline.to(
+        timeline.fromTo(
           contentRef.current,
           {
-            filter: 'blur(10px)',
+            filter: 'blur(100px)',
             paddingTop: 0,
             paddingBottom: 0,
           },
+          {
+            filter: 'blur(0px)',
+            paddingTop: 150,
+            paddingBottom: 80,
+          },
           'start'
         );
-      }
-
-      if (heroRef.current) {
-        timeline.to(heroRef.current, {
-          opacity: 0,
-        });
       }
     }
 
@@ -103,18 +111,11 @@ const Hero = ({ title, number, text }) => {
       <div className={styles.hero__canvas} ref={containerRef}></div>
       {loading && (
         <div className={styles.hero__content} ref={contentRef}>
-          <h1 className={styles.hero__content__title}>{title}</h1>
-          <div className={styles.hero__content__data}>
-            {/* <p className={styles.hero__content__data__number}>{number}</p> */}
-            <Glitch className={styles.hero__content__data__number}>
-              {number}
-            </Glitch>
-            <p className={styles.hero__content__data__text}>{text}</p>
-          </div>
+          <h1 className={styles.hero__content__title}>{text}</h1>
         </div>
       )}
     </div>
   );
 };
 
-export default Hero;
+export default HeroEnd;

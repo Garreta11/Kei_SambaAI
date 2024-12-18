@@ -15,6 +15,7 @@ import dataLeaderboards from './data-leaderboards.json';
 import PageWrapper from './components/pageWrapper/PageWrapper';
 import PageContent from './components/pageContent/PageContent';
 import VideoCanvas from './sections/videoCanvas/VideoCanvas';
+import HeroEnds from './sections/heroEnd/HeroEnd';
 
 export default function Home() {
   return (
@@ -48,9 +49,9 @@ export default function Home() {
             headline={data.track.headline}
             subtext={data.track.subtext}
           />
-        </PageContent>
 
-        <div style={{ height: '300svh' }}></div>
+          <HeroEnds text={data.end.text} />
+        </PageContent>
       </PageWrapper>
     </div>
   );

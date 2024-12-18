@@ -1,0 +1,75 @@
+@import '../../breakpoints';
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+
+  &__canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+  }
+  &__content {
+    pointer-events: none;
+
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding-top: 150px;
+    padding-bottom: 80px;
+    padding-left: 60px;
+    padding-right: 60px;
+
+    @include mobile-query {
+      padding-top: 56px;
+      padding-bottom: 70px;
+    }
+
+    &__title {
+      font-size: 32px;
+      opacity: 0;
+      animation: fadeInTitle ease 0.5s 1s forwards;
+      text-transform: uppercase;
+
+      @include mobile-query {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@keyframes fadeInTitle {
+  0% {
+    opacity: 0;
+    filter: blur(100px);
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0px);
+  }
+}
+@keyframes fadeInData {
+  0% {
+    opacity: 0;
+    filter: blur(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0px);
+  }
+}

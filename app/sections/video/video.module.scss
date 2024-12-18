@@ -7,6 +7,15 @@
     object-fit: cover;
   }
 
+  &__blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+  }
+
   &__content {
     position: absolute;
     top: 0;

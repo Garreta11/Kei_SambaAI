@@ -12,6 +12,7 @@ const Video = ({ url, text }) => {
   const containerRef = useRef(null);
   const outputRef = useRef(null);
   const textRef = useRef(null);
+  const blurRef = useRef(null);
 
   useEffect(() => {
     outputRef.current = new Experience({
@@ -72,10 +73,22 @@ const Video = ({ url, text }) => {
       opacity: 0,
     });
 
-    timeline.to(outputRef.current.world.plane.material.uniforms.uPixel, {
-      value: 500,
-      ease: 'power4.in',
-    });
+    timeline.add('pixel');
+    timeline.to(
+      outputRef.current.world.plane.material.uniforms.uPixel,
+      {
+        value: 500,
+        ease: 'power4.in',
+      },
+      'pixel'
+    );
+    timeline.to(
+      blurRef.current,
+      {
+        backdropFilter: 'blur(0)',
+      },
+      'pixel'
+    );
 
     timeline.to(containerRef.current, {
       scale: 0,
@@ -89,6 +102,7 @@ const Video = ({ url, text }) => {
   return (
     <div className={`section ${styles.video}`} ref={containerRef}>
       <div className={styles.video__canvas}></div>
+      <div className={styles.video__blur} ref={blurRef} />
       <div className={styles.video__content} ref={textRef}>
         <p className={styles.video__content__text}>{text}</p>
       </div>

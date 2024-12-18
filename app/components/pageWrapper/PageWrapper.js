@@ -7,7 +7,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const PageWrapper = ({ children }) => {
-  useEffect(() => {
+  /* useEffect(() => {
     // Initialize a new Lenis instance for smooth scrolling
     const lenis = new Lenis();
 
@@ -22,7 +22,7 @@ const PageWrapper = ({ children }) => {
 
     // Disable lag smoothing in GSAP to prevent any delay in scroll animations
     gsap.ticker.lagSmoothing(0);
-  }, []);
+  }, []); */
 
   return <DataProvider>{children}</DataProvider>;
 };

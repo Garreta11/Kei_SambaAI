@@ -35,7 +35,7 @@
 
   &__content {
     display: flex;
-    gap: 50px;
+    padding: 0px 50px;
     width: 100%;
     @include mobile-query {
       flex-direction: column;
@@ -44,7 +44,7 @@
 
   &__cards {
     position: relative;
-    width: 65%;
+    width: 60%;
     @include mobile-query {
       width: 100%;
     }
@@ -55,47 +55,80 @@
       border-radius: 16px;
 
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
 
       &__0 {
-        z-index: 3;
+        z-index: 4;
         transform: perspective(100vw) rotateY(0deg) translateZ(0px);
       }
       &__1 {
-        z-index: 2;
+        z-index: 3;
         transform: perspective(100vw) rotateY(0deg) translateZ(-50px);
       }
       &__2 {
-        z-index: 1;
+        z-index: 2;
         transform: perspective(100vw) rotateY(0deg) translateZ(-100px);
       }
       &__3 {
-        z-index: 0;
+        z-index: 1;
         transform: perspective(100vw) rotateY(0deg) translateZ(-150px);
+      }
+      &__4 {
+        z-index: 0;
+        transform: perspective(100vw) rotateY(0deg) translateZ(-200px);
       }
     }
   }
 
   &__texts {
-    width: 35%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60vh;
+
     @include mobile-query {
       margin-top: 60%;
       width: 100%;
     }
     &__item {
-      margin-bottom: 100px;
+      display: flex;
+      position: relative;
       @include mobile-query {
         margin-bottom: 30px;
       }
-      &__title {
-        font-size: 16px;
-        font-weight: 700;
-        text-transform: uppercase;
-        margin-bottom: 10px;
+      &__line {
+        position: absolute;
+        z-index: 10;
+
+        &__0 {
+          left: -555px;
+        }
+        &__1 {
+          left: -500px;
+        }
+        &__2 {
+          left: -435px;
+        }
+        &__3 {
+          left: -375px;
+        }
+        &__4 {
+          left: -335px;
+        }
       }
-      &__text {
-        font-size: 16px;
-        font-weight: 200;
+      &__content {
+        &__title {
+          font-size: 16px;
+          font-weight: 700;
+          text-transform: uppercase;
+          margin-bottom: 10px;
+        }
+        &__text {
+          font-size: 16px;
+          font-weight: 200;
+        }
       }
     }
   }

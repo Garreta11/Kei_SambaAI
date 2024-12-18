@@ -1,37 +1,21 @@
-#define M_PI 3.1415926535897932384626433832795
+varying vec2 vUv;
+varying vec3 vPosition;
+varying float vFresnel;
 
-varying vec3 vNormal;
-varying vec3 vColor;
-uniform mat4 uModelMatrix;
-
-uniform float uTime;
 uniform float uScale;
-uniform vec2 uSubdivision;
+uniform float uTime;
+uniform float uSpeedDeform;
 
-// Mouse
-uniform vec2 uMouse;
-
-// Distortion and Displacement
 uniform float uDistortionFrequency;
 uniform float uDistortionStrength;
+
 uniform float uDisplacementFrequency;
 uniform float uDisplacementStrength;
 
-// Lights
-uniform vec3 uLightAColor;
-uniform vec3 uLightAPosition;
-uniform float uLightAIntensity;
-
-uniform vec3 uLightBColor;
-uniform vec3 uLightBPosition;
-uniform float uLightBIntensity;
-
-// Fresnel
 uniform float uFresnelOffset;
 uniform float uFresnelMultiplier;
 uniform float uFresnelPower;
 
-        
 vec4 permute(vec4 x){return mod(((x*34.0)+1.0)*x, 289.0);}
 vec4 taylorInvSqrt(vec4 r){return 1.79284291400159 - 0.85373472095314 * r;}
 vec4 fade(vec4 t) {return t*t*t*(t*(t*6.0-15.0)+10.0);}
@@ -169,12 +153,13 @@ float perlin4d(vec4 P){
   return 2.2 * n_xyzw;
 }
 
-vec3 getDisplacedPosition(vec3 _position, float dist) {
+// position
+vec3 getDisplacedPosition(vec3 _position) {
 
   vec3 distoredPosition = _position;
-  distoredPosition += perlin4d(vec4(distoredPosition * uDistortionFrequency * dist, uTime)) * uDistortionStrength;
+  distoredPosition += perlin4d(vec4(distoredPosition * uDistortionFrequency, uTime * uSpeedDeform)) * uDistortionStrength;
 
-  float perlinStrength = perlin4d(vec4(distoredPosition * uDisplacementFrequency, uTime));
+  float perlinStrength = perlin4d(vec4(distoredPosition * uDisplacementFrequency, uTime * uSpeedDeform));
   
   vec3 displacedPosition = _position;
   displacedPosition += normalize(_position) * perlinStrength * uDisplacementStrength;
@@ -184,53 +169,18 @@ vec3 getDisplacedPosition(vec3 _position, float dist) {
 
 void main() {
 
-
   vec3 scaledPosition = position * uScale;
-  // Transform the vertex position to screen space
-  vec3 screenPos = (uModelMatrix * vec4(scaledPosition, 1.0)).xyz;
-  // Compute the distance between mouse and vertex position in screen space
-  float dist = distance(vec2(screenPos.xy), uMouse);
-  dist = 2. - dist;
+  vec3 displacedPosition = getDisplacedPosition(scaledPosition);
 
-  // Position
-  vec3 displacedPosition = getDisplacedPosition(scaledPosition, dist);
-  vec4 viewPosition = viewMatrix * uModelMatrix * vec4(position, 1.0);
+  vec4 viewPosition = viewMatrix * vec4(displacedPosition, 1.0);
   gl_Position = projectionMatrix * viewPosition;
-
-  // Bi Tangent
-  float distanceA = (M_PI * 2.0) / uSubdivision.x;
-  float distanceB = M_PI / uSubdivision.x;
-
-  vec3 biTangent = cross(normal, tangent.xyz);
-  
-  vec3 positionA = scaledPosition + tangent.xyz * distanceA;
-  vec3 displacedPositionA = getDisplacedPosition(positionA, dist);
-
-  vec3 positionB = scaledPosition + biTangent.xyz * distanceB;
-  vec3 displacePositionB = getDisplacedPosition(positionB, dist);
-
-  vec3 computedNormal = cross(displacedPositionA - displacedPosition, displacePositionB - displacedPosition);
-  computedNormal = normalize(computedNormal);
 
   // Fresnel
   vec3 viewDirection = normalize(displacedPosition - cameraPosition);
-  float fresnel = uFresnelOffset + (1.0 + dot(viewDirection, computedNormal)) * uFresnelMultiplier;
+  float fresnel = uFresnelOffset + (1.0 + dot(viewDirection, displacedPosition)) * uFresnelMultiplier;
   fresnel = pow(max(0.0, fresnel), uFresnelPower);
 
-  // Color
-  float lightAIntensity = max(0.0, - dot(computedNormal.xyz, normalize(-uLightAPosition))) * uLightAIntensity;
-  float lightBIntensity = max(0.0, - dot(computedNormal.xyz, normalize(-uLightBPosition))) * uLightBIntensity;
-  
-  vec3 color = vec3(1.0);
-  color = mix(color, uLightAColor, lightAIntensity);
-  color = mix(color, uLightBColor, lightBIntensity);
-  // white fresnel color
-  vec3 fresnelColor = vec3(1.0);
-  color = mix(color, fresnelColor, clamp(pow(max(0.0, fresnel - 0.9), 3.0), 0.0, 1.0));
-
-  // Varying
-  vNormal = normal;
-  vColor = color;
-
-  gl_PointSize = 1.0;
+  vFresnel = fresnel;
+  vPosition = displacedPosition;
+  vUv = uv;
 }

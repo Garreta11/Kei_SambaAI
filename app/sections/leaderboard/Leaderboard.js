@@ -59,8 +59,8 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
     gsap.from(gallerySubwrapperRef.current, {
       scrollTrigger: {
         trigger: galleryRef.current,
-        start: 'top 20%',
-        end: 'end end',
+        start: 'top 30%',
+        end: 'end 30%',
         scrub: true,
       },
       opacity: 0,
@@ -69,8 +69,8 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
     gsap.from(titleRef.current, {
       scrollTrigger: {
         trigger: galleryRef.current,
-        start: 'top 20%',
-        end: 'end end',
+        start: 'top 30%',
+        end: 'end 30%',
         scrub: true,
       },
       opacity: 0,
