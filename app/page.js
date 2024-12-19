@@ -45,10 +45,10 @@ export default function Home() {
             subtext={data.layers.subtext}
           />
 
-          <TrackAdInsights
+          {/* <TrackAdInsights
             headline={data.track.headline}
             subtext={data.track.subtext}
-          />
+          />*/}
 
           <HeroEnds text={data.end.text} />
         </PageContent>

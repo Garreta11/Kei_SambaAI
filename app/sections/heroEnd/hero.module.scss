@@ -32,8 +32,11 @@
     padding-right: 60px;
 
     @include mobile-query {
+      width: 90%;
       padding-top: 56px;
       padding-bottom: 70px;
+      padding-left: 0px;
+      padding-right: 0px;
     }
 
     &__title {

@@ -7,14 +7,26 @@ const DETECT_SECONDS = 3;
 const KeepScrolling = () => {
   const [show, setShow] = useState(false);
   const [count, setCount] = useState(DETECT_SECONDS);
+  const [isAtBottom, setIsAtBottom] = useState(false);
+
+  const checkIfAtBottom = () => {
+    const scrollY = window.scrollY;
+    const viewportHeight = window.innerHeight;
+    const documentHeight = document.body.scrollHeight;
+
+    // Check if user is in the last section
+    setIsAtBottom(scrollY + viewportHeight >= documentHeight - 10); // Add margin for precision
+  };
 
   useEffect(() => {
     const handleScroll = () => {
       setCount(DETECT_SECONDS);
+      checkIfAtBottom();
     };
 
     // Add scroll event listener
     window.addEventListener('scroll', handleScroll);
+    checkIfAtBottom(); // Initial check
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -28,10 +40,10 @@ const KeepScrolling = () => {
         setCount((current) => current - 1);
       }, 1000);
       return () => clearTimeout(timer); // Clean up the timer
-    } else {
+    } else if (!isAtBottom) {
       setShow(true);
     }
-  }, [count]);
+  }, [count, isAtBottom]);
 
   return (
     <div className={`${styles.scroll} ${show ? styles.scroll__show : ''}`}>

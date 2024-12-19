@@ -16,13 +16,16 @@
     text-transform: uppercase;
     @include mobile-query {
       width: 100%;
-      font-size: 32px;
+      font-size: 25px;
     }
   }
 
   &__wrapper {
     width: 100%;
     padding-top: 50px;
+    @include mobile-query {
+      padding-top: 50px;
+    }
   }
 
   &__subtext {
@@ -30,7 +33,7 @@
     font-size: 18px;
     font-weight: 200;
     @include mobile-query {
-      font-size: 18px;
+      font-size: 14px;
       width: 100%;
     }
   }
@@ -75,9 +78,16 @@
         height: 40px;
 
         @include mobile-query {
-          min-width: fit-content;
-          font-size: 16px;
-          padding: 22px 25px;
+          min-width: 100%;
+          font-size: 10px;
+          padding: 5px 15px;
+          height: fit-content;
+        }
+
+        &:last-of-type {
+          @include mobile-query {
+            margin-bottom: 0;
+          }
         }
 
         &__dot {
@@ -85,6 +95,10 @@
           width: 18px;
           height: 18px;
           border-radius: 50%;
+          @include mobile-query {
+            width: 10px;
+            height: 10px;
+          }
           &__blue {
             background-color: #339afa;
           }
@@ -111,12 +125,27 @@
         rgba(255, 255, 255, 0.2) 100%
       );
 
+      @include mobile-query {
+        width: 100%;
+        opacity: 0;
+        padding: 25px 20px;
+        overflow: hidden;
+        border-radius: 16px;
+        margin-top: 30px;
+      }
+
       &__item {
         margin-bottom: 70px;
+        @include mobile-query {
+          margin-bottom: 30px;
+        }
         &__title {
           text-transform: uppercase;
           font-size: 18px;
           margin-bottom: 10px;
+          @include mobile-query {
+            font-size: 10px;
+          }
         }
         &__wrapper {
           display: flex;
@@ -143,6 +172,10 @@
           position: absolute;
           left: -1%;
           top: 12px;
+          @include mobile-query {
+            width: 15px;
+            height: 15px;
+          }
         }
       }
     }
@@ -150,8 +183,19 @@
     &__image {
       max-width: 0;
       overflow: hidden;
+      @include mobile-query {
+        max-width: fit-content;
+        width: 100%;
+        max-height: 0;
+      }
+
       img {
         margin-top: 20px;
+        @include mobile-query {
+          margin-top: 0px;
+          width: 100%;
+          height: auto;
+        }
       }
     }
   }

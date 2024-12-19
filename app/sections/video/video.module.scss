@@ -35,6 +35,9 @@
       text-align: center;
       font-size: 32px;
       font-weight: 200;
+      @include mobile-query {
+        font-size: 25px;
+      }
     }
   }
 }

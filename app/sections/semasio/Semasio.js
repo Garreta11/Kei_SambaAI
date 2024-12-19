@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from './semasio.module.scss';
 import TitleReveal from '@/app/components/titleReveal/TitleReveal';
 import TextReveal from '@/app/components/textReveal/TextReveal';
@@ -16,6 +16,7 @@ const Semasio = ({ headline, subtext }) => {
   const slidersRef = useRef();
   const subContentRef = useRef();
   const imageRef = useRef();
+  const [imageSrc, setImageSrc] = useState('/semasio.png');
 
   const items = useRef([
     {
@@ -90,160 +91,295 @@ const Semasio = ({ headline, subtext }) => {
   ]);
 
   useEffect(() => {
-    const ammountToScroll = 8 * window.innerHeight;
+    const handleResize = () => {
+      if (window.innerWidth < 1024) {
+        setImageSrc('/semasio-mobile.png'); // Set to mobile version
+      } else {
+        setImageSrc('/semasio.png'); // Set to desktop version
+      }
+    };
 
-    const timeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: contentRef.current,
-        start: 'top top',
-        end: '+=' + ammountToScroll,
-        pin: true,
-        scrub: true,
-        snap: {
-          snapTo: [0.778, 0.858, 0.928, 0.965, 1], // Two states: 0 (start) and 1 (end)
-          duration: { min: 0.2, max: 0.8 }, // Optional snapping animation duration
-          delay: 0, // No delay
-        },
-      },
-    });
+    // Initial check
+    handleResize();
 
-    // Show boxes
-    items.current.forEach((item, index) => {
-      // show boxes
-      timeline.fromTo(
-        item.ref.current,
-        {
-          autoAlpha: 0,
-          y: -100,
-          x: 0,
-        },
-        {
-          autoAlpha: 1,
-          y: 0,
-          x: index * 50,
-        }
-      );
+    // Add resize event listener
+    window.addEventListener('resize', handleResize);
 
-      // typing text
-      const text = new SplitType(item.textRef.current, { types: 'chars' });
-      timeline.from(text.chars, {
-        opacity: 0,
-        stagger: 0.1,
-      });
-    });
+    // Cleanup event listener
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
-    // Small boxes and sliders appear
-    timeline.add('show-two');
-    items.current.forEach((item, index) => {
-      timeline.to(
-        item.ref.current,
-        {
-          fontSize: '16px',
-          padding: '10px',
-          minWidth: '462px',
-          scale: 1,
-          x: 0,
-        },
-        'show-two'
-      );
-      timeline.fromTo(
-        item.dotRef.current,
-        {
-          opacity: 0,
-        },
-        {
-          opacity: 1,
-        },
-        'show-two'
-      );
-    });
-    timeline.to(
-      itemsRef.current,
-      {
-        width: '50%',
-      },
-      'show-two'
-    );
-    timeline.to(
-      slidersRef.current,
-      {
-        width: '50%',
-        opacity: 1,
-      },
-      'show-two'
-    );
+  useEffect(() => {
+    const ammountToScroll = 16 * window.innerHeight;
 
-    // move triangels sliders #1
-    timeline.add('triangles');
-    sliders.current.forEach((item, index) => {
-      timeline.to(
-        item.triangleRef.current,
-        {
-          left: item.triangleStartPos,
-        },
-        'triangles'
-      );
-    });
+    ScrollTrigger.matchMedia({
+      // Large Screens
+      '(min-width: 1024px)': function () {
+        const timeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: contentRef.current,
+            start: 'top top',
+            end: '+=' + ammountToScroll,
+            pin: true,
+            scrub: true,
+            snap: {
+              snapTo: [0.778, 0.858, 0.928, 0.965, 1], // Two states: 0 (start) and 1 (end)
+              duration: { min: 0.2, max: 0.8 }, // Optional snapping animation duration
+              delay: 0, // No delay
+            },
+          },
+        });
 
-    // move triangels sliders #2 & remove pink items
-    timeline.add('triangles2');
-    items.current.forEach((item, index) => {
-      if (item.dotColor === 'pink') {
+        // Show boxes
+        items.current.forEach((item, index) => {
+          // show boxes
+          timeline.fromTo(
+            item.ref.current,
+            {
+              autoAlpha: 0,
+              y: -100,
+              x: 0,
+            },
+            {
+              autoAlpha: 1,
+              y: 0,
+              x: index * 50,
+            }
+          );
+
+          // typing text
+          const text = new SplitType(item.textRef.current, { types: 'chars' });
+          timeline.from(text.chars, {
+            opacity: 0,
+            stagger: 0.1,
+          });
+        });
+
+        // Small boxes and sliders appear
+        timeline.add('show-two');
+        items.current.forEach((item, index) => {
+          timeline.to(
+            item.ref.current,
+            {
+              fontSize: '16px',
+              padding: '10px',
+              minWidth: '462px',
+              scale: 1,
+              x: 0,
+            },
+            'show-two'
+          );
+          timeline.fromTo(
+            item.dotRef.current,
+            {
+              opacity: 0,
+            },
+            {
+              opacity: 1,
+            },
+            'show-two'
+          );
+        });
         timeline.to(
-          item.ref.current,
+          itemsRef.current,
           {
-            autoAlpha: 0,
-            x: -window.innerWidth,
+            width: '50%',
+          },
+          'show-two'
+        );
+        timeline.to(
+          slidersRef.current,
+          {
+            width: '50%',
+            opacity: 1,
+          },
+          'show-two'
+        );
+
+        // move triangels sliders #1
+        timeline.add('triangles');
+        sliders.current.forEach((item, index) => {
+          timeline.to(
+            item.triangleRef.current,
+            {
+              left: item.triangleStartPos,
+            },
+            'triangles'
+          );
+        });
+
+        // move triangels sliders #2 & remove pink items
+        timeline.add('triangles2');
+        items.current.forEach((item, index) => {
+          if (item.dotColor === 'pink') {
+            timeline.to(
+              item.ref.current,
+              {
+                autoAlpha: 0,
+                x: -window.innerWidth,
+                padding: 0,
+                margin: 0,
+                overflow: 'hidden',
+                height: 0,
+                borderWidth: 0,
+              },
+              'triangles2'
+            );
+          }
+        });
+        sliders.current.forEach((item, index) => {
+          timeline.to(
+            item.triangleRef.current,
+            {
+              left: item.triangleEndPos,
+            },
+            'triangle2'
+          );
+        });
+
+        // show image
+        timeline.add('showImage');
+        timeline.to(
+          imageRef.current,
+          {
+            maxWidth: window.innerWidth,
+          },
+          'showImage'
+        );
+        timeline.to(
+          slidersRef.current,
+          {
+            width: 0,
             padding: 0,
-            margin: 0,
-            overflow: 'hidden',
-            height: 0,
+            opacity: 0,
             borderWidth: 0,
           },
-          'triangles2'
+          'showImage'
         );
-      }
-    });
-    sliders.current.forEach((item, index) => {
-      timeline.to(
-        item.triangleRef.current,
-        {
-          left: item.triangleEndPos,
-        },
-        'triangle2'
-      );
-    });
+        timeline.to(
+          itemsRef.current,
+          {
+            width: 'auto',
+          },
+          'showImage'
+        );
 
-    // show image
-    timeline.add('showImage');
-    timeline.to(
-      imageRef.current,
-      {
-        maxWidth: window.innerWidth,
+        timeline.to(subContentRef.current, {
+          y: -window.innerHeight,
+          opacity: 0,
+        });
       },
-      'showImage'
-    );
-    timeline.to(
-      slidersRef.current,
-      {
-        width: 0,
-        padding: 0,
-        opacity: 0,
-        borderWidth: 0,
-      },
-      'showImage'
-    );
-    timeline.to(
-      itemsRef.current,
-      {
-        width: 'auto',
-      },
-      'showImage'
-    );
 
-    timeline.to(subContentRef.current, {
-      y: -window.innerHeight,
-      opacity: 0,
+      // Small Screens
+      '(max-width: 1023px)': function () {
+        const timeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: contentRef.current,
+            start: 'top top',
+            end: '+=' + ammountToScroll,
+            pin: true,
+            scrub: true,
+            /* snap: {
+              snapTo: [0.778, 0.858, 0.928, 0.965, 1], // Two states: 0 (start) and 1 (end)
+              duration: { min: 0.2, max: 0.8 }, // Optional snapping animation duration
+              delay: 0, // No delay
+            }, */
+          },
+        });
+
+        // show boxes
+        items.current.forEach((item, index) => {
+          // show boxes
+          timeline.fromTo(
+            item.ref.current,
+            {
+              autoAlpha: 0,
+              y: -100,
+              x: 0,
+            },
+            {
+              autoAlpha: 1,
+              y: 0,
+            }
+          );
+
+          // typing text
+          const text = new SplitType(item.textRef.current, { types: 'chars' });
+          timeline.from(text.chars, {
+            opacity: 0,
+            stagger: 0.1,
+          });
+        });
+
+        // show sliders
+        timeline.to(slidersRef.current, {
+          opacity: 1,
+        });
+
+        // move triangels sliders #1
+        timeline.add('triangles');
+        sliders.current.forEach((item, index) => {
+          timeline.to(
+            item.triangleRef.current,
+            {
+              left: item.triangleStartPos,
+            },
+            'triangles'
+          );
+        });
+
+        // move triangels sliders #2 & remove pink items
+        timeline.add('triangles2');
+        items.current.forEach((item, index) => {
+          if (item.dotColor === 'pink') {
+            timeline.to(
+              item.ref.current,
+              {
+                autoAlpha: 0,
+                x: -window.innerWidth,
+                padding: 0,
+                margin: 0,
+                overflow: 'hidden',
+                height: 0,
+                borderWidth: 0,
+              },
+              'triangles2'
+            );
+          }
+        });
+        sliders.current.forEach((item, index) => {
+          timeline.to(
+            item.triangleRef.current,
+            {
+              left: item.triangleEndPos,
+            },
+            'triangle2'
+          );
+        });
+
+        // show image
+        timeline.add('showImage');
+        timeline.to(
+          imageRef.current,
+          {
+            maxHeight: window.innerHeight,
+          },
+          'showImage'
+        );
+        timeline.to(
+          slidersRef.current,
+          {
+            height: 0,
+            padding: 0,
+            opacity: 0,
+            borderWidth: 0,
+            marginTop: 0,
+          },
+          'showImage'
+        );
+      },
     });
   }, []);
 
@@ -301,7 +437,7 @@ const Semasio = ({ headline, subtext }) => {
           </div>
 
           <div ref={imageRef} className={styles.semasio__content__image}>
-            <Image src='/semasio.png' width={748} height={464} alt='semasio' />
+            <Image src={imageSrc} width={748} height={464} alt='semasio' />
           </div>
         </div>
       </div>

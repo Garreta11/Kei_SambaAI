@@ -12,6 +12,8 @@ gsap.registerPlugin(ScrollTrigger);
 const Layers = ({ headline, subtext }) => {
   const layersRef = useRef();
   const contentRef = useRef();
+  const cardsRef = useRef();
+  const textsRef = useRef();
   const layers = useRef([
     {
       ref: useRef(),
@@ -20,6 +22,8 @@ const Layers = ({ headline, subtext }) => {
       src: '/layer1.png',
       translateXFactor: 40,
       translateZ: 0,
+      translateXFactorMobile: 40,
+      translateYFactorMobile: 100,
       title: 'THE ATTENTION GRAPH',
       text: 'We measure attention across all screens, TV, mobile, desktop and web.',
     },
@@ -30,6 +34,8 @@ const Layers = ({ headline, subtext }) => {
       src: '/layer2.png',
       translateXFactor: 180,
       translateZ: -100,
+      translateXFactorMobile: 90,
+      translateYFactorMobile: 50,
       title: 'AI video decoding',
       text: 'Our best in class AI video decoding understands the content of what you are watching with incredible accuracy.',
     },
@@ -40,6 +46,8 @@ const Layers = ({ headline, subtext }) => {
       src: '/layer3.png',
       translateXFactor: 320,
       translateZ: -200,
+      translateXFactorMobile: 140,
+      translateYFactorMobile: 0,
       title: 'Interest profile',
       text: 'We can build and store a profile of user interest an intent that helps gauge real advertising success and follow through.',
     },
@@ -50,6 +58,8 @@ const Layers = ({ headline, subtext }) => {
       src: '/layer4.png',
       translateXFactor: 470,
       translateZ: -300,
+      translateXFactorMobile: 200,
+      translateYFactorMobile: -50,
       title: 'Screen targeting',
       text: 'Samba AI helps target ads to the right screen at the right time. Both interstitials and in-content placements.',
     },
@@ -60,102 +70,207 @@ const Layers = ({ headline, subtext }) => {
       src: '/layer2.png',
       translateXFactor: 600,
       translateZ: -400,
+      translateXFactorMobile: 270,
+      translateYFactorMobile: -100,
       title: 'measurement flywheel',
       text: 'Samba AI helps target ads to the right screen at the right time. Both interstitials and in-content placements.',
     },
   ]);
 
   useEffect(() => {
-    gsap.from(contentRef.current, {
-      scrollTrigger: {
-        trigger: layersRef.current,
-        start: 'top 20%',
-        end: 'top 10%',
-        scrub: true,
-      },
-      x: 100,
-      opacity: 0.0,
-      filter: 'blur(100px)',
-    });
-
-    // timeline
-    const ammountToScroll = 8 * window.innerHeight;
-    const timeline = gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: layersRef.current,
-          start: 'top top',
-          end: '+=' + ammountToScroll,
-          scrub: true,
-          pin: true,
-          snap: {
-            snapTo: [0, 0.115, 0.23, 0.394, 0.586, 0.748, 0.93], // Two states: 0 (start) and 1 (end)
-            delay: 0, // No delay
+    ScrollTrigger.matchMedia({
+      // Large Screens
+      '(min-width: 1024px)': function () {
+        gsap.from(contentRef.current, {
+          scrollTrigger: {
+            trigger: layersRef.current,
+            start: 'top 20%',
+            end: 'top 10%',
+            scrub: true,
           },
-        },
-      })
-      .add('layer');
+          x: 100,
+          opacity: 0.0,
+          filter: 'blur(100px)',
+        });
 
-    // Initial transformation: Apply perspective and rotation during scroll
-    layers.current.forEach((layer, index) => {
-      timeline.to(
-        layer.ref.current,
-        {
-          rotateY: -40,
-          x: layer.translateXFactor,
-          left: -500,
-          z: layer.translateZ,
-          duration: 1,
-        },
-        0 // Apply simultaneously
-      );
-    });
+        // timeline
+        const ammountToScroll = 8 * window.innerHeight;
+        const timeline = gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: layersRef.current,
+              start: 'top top',
+              end: '+=' + ammountToScroll,
+              scrub: true,
+              pin: true,
+              snap: {
+                snapTo: [0, 0.115, 0.23, 0.394, 0.586, 0.748, 0.93], // Two states: 0 (start) and 1 (end)
+                delay: 0, // No delay
+              },
+            },
+          })
+          .add('layer');
 
-    // Individual animation: Reset each layer to `rotateY(0)`
-    layers.current.forEach((layer, index) => {
-      timeline.add(`section${index}`);
-      timeline.to(
-        layer.ref.current,
-        {
-          rotateY: 0,
-          duration: 1,
-        },
-        `section${index}`
-      );
-      timeline.from(
-        layer.textRef.current,
-        {
-          opacity: 0,
+        // Initial transformation: Apply perspective and rotation during scroll
+        layers.current.forEach((layer, index) => {
+          timeline.to(
+            layer.ref.current,
+            {
+              rotateY: -40,
+              x: layer.translateXFactor,
+              left: -500,
+              z: layer.translateZ,
+              duration: 1,
+            },
+            0 // Apply simultaneously
+          );
+        });
+
+        // Individual animation: Reset each layer to `rotateY(0)`
+        layers.current.forEach((layer, index) => {
+          timeline.add(`section${index}`);
+          timeline.to(
+            layer.ref.current,
+            {
+              rotateY: 0,
+              duration: 1,
+            },
+            `section${index}`
+          );
+          timeline.from(
+            layer.textRef.current,
+            {
+              opacity: 0,
+              filter: 'blur(100px)',
+            },
+            `section${index}`
+          );
+          timeline.from(
+            layer.lineRef.current,
+            {
+              opacity: 0,
+              filter: 'blur(100px)',
+            },
+            `section${index}`
+          );
+          // next item
+          timeline.add(`section${index}_1`);
+          timeline.to(
+            layer.ref.current,
+            {
+              left: -window.innerWidth / 2,
+              opacity: 0,
+              filter: 'blur(100px)',
+            },
+            `section${index}_1`
+          );
+          timeline.to(
+            layer.lineRef.current,
+            {
+              opacity: 0,
+            },
+            `section${index}_1`
+          );
+        });
+      },
+      // Small Screens
+      '(max-width: 1023px)': function () {
+        gsap.from(contentRef.current, {
+          scrollTrigger: {
+            trigger: layersRef.current,
+            start: 'top 20%',
+            end: 'top 10%',
+            scrub: true,
+          },
+          y: 100,
+          opacity: 0.0,
           filter: 'blur(100px)',
-        },
-        `section${index}`
-      );
-      timeline.from(
-        layer.lineRef.current,
-        {
-          opacity: 0,
-          filter: 'blur(100px)',
-        },
-        `section${index}`
-      );
-      // next item
-      timeline.add(`section${index}_1`);
-      timeline.to(
-        layer.ref.current,
-        {
-          left: -window.innerWidth / 2,
-          opacity: 0,
-          filter: 'blur(100px)',
-        },
-        `section${index}_1`
-      );
-      timeline.to(
-        layer.lineRef.current,
-        {
-          opacity: 0,
-        },
-        `section${index}_1`
-      );
+        });
+
+        // timeline
+        const ammountToScroll = 8 * window.innerHeight;
+        const timeline = gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: layersRef.current,
+              start: 'top top',
+              end: '+=' + ammountToScroll,
+              scrub: true,
+              pin: true,
+              /* snap: {
+                snapTo: [0, 0.115, 0.23, 0.394, 0.586, 0.748, 0.93], // Two states: 0 (start) and 1 (end)
+                delay: 0, // No delay
+              }, */
+            },
+          })
+          .add('init');
+
+        // Initial transformation
+        layers.current.forEach((layer, index) => {
+          timeline.to(
+            layer.ref.current,
+            {
+              // rotateY: -40,
+              x: layer.translateXFactorMobile,
+              y: layer.translateYFactorMobile,
+              left: -350,
+              minWidth: '100vw',
+              // z: layer.translateZMobile,
+              duration: 1,
+            },
+            'init'
+          );
+        });
+
+        // second
+        timeline.add('second');
+        timeline.to(
+          textsRef.current,
+          { width: '100%', overflow: 'visible', marginTop: '-80px' },
+          'second'
+        );
+
+        // Individual animation: Reset each layer to `rotateY(0)`
+        layers.current.forEach((layer, index) => {
+          timeline.add(`section${index}`);
+          timeline.from(
+            layer.textRef.current,
+            {
+              opacity: 0,
+              filter: 'blur(100px)',
+            },
+            `section${index}`
+          );
+          timeline.add(`section${index}_1`);
+          timeline.to(
+            layer.ref.current,
+            {
+              opacity: 0,
+              filter: 'blur(100px)',
+              x: -100,
+            },
+            `section${index}_1`
+          );
+        });
+
+        // remove cards
+        timeline.add('last');
+        timeline.to(
+          cardsRef.current,
+          {
+            width: '0%',
+          },
+          'last'
+        );
+        timeline.to(
+          textsRef.current,
+          {
+            marginTop: 0,
+            width: '100%',
+          },
+          'last'
+        );
+      },
     });
 
     return () => ScrollTrigger.getAll().forEach((st) => st.kill());
@@ -171,7 +286,7 @@ const Layers = ({ headline, subtext }) => {
         <TextReveal className={styles.layers__subtext} text={subtext} />
 
         <div className={styles.layers__content} ref={contentRef}>
-          <div className={styles.layers__cards}>
+          <div className={styles.layers__cards} ref={cardsRef}>
             {layers.current.map((layer, index) => (
               <Image
                 key={index}
@@ -187,7 +302,7 @@ const Layers = ({ headline, subtext }) => {
             ))}
           </div>
 
-          <div className={styles.layers__texts}>
+          <div className={styles.layers__texts} ref={textsRef}>
             {layers.current.map((layer, index) => (
               <div key={index} className={styles.layers__texts__item}>
                 <Image
