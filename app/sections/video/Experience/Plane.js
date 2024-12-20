@@ -12,12 +12,12 @@ export default class Plane {
 
     this.setVideo();
     this.loaded = true;
-    this.setTexture();
-    this.setGeometry();
-    this.setMaterial();
-    this.video.addEventListener('loadedmetadata', (e) => {
-      this.setMesh();
-    });
+    //  this.setTexture();
+    // this.setGeometry();
+    //this.setMaterial();
+    //this.video.addEventListener('loadedmetadata', (e) => {
+    //  this.setMesh();
+    //});
   }
 
   setVideo() {
@@ -25,7 +25,15 @@ export default class Plane {
     this.video.src = this.experience.videoUrl; // Replace with your video file path
     this.video.loop = true;
     this.video.muted = true;
-    this.video.play();
+    // Wait for the video to load before playing
+    this.video.addEventListener('loadeddata', () => {
+      this.video.play();
+      this.setTexture(); // Initialize texture after video is loaded
+      this.setGeometry();
+      this.setMaterial();
+      this.setMesh();
+    });
+    // this.video.play();
   }
 
   setTexture() {

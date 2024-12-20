@@ -191,6 +191,8 @@
 
       img {
         margin-top: 20px;
+        width: 100%;
+        height: auto;
         @include mobile-query {
           margin-top: 0px;
           width: 100%;

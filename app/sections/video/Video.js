@@ -30,8 +30,8 @@ const Video = ({ url, text }) => {
         scrub: true,
         pin: true,
         snap: {
-          snapTo: [0, 0.25, 0.75, 1], // Snap points (percentages of the timeline progress)
-          duration: 1, // Smooth snap duration
+          snapTo: [0, 0.25, 0.75, 1],
+          duration: 1,
         },
         onEnter: () => {
           outputRef.current.renderer.isPaused = false;
@@ -63,37 +63,51 @@ const Video = ({ url, text }) => {
       },
     });
 
-    timeline.from(textRef.current, {
-      opacity: 0,
-      filter: 'blur(100px)',
-    });
+    // Ensure the video is loaded before setting up ScrollTrigger
+    const waitForVideoLoad = () => {
+      const videoElement = outputRef.current.world.plane.video;
+      return new Promise((resolve) => {
+        if (videoElement.readyState >= 3) {
+          resolve();
+        } else {
+          videoElement.addEventListener('loadeddata', resolve, { once: true });
+        }
+      });
+    };
 
-    timeline.to(textRef.current, {
-      y: '-50vh',
-      opacity: 0,
-    });
+    waitForVideoLoad().then(() => {
+      timeline.from(textRef.current, {
+        opacity: 0,
+        filter: 'blur(100px)',
+      });
 
-    timeline.add('pixel');
-    timeline.to(
-      outputRef.current.world.plane.material.uniforms.uPixel,
-      {
-        value: 500,
-        ease: 'power4.in',
-      },
-      'pixel'
-    );
-    timeline.to(
-      blurRef.current,
-      {
-        backdropFilter: 'blur(0)',
-      },
-      'pixel'
-    );
+      timeline.to(textRef.current, {
+        y: '-50vh',
+        opacity: 0,
+      });
 
-    timeline.to(containerRef.current, {
-      scale: 0,
-      filter: 'blur(100px)',
-      opacity: 0,
+      timeline.add('pixel');
+      timeline.to(
+        outputRef.current.world.plane.material.uniforms.uPixel,
+        {
+          value: 500,
+          ease: 'power4.in',
+        },
+        'pixel'
+      );
+      timeline.to(
+        blurRef.current,
+        {
+          backdropFilter: 'blur(0)',
+        },
+        'pixel'
+      );
+
+      timeline.to(containerRef.current, {
+        scale: 0,
+        filter: 'blur(100px)',
+        opacity: 0,
+      });
     });
 
     return () => ScrollTrigger.getAll().forEach((st) => st.kill());

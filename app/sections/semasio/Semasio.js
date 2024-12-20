@@ -125,7 +125,7 @@ const Semasio = ({ headline, subtext }) => {
             pin: true,
             scrub: true,
             snap: {
-              snapTo: [0.778, 0.858, 0.928, 0.965, 1], // Two states: 0 (start) and 1 (end)
+              snapTo: [0.778, 0.858, 0.928, 0.965], // Two states: 0 (start) and 1 (end)
               duration: { min: 0.2, max: 0.8 }, // Optional snapping animation duration
               delay: 0, // No delay
             },
