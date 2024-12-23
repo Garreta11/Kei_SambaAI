@@ -16,6 +16,7 @@ import PageWrapper from './components/pageWrapper/PageWrapper';
 import PageContent from './components/pageContent/PageContent';
 import VideoCanvas from './sections/videoCanvas/VideoCanvas';
 import HeroEnds from './sections/heroEnd/HeroEnd';
+import Attention from './sections/attention/Attention';
 
 export default function Home() {
   return (
@@ -45,10 +46,7 @@ export default function Home() {
             subtext={data.layers.subtext}
           />
 
-          {/* <TrackAdInsights
-            headline={data.track.headline}
-            subtext={data.track.subtext}
-          />*/}
+          <Attention />
 
           <HeroEnds text={data.end.text} />
         </PageContent>
