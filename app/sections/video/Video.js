@@ -18,6 +18,7 @@ const Video = ({ url, text }) => {
     const video = document.createElement('video');
     video.src = url; // Replace with your video file path
     video.loop = true;
+    video.playsInline = true;
     video.muted = true;
 
     const ammountToScroll = 16 * window.innerHeight;
