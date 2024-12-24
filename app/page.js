@@ -38,8 +38,8 @@ export default function Home() {
             subtext={data.semasio.subtext}
           />
 
-          <Video url={data.video.url} text={data.video.text} />
-          {/* <VideoCanvas videoSrc={data.video.url} /> */}
+          {/* <Video url={data.video.url} text={data.video.text} /> */}
+          <VideoCanvas videoSrc={data.video.url} />
 
           <Layers
             headline={data.layers.headline}

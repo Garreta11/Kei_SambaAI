@@ -29,6 +29,7 @@ const Hero = ({ title, number, text }) => {
     // Check if the Experience instance is ready before proceeding with GSAP animations
     if (outputRef.current) {
       const ammountToScroll = 1 * window.innerHeight;
+      let lastScrollTop = 0;
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: heroRef.current,
@@ -36,19 +37,28 @@ const Hero = ({ title, number, text }) => {
           end: '+=' + ammountToScroll,
           scrub: true,
           pin: true,
-          snap: {
-            snapTo: [0, 1], // Two states: 0 (start) and 1 (end)
-            duration: { min: 0.2, max: 0.8 }, // Optional snapping animation duration
-            delay: 0, // No delay
+          onUpdate: () => {
+            const scrollTop =
+              window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+              // Scrolling down
+              navigateToNextSection();
+            } else {
+              // Scrolling up
+              window.scrollTo({ top: 0, left: 0, behavior: 'smooth' }); // Scroll to top of the page
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
           },
           onEnter: () => {
             outputRef.current.renderer.isPaused = false;
           },
           onLeave: () => {
             outputRef.current.renderer.isPaused = true;
+            navigateToNextSection();
           },
           onEnterBack: () => {
             outputRef.current.renderer.isPaused = false;
+            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' }); // Scroll to top of the page
           },
           onLeaveBack: () => {
             outputRef.current.renderer.isPaused = true;
@@ -95,8 +105,33 @@ const Hero = ({ title, number, text }) => {
     }
 
     // Cleanup ScrollTrigger when component is unmounted
-    return () => ScrollTrigger.getAll().forEach((st) => st.kill());
+    return () => {
+      ScrollTrigger.getAll().forEach((st) => st.kill());
+    };
   }, [setLoading]); // Only run the effect when Experience is ready
+
+  const navigateToNextSection = () => {
+    const currentSection = heroRef.current;
+    const allSections = document.querySelectorAll('.section');
+    let nextSection = null;
+
+    for (let i = 0; i < allSections.length; i++) {
+      if (allSections[i] === currentSection && allSections[i + 1]) {
+        nextSection = allSections[i + 1];
+        break;
+      }
+    }
+
+    if (nextSection) {
+      const yPosition =
+        nextSection.getBoundingClientRect().top + window.scrollY;
+      //nextSection.scrollIntoView({ behavior: 'smooth' });
+      window.scrollTo({
+        top: yPosition - window.innerHeight / 4,
+        behavior: 'smooth',
+      });
+    }
+  };
 
   return (
     <div className={`section ${styles.hero}`} ref={heroRef}>

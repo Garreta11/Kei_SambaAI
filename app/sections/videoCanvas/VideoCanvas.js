@@ -16,7 +16,7 @@ const VideoCanvas = ({ videoSrc }) => {
   useEffect(() => {
     const ammountToScroll = 8 * window.innerHeight;
 
-    // Set up the ScrollTrigger
+    // Create the timeline
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
@@ -24,38 +24,103 @@ const VideoCanvas = ({ videoSrc }) => {
         end: '+=' + ammountToScroll,
         scrub: true,
         pin: true,
-        onUpdate: (self) => {
-          // Dynamically adjust the number of cells based on scroll progress
-          const maxCells = 100; // Maximum number of cells
-          const minCells = 2; // Minimum number of cells
-          let newCellCount = Math.floor(
-            minCells + self.progress * (maxCells - minCells)
-          );
-
-          // Ensure the newCellCount is even
-          if (newCellCount % 2 !== 0) {
-            newCellCount += 1; // Make it even
-          }
-
-          setVisibleCells(newCellCount);
-
-          // Update grid-template-columns and rows
-          if (blurContainerRef.current) {
-            const columns = Math.ceil(Math.sqrt(newCellCount));
-            const rows = Math.ceil(newCellCount / columns);
-
-            blurContainerRef.current.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
-            blurContainerRef.current.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
-          }
+        snap: {
+          snapTo: [0, 0.5, 1],
+        },
+        onLeave: () => {
+          navigateToNextSection();
         },
       },
     });
+
+    // Dynamically adjust the number of cells based on scroll progress using the timeline's `to()` method
+    timeline.to(
+      {},
+      {
+        onUpdate: () => {
+          let progress = timeline.progress();
+
+          // Only update when progress is smaller than 0.5
+          if (progress < 0.5) {
+            // Map progress from [0, 0.5] to [0, 1]
+            const mappedProgress = progress * 2;
+
+            const maxCells = 200; // Maximum number of cells
+            const minCells = 2; // Minimum number of cells
+            let newCellCount = Math.floor(
+              minCells + mappedProgress * (maxCells - minCells)
+            );
+
+            // Calculate rows and columns for a square grid
+            const gridSize = Math.sqrt(newCellCount);
+            const rows = Math.floor(gridSize);
+            const columns = Math.ceil(newCellCount / (2 * rows));
+
+            setVisibleCells(rows * columns);
+
+            // Update the grid styles
+            blurContainerRef.current.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
+
+            // Apply opacity to blur items based on mapped progress
+            const blurItems = blurContainerRef.current.children;
+            Array.from(blurItems).forEach((item) => {
+              const opacity = 1 - mappedProgress; // Calculate opacity based on mapped progress
+              gsap.to(item, { backdropFilter: `blur(${opacity * 100}px)` });
+            });
+
+            gsap.to(containerRef.current, {
+              filter: `blur(0px)`,
+              scale: 1,
+            });
+          } else {
+            // Apply opacity to blur items based on mapped progress
+            const blurItems = blurContainerRef.current.children;
+            Array.from(blurItems).forEach((item) => {
+              gsap.to(item, { backdropFilter: `blur(${0}px)` });
+            });
+          }
+
+          if (progress > 0.5) {
+            gsap.to(containerRef.current, {
+              filter: `blur(${mapValue(progress, 0.5, 1, 0, 100)}px)`,
+              scale: mapValue(progress, 0.5, 1, 1, 0),
+            });
+          }
+        },
+      }
+    );
 
     // Cleanup on unmount
     return () => {
       ScrollTrigger.kill();
     };
   }, []);
+
+  function mapValue(value, inMin, inMax, outMin, outMax) {
+    return ((value - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
+  }
+
+  const navigateToNextSection = () => {
+    const currentSection = containerRef.current;
+    const allSections = document.querySelectorAll('.section');
+    let nextSection = null;
+
+    for (let i = 0; i < allSections.length; i++) {
+      if (allSections[i] === currentSection && allSections[i + 1]) {
+        nextSection = allSections[i + 1];
+        break;
+      }
+    }
+
+    if (nextSection) {
+      const yPosition =
+        nextSection.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: yPosition - window.innerHeight / 4,
+        behavior: 'smooth',
+      });
+    }
+  };
 
   return (
     <div className={`section ${styles.videoCanvas}`} ref={containerRef}>

@@ -11,7 +11,7 @@ const PageWrapper = ({ children }) => {
     // Scroll to the top of the page on initial load
     window.scrollTo(0, 0);
 
-    // Initialize a new Lenis instance for smooth scrolling
+    /* // Initialize a new Lenis instance for smooth scrolling
     const lenis = new Lenis();
 
     // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
@@ -24,7 +24,7 @@ const PageWrapper = ({ children }) => {
     });
 
     // Disable lag smoothing in GSAP to prevent any delay in scroll animations
-    gsap.ticker.lagSmoothing(0);
+    gsap.ticker.lagSmoothing(0); */
   }, []);
 
   return <DataProvider>{children}</DataProvider>;

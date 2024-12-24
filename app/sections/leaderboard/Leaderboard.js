@@ -13,6 +13,7 @@ import TextReveal from '@/app/components/textReveal/TextReveal';
 gsap.registerPlugin(ScrollTrigger);
 
 const Leaderboard = ({ headlines, subtext, carousel }) => {
+  const leaderboardRef = useRef(null);
   const headlinesRef = useRef(null);
   const galleryRef = useRef();
   const titleRef = useRef();
@@ -51,6 +52,9 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
                 itemRefs.current[currentIndex].dataset.category
               );
             },
+            onLeave: () => {
+              navigateToNextSection();
+            },
           },
         });
       },
@@ -80,6 +84,28 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
     return () => ScrollTrigger.getAll().forEach((st) => st.kill());
   }, []);
 
+  const navigateToNextSection = () => {
+    const currentSection = leaderboardRef.current;
+    const allSections = document.querySelectorAll('.section');
+    let nextSection = null;
+
+    for (let i = 0; i < allSections.length; i++) {
+      if (allSections[i] === currentSection && allSections[i + 1]) {
+        nextSection = allSections[i + 1];
+        break;
+      }
+    }
+
+    if (nextSection) {
+      const yPosition =
+        nextSection.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: yPosition - window.innerHeight / 4,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   const scrollToCategory = (category) => {
     if (galleryRef.current) {
       galleryRef.current.scrollTo({
@@ -90,7 +116,7 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
   };
 
   return (
-    <div className={`section ${styles.leaderboard}`}>
+    <div className={`section ${styles.leaderboard}`} ref={leaderboardRef}>
       <div className={styles.leaderboard__headlines} ref={headlinesRef}>
         {headlines.map((headline, index) => {
           return <TitleReveal key={index} text={headline} />;

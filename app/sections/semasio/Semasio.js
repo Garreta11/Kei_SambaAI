@@ -11,6 +11,7 @@ import Image from 'next/image';
 gsap.registerPlugin(ScrollTrigger);
 
 const Semasio = ({ headline, subtext }) => {
+  const semasioRef = useRef();
   const contentRef = useRef();
   const itemsRef = useRef();
   const slidersRef = useRef();
@@ -68,7 +69,7 @@ const Semasio = ({ headline, subtext }) => {
       ref: useRef(),
       text: 'Sentiment',
       triangleRef: useRef(),
-      trianglePos: '30%',
+      trianglePos: '40%',
       triangleStartPos: '90%',
       triangleEndPos: '90%',
     },
@@ -76,7 +77,7 @@ const Semasio = ({ headline, subtext }) => {
       ref: useRef(),
       text: 'Behavious',
       triangleRef: useRef(),
-      trianglePos: '70%',
+      trianglePos: '30%',
       triangleStartPos: '20%',
       triangleEndPos: '50%',
     },
@@ -84,7 +85,7 @@ const Semasio = ({ headline, subtext }) => {
       ref: useRef(),
       text: 'Preferences',
       triangleRef: useRef(),
-      trianglePos: '40%',
+      trianglePos: '20%',
       triangleStartPos: '10%',
       triangleEndPos: '70%',
     },
@@ -125,9 +126,10 @@ const Semasio = ({ headline, subtext }) => {
             pin: true,
             scrub: true,
             snap: {
-              snapTo: [0.778, 0.858, 0.928, 0.965], // Two states: 0 (start) and 1 (end)
-              duration: { min: 0.2, max: 0.8 }, // Optional snapping animation duration
-              delay: 0, // No delay
+              snapTo: [0.845, 0.885, 0.96, 1], // Two states: 0 (start) and 1 (end)
+            },
+            onLeave: () => {
+              navigateToNextSection();
             },
           },
         });
@@ -199,7 +201,7 @@ const Semasio = ({ headline, subtext }) => {
         );
 
         // move triangels sliders #1
-        timeline.add('triangles');
+        /* timeline.add('triangles');
         sliders.current.forEach((item, index) => {
           timeline.to(
             item.triangleRef.current,
@@ -208,7 +210,7 @@ const Semasio = ({ headline, subtext }) => {
             },
             'triangles'
           );
-        });
+        }); */
 
         // move triangels sliders #2 & remove pink items
         timeline.add('triangles2');
@@ -265,11 +267,6 @@ const Semasio = ({ headline, subtext }) => {
           },
           'showImage'
         );
-
-        timeline.to(subContentRef.current, {
-          y: -window.innerHeight,
-          opacity: 0,
-        });
       },
 
       // Small Screens
@@ -281,11 +278,12 @@ const Semasio = ({ headline, subtext }) => {
             end: '+=' + ammountToScroll,
             pin: true,
             scrub: true,
-            /* snap: {
-              snapTo: [0.778, 0.858, 0.928, 0.965, 1], // Two states: 0 (start) and 1 (end)
-              duration: { min: 0.2, max: 0.8 }, // Optional snapping animation duration
-              delay: 0, // No delay
-            }, */
+            snap: {
+              snapTo: [0.845, 0.885, 0.96, 1], // Two states: 0 (start) and 1 (end)
+            },
+            onLeave: () => {
+              navigateToNextSection();
+            },
           },
         });
 
@@ -316,18 +314,6 @@ const Semasio = ({ headline, subtext }) => {
         // show sliders
         timeline.to(slidersRef.current, {
           opacity: 1,
-        });
-
-        // move triangels sliders #1
-        timeline.add('triangles');
-        sliders.current.forEach((item, index) => {
-          timeline.to(
-            item.triangleRef.current,
-            {
-              left: item.triangleStartPos,
-            },
-            'triangles'
-          );
         });
 
         // move triangels sliders #2 & remove pink items
@@ -383,8 +369,27 @@ const Semasio = ({ headline, subtext }) => {
     });
   }, []);
 
+  const navigateToNextSection = () => {
+    const currentSection = semasioRef.current;
+    const allSections = document.querySelectorAll('.section');
+    let nextSection = null;
+
+    for (let i = 0; i < allSections.length; i++) {
+      if (allSections[i] === currentSection && allSections[i + 1]) {
+        nextSection = allSections[i + 1];
+        break;
+      }
+    }
+
+    if (nextSection) {
+      nextSection.scrollIntoView({
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
-    <div className={`section ${styles.semasio}`}>
+    <div className={`section ${styles.semasio}`} ref={semasioRef}>
       <TitleReveal text={headline} className={styles.semasio__headline} />
       <div className={styles.semasio__wrapper} ref={contentRef}>
         <TextReveal text={subtext} className={styles.semasio__subtext} />

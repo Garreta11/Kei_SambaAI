@@ -65,7 +65,6 @@ const Video = ({ url, text }) => {
     });
 
     video.addEventListener('loadeddata', () => {
-      alert('video is loaded !');
       video.play();
       outputRef.current = new Experience({
         targetElement: containerRef.current,

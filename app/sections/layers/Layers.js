@@ -10,6 +10,7 @@ import TextReveal from '@/app/components/textReveal/TextReveal';
 gsap.registerPlugin(ScrollTrigger);
 
 const Layers = ({ headline, subtext }) => {
+  const sectionRef = useRef();
   const layersRef = useRef();
   const contentRef = useRef();
   const cardsRef = useRef();
@@ -104,8 +105,11 @@ const Layers = ({ headline, subtext }) => {
               scrub: true,
               pin: true,
               snap: {
-                snapTo: [0, 0.115, 0.23, 0.394, 0.586, 0.748, 0.93], // Two states: 0 (start) and 1 (end)
-                delay: 0, // No delay
+                snapTo: [0, 0.115, 0.23, 0.394, 0.586, 0.748, 0.93, 1],
+              },
+              onLeave: () => {
+                console.log('leave layers');
+                navigateToNextSection();
               },
             },
           })
@@ -280,8 +284,41 @@ const Layers = ({ headline, subtext }) => {
     return () => ScrollTrigger.getAll().forEach((st) => st.kill());
   }, []);
 
+  const navigateToNextSection = () => {
+    const nextSection = document.getElementById('attention');
+    if (nextSection) {
+      const yPosition =
+        nextSection.getBoundingClientRect().top + window.scrollY;
+      //nextSection.scrollIntoView({ behavior: 'smooth' });
+      window.scrollTo({
+        top: yPosition,
+        behavior: 'smooth',
+      });
+    }
+    /* const currentSection = sectionRef.current;
+    const allSections = document.querySelectorAll('.section');
+    let nextSection = null;
+
+    for (let i = 0; i < allSections.length; i++) {
+      if (allSections[i] === currentSection && allSections[i + 1]) {
+        nextSection = allSections[i + 1];
+        break;
+      }
+    }
+
+    if (nextSection) {
+      const yPosition =
+        nextSection.getBoundingClientRect().top + window.scrollY;
+      //nextSection.scrollIntoView({ behavior: 'smooth' });
+      window.scrollTo({
+        top: yPosition - window.innerHeight / 4,
+        behavior: 'smooth',
+      });
+    } */
+  };
+
   return (
-    <div className={`section ${styles.layers}`}>
+    <div className={`section ${styles.layers}`} ref={sectionRef}>
       <div className={styles.layers__headline}>
         <TitleReveal text={headline} />
       </div>

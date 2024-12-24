@@ -22,7 +22,7 @@ const Attention = () => {
         scrub: true,
         pin: true,
         snap: {
-          snapTo: [0.14, 0.42, 0.58, 0.85, 1],
+          snapTo: [0.42, 0.58, 0.85, 1],
           duration: 1,
         },
       },
@@ -74,7 +74,11 @@ const Attention = () => {
 
   return (
     <div className={`section ${styles.attention}`} ref={sectionRef}>
-      <div className={styles.attention__light} ref={lightRef}></div>
+      <div
+        className={styles.attention__light}
+        ref={lightRef}
+        id='attention'
+      ></div>
       <div className={styles.attention__content} ref={contentRef}>
         <div className={styles.attention__content__word}>
           <h3 className={`letter ${styles.attention__content__word__letter}`}>

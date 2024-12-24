@@ -37,7 +37,6 @@ const HeroEnd = ({ title, number, text }) => {
           pin: true,
           snap: {
             snapTo: [0, 1], // Two states: 0 (start) and 1 (end)
-            duration: { min: 0.2, max: 0.8 }, // Optional snapping animation duration
             delay: 0, // No delay
           },
           onEnter: () => {
