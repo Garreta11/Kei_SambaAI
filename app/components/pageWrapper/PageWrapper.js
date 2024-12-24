@@ -8,6 +8,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 const PageWrapper = ({ children }) => {
   useEffect(() => {
+    // Scroll to the top of the page on initial load
+    window.scrollTo(0, 0);
+
     // Initialize a new Lenis instance for smooth scrolling
     const lenis = new Lenis();
 

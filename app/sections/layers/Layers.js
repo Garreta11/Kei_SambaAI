@@ -153,24 +153,26 @@ const Layers = ({ headline, subtext }) => {
             },
             `section${index}`
           );
-          // next item
-          timeline.add(`section${index}_1`);
-          timeline.to(
-            layer.ref.current,
-            {
-              left: -window.innerWidth / 2,
-              opacity: 0,
-              filter: 'blur(100px)',
-            },
-            `section${index}_1`
-          );
-          timeline.to(
-            layer.lineRef.current,
-            {
-              opacity: 0,
-            },
-            `section${index}_1`
-          );
+          // next item besides the last one
+          if (index !== layers.current.length - 1) {
+            timeline.add(`section${index}_1`);
+            timeline.to(
+              layer.ref.current,
+              {
+                left: -window.innerWidth / 2,
+                opacity: 0,
+                filter: 'blur(100px)',
+              },
+              `section${index}_1`
+            );
+            timeline.to(
+              layer.lineRef.current,
+              {
+                opacity: 0,
+              },
+              `section${index}_1`
+            );
+          }
         });
       },
       // Small Screens
@@ -241,20 +243,22 @@ const Layers = ({ headline, subtext }) => {
             },
             `section${index}`
           );
-          timeline.add(`section${index}_1`);
-          timeline.to(
-            layer.ref.current,
-            {
-              opacity: 0,
-              filter: 'blur(100px)',
-              x: -100,
-            },
-            `section${index}_1`
-          );
+          if (index !== layers.current.length - 1) {
+            timeline.add(`section${index}_1`);
+            timeline.to(
+              layer.ref.current,
+              {
+                opacity: 0,
+                filter: 'blur(100px)',
+                x: -100,
+              },
+              `section${index}_1`
+            );
+          }
         });
 
         // remove cards
-        timeline.add('last');
+        /* timeline.add('last');
         timeline.to(
           cardsRef.current,
           {
@@ -269,7 +273,7 @@ const Layers = ({ headline, subtext }) => {
             width: '100%',
           },
           'last'
-        );
+        ); */
       },
     });
 

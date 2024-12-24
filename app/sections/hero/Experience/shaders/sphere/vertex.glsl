@@ -190,8 +190,8 @@ void main() {
   vec3 screenPos = (uModelMatrix * vec4(scaledPosition, 1.0)).xyz;
   // Compute the distance between mouse and vertex position in screen space
   float dist = distance(vec2(screenPos.xy), uMouse);
-  dist = 2. - dist;
-
+  dist = max(0.8, 0.5 + (1. - dist));
+  
   // Position
   vec3 displacedPosition = getDisplacedPosition(scaledPosition, dist);
   vec4 viewPosition = viewMatrix * uModelMatrix * vec4(position, 1.0);

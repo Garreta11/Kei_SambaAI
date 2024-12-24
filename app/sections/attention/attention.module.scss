@@ -1,3 +1,5 @@
+@import '../../breakpoints';
+
 .attention {
   position: relative;
   min-height: 100vh;
@@ -29,6 +31,10 @@
 
     font-size: 32px;
 
+    @include mobile-query {
+      font-size: 16px;
+    }
+
     &__word {
       display: flex;
       gap: 0px;
@@ -52,11 +58,17 @@
     justify-content: center;
     text-transform: uppercase;
     font-size: 32px;
+    @include mobile-query {
+      font-size: 16px;
+    }
 
     &__text {
       width: 50%;
       text-align: center;
       margin: 0 auto;
+      @include mobile-query {
+        width: 90%;
+      }
     }
   }
 }

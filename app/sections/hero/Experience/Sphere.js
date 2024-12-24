@@ -228,11 +228,7 @@ export default class Sphere {
   }
 
   setMesh() {
-    if (this.isPoints) {
-      this.mesh = new THREE.Points(this.geometry, this.material);
-    } else {
-      this.mesh = new THREE.Mesh(this.geometry, this.material);
-    }
+    this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.mesh.position.z = -100;
     this.scene.add(this.mesh);
   }

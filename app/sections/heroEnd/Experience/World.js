@@ -1,6 +1,4 @@
 import Experience from './Experience';
-import Orb from './Orb';
-// import Particles from './Particles';
 import Sphere from './Sphere';
 
 export default class World {
@@ -11,7 +9,6 @@ export default class World {
     this.camera = this.experience.camera;
     this.resources = this.experience.resources;
     this.setSphere();
-    // this.setOrb();
   }
 
   setSphere() {

@@ -2,8 +2,10 @@ import * as THREE from 'three';
 import gsap from 'gsap';
 import Experience from './Experience';
 
-import vertexShader from './shaders/sphere/vertex.glsl';
-import fragmentShader from './shaders/sphere/fragment.glsl';
+/* import vertexShader from './shaders/sphere/vertex.glsl';
+import fragmentShader from './shaders/sphere/fragment.glsl'; */
+import vertexShader from '../../hero/Experience/shaders/sphere/vertex.glsl';
+import fragmentShader from '../../hero/Experience/shaders/sphere/fragment.glsl';
 
 export default class Sphere {
   constructor() {

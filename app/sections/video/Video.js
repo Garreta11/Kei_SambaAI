@@ -20,7 +20,7 @@ const Video = ({ url, text }) => {
       videoUrl: url,
     });
 
-    const ammountToScroll = 8 * window.innerHeight;
+    const ammountToScroll = 16 * window.innerHeight;
 
     const timeline = gsap.timeline({
       scrollTrigger: {
@@ -95,13 +95,13 @@ const Video = ({ url, text }) => {
         },
         'pixel'
       );
-      timeline.to(
+      /* timeline.to(
         blurRef.current,
         {
           backdropFilter: 'blur(0)',
         },
         'pixel'
-      );
+      ); */
 
       timeline.to(containerRef.current, {
         scale: 0,
@@ -116,7 +116,7 @@ const Video = ({ url, text }) => {
   return (
     <div className={`section ${styles.video}`} ref={containerRef}>
       <div className={styles.video__canvas}></div>
-      <div className={styles.video__blur} ref={blurRef} />
+      {/* <div className={styles.video__blur} ref={blurRef} /> */}
       <div className={styles.video__content} ref={textRef}>
         <p className={styles.video__content__text}>{text}</p>
       </div>

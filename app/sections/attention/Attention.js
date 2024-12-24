@@ -21,7 +21,15 @@ const Attention = () => {
         end: '+=' + ammountToScroll,
         scrub: true,
         pin: true,
+        snap: {
+          snapTo: [0.14, 0.42, 0.58, 0.85, 1],
+          duration: 1,
+        },
       },
+    });
+
+    gsap.ticker.add(() => {
+      console.log(timeline.progress());
     });
 
     timeline.to(lightRef.current, {
