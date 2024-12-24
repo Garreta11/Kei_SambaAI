@@ -28,10 +28,6 @@ const Attention = () => {
       },
     });
 
-    gsap.ticker.add(() => {
-      console.log(timeline.progress());
-    });
-
     timeline.to(lightRef.current, {
       opacity: 0.3,
     });

@@ -22,7 +22,7 @@ export default class Experience {
 
     this.sizes = new Sizes();
     this.loaded = false;
-    this.videoUrl = _options.videoUrl;
+    this.videoItem = _options.video;
 
     this.setConfig();
     this.setScene();

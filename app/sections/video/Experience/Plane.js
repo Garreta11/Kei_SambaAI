@@ -9,25 +9,21 @@ export default class Plane {
     this.experience = new Experience();
     this.scene = this.experience.scene;
     this.loaded = this.experience.loaded;
+    this.videoItem = this.experience.videoItem;
 
-    this.setVideo();
+    // this.setVideo();
+
+    this.setTexture(); // Initialize texture after video is loaded
+    this.setGeometry();
+    this.setMaterial();
+    this.setMesh();
     this.loaded = true;
-    //  this.setTexture();
-    // this.setGeometry();
-    //this.setMaterial();
-    //this.video.addEventListener('loadedmetadata', (e) => {
-    //  this.setMesh();
-    //});
   }
 
   setVideo() {
-    this.video = document.createElement('video');
-    this.video.src = this.experience.videoUrl; // Replace with your video file path
-    this.video.loop = true;
-    this.video.muted = true;
     // Wait for the video to load before playing
     this.video.addEventListener('loadeddata', () => {
-      this.video.play();
+      videoItem.play();
       this.setTexture(); // Initialize texture after video is loaded
       this.setGeometry();
       this.setMaterial();
@@ -37,7 +33,7 @@ export default class Plane {
   }
 
   setTexture() {
-    this.videoTexture = new THREE.VideoTexture(this.video);
+    this.videoTexture = new THREE.VideoTexture(this.videoItem);
     this.videoTexture.minFilter = THREE.LinearFilter;
     this.videoTexture.magFilter = THREE.LinearFilter;
     this.videoTexture.format = THREE.RGBFormat;

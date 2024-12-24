@@ -12,13 +12,13 @@ const Video = ({ url, text }) => {
   const containerRef = useRef(null);
   const outputRef = useRef(null);
   const textRef = useRef(null);
-  const blurRef = useRef(null);
+  /* const blurRef = useRef(null); */
 
   useEffect(() => {
-    outputRef.current = new Experience({
-      targetElement: containerRef.current,
-      videoUrl: url,
-    });
+    const video = document.createElement('video');
+    video.src = url; // Replace with your video file path
+    video.loop = true;
+    video.muted = true;
 
     const ammountToScroll = 16 * window.innerHeight;
 
@@ -63,19 +63,14 @@ const Video = ({ url, text }) => {
       },
     });
 
-    // Ensure the video is loaded before setting up ScrollTrigger
-    const waitForVideoLoad = () => {
-      const videoElement = outputRef.current.world.plane.video;
-      return new Promise((resolve) => {
-        if (videoElement.readyState >= 3) {
-          resolve();
-        } else {
-          videoElement.addEventListener('loadeddata', resolve, { once: true });
-        }
+    video.addEventListener('loadeddata', () => {
+      alert('video is loaded !');
+      video.play();
+      outputRef.current = new Experience({
+        targetElement: containerRef.current,
+        video: video,
       });
-    };
 
-    waitForVideoLoad().then(() => {
       timeline.from(textRef.current, {
         opacity: 0,
         filter: 'blur(100px)',
@@ -108,6 +103,48 @@ const Video = ({ url, text }) => {
         filter: 'blur(100px)',
         opacity: 0,
       });
+
+      /* // Ensure the video is loaded before setting up ScrollTrigger
+      const waitForVideoLoad = () => {
+        const videoElement = outputRef.current.world.plane.video;
+        return new Promise((resolve) => {
+          if (videoElement.readyState >= 3) {
+            resolve();
+          } else {
+            videoElement.addEventListener('loadeddata', resolve, {
+              once: true,
+            });
+          }
+        });
+      };
+
+      waitForVideoLoad().then(() => {
+        timeline.from(textRef.current, {
+          opacity: 0,
+          filter: 'blur(100px)',
+        });
+
+        timeline.to(textRef.current, {
+          y: '-50vh',
+          opacity: 0,
+        });
+
+        timeline.add('pixel');
+        timeline.to(
+          outputRef.current.world.plane.material.uniforms.uPixel,
+          {
+            value: 500,
+            ease: 'power4.in',
+          },
+          'pixel'
+        );
+
+        timeline.to(containerRef.current, {
+          scale: 0,
+          filter: 'blur(100px)',
+          opacity: 0,
+        });
+      }); */
     });
 
     return () => ScrollTrigger.getAll().forEach((st) => st.kill());
