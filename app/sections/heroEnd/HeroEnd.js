@@ -106,7 +106,7 @@ const HeroEnd = ({ title, number, text }) => {
   }, [setLoading]); // Only run the effect when Experience is ready
 
   return (
-    <div className={`section ${styles.hero}`} ref={heroRef}>
+    <div className={`section ${styles.hero}`} ref={heroRef} id='hero-end'>
       <div className={styles.hero__canvas} ref={containerRef}></div>
       {loading && (
         <div className={styles.hero__content} ref={contentRef}>

@@ -113,7 +113,7 @@ const Semasio = ({ headline, subtext }) => {
   }, []);
 
   useEffect(() => {
-    const ammountToScroll = 16 * window.innerHeight;
+    const ammountToScroll = 32 * window.innerHeight;
 
     ScrollTrigger.matchMedia({
       // Large Screens
@@ -126,7 +126,7 @@ const Semasio = ({ headline, subtext }) => {
             pin: true,
             scrub: true,
             snap: {
-              snapTo: [0.845, 0.885, 0.96, 1], // Two states: 0 (start) and 1 (end)
+              snapTo: [0.87, 0.92, 0.959, 1], // Two states: 0 (start) and 1 (end)
             },
             onLeave: () => {
               navigateToNextSection();
@@ -200,18 +200,6 @@ const Semasio = ({ headline, subtext }) => {
           'show-two'
         );
 
-        // move triangels sliders #1
-        /* timeline.add('triangles');
-        sliders.current.forEach((item, index) => {
-          timeline.to(
-            item.triangleRef.current,
-            {
-              left: item.triangleStartPos,
-            },
-            'triangles'
-          );
-        }); */
-
         // move triangels sliders #2 & remove pink items
         timeline.add('triangles2');
         items.current.forEach((item, index) => {
@@ -237,7 +225,7 @@ const Semasio = ({ headline, subtext }) => {
             {
               left: item.triangleEndPos,
             },
-            'triangle2'
+            'triangles2'
           );
         });
 
@@ -279,7 +267,7 @@ const Semasio = ({ headline, subtext }) => {
             pin: true,
             scrub: true,
             snap: {
-              snapTo: [0.845, 0.885, 0.96, 1], // Two states: 0 (start) and 1 (end)
+              snapTo: [0.87, 0.92, 0.959, 1], // Two states: 0 (start) and 1 (end)
             },
             onLeave: () => {
               navigateToNextSection();
@@ -311,10 +299,28 @@ const Semasio = ({ headline, subtext }) => {
           });
         });
 
-        // show sliders
-        timeline.to(slidersRef.current, {
-          opacity: 1,
+        timeline.add('show-two');
+        items.current.forEach((item, index) => {
+          timeline.fromTo(
+            item.dotRef.current,
+            {
+              opacity: 0,
+            },
+            {
+              opacity: 1,
+            },
+            'show-two'
+          );
         });
+
+        // show sliders
+        timeline.to(
+          slidersRef.current,
+          {
+            opacity: 1,
+          },
+          'show-two'
+        );
 
         // move triangels sliders #2 & remove pink items
         timeline.add('triangles2');
@@ -341,7 +347,7 @@ const Semasio = ({ headline, subtext }) => {
             {
               left: item.triangleEndPos,
             },
-            'triangle2'
+            'triangles2'
           );
         });
 

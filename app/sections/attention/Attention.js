@@ -4,7 +4,9 @@ import styles from './attention.module.scss';
 
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import Flip from 'gsap/Flip';
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(Flip);
 
 const Attention = () => {
   const sectionRef = useRef();
@@ -22,7 +24,7 @@ const Attention = () => {
         scrub: true,
         pin: true,
         snap: {
-          snapTo: [0.42, 0.58, 0.85, 1],
+          snapTo: [0.12, 0.42, 0.58, 0.85, 1],
           duration: 1,
         },
       },
@@ -35,6 +37,7 @@ const Attention = () => {
     timeline.to(contentRef.current, {
       opacity: 1,
       gap: 100,
+      filter: 'blur(0px)',
     });
 
     timeline.to(contentRef.current, {
@@ -55,6 +58,7 @@ const Attention = () => {
       `.${styles.attention__content__word__text}`,
       {
         maxWidth: 400,
+        filter: 'blur(0px)',
       },
       'letters' // Sync this animation with the previous one
     );
@@ -64,6 +68,7 @@ const Attention = () => {
     });
 
     timeline.to(textRef.current, {
+      filter: 'blur(0px)',
       opacity: 1,
     });
 

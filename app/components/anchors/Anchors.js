@@ -37,9 +37,35 @@ const Anchors = () => {
   }, []);
 
   const handleAnchor = (targetSection) => {
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (!targetSection) return;
+
+    const scrollToSection = () => {
+      let targetTop;
+      if (targetSection.id === 'hero') {
+        targetTop = 0;
+      } else if (targetSection.id === 'hero-end') {
+        targetTop = document.documentElement.scrollHeight - window.innerHeight;
+      } else {
+        const rect = targetSection.getBoundingClientRect();
+        targetTop = window.scrollY + rect.top;
+      }
+
+      window.scrollTo({
+        top: targetTop,
+        behavior: 'smooth',
+      });
+
+      // Verify position after the animation
+      setTimeout(() => {
+        const currentTop = window.scrollY;
+        if (Math.abs(currentTop - targetTop) > 1) {
+          // If the position is incorrect, try again
+          scrollToSection();
+        }
+      }, 300); // Adjust timeout duration based on smooth scrolling duration
+    };
+
+    scrollToSection();
   };
 
   return (

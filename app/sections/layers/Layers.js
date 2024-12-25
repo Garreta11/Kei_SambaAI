@@ -105,10 +105,9 @@ const Layers = ({ headline, subtext }) => {
               scrub: true,
               pin: true,
               snap: {
-                snapTo: [0, 0.115, 0.23, 0.394, 0.586, 0.748, 0.93, 1],
+                snapTo: [0, 0.115, 0.23, 0.394, 0.586, 0.748, 1],
               },
               onLeave: () => {
-                console.log('leave layers');
                 navigateToNextSection();
               },
             },
@@ -203,10 +202,12 @@ const Layers = ({ headline, subtext }) => {
               end: '+=' + ammountToScroll,
               scrub: true,
               pin: true,
-              /* snap: {
-                snapTo: [0, 0.115, 0.23, 0.394, 0.586, 0.748, 0.93], // Two states: 0 (start) and 1 (end)
-                delay: 0, // No delay
-              }, */
+              onComplete: () => {
+                navigateToNextSection();
+              },
+              snap: {
+                snapTo: [0, 0.254, 0.33, 0.497, 0.663, 0.83, 1],
+              },
             },
           })
           .add('init');

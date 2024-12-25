@@ -134,7 +134,7 @@ const Hero = ({ title, number, text }) => {
   };
 
   return (
-    <div className={`section ${styles.hero}`} ref={heroRef}>
+    <div className={`section ${styles.hero}`} ref={heroRef} id='hero'>
       <div className={styles.hero__canvas} ref={containerRef}></div>
       {loading && (
         <div className={styles.hero__content} ref={contentRef}>
