@@ -139,14 +139,23 @@ export default class Experience {
 
   // Update
   update() {
-    if (this.stats) this.stats.update();
+    const now = performance.now();
+    const deltaTime = now - (this.lastUpdateTime || now);
+    this.lastUpdateTime = now;
+
+    if (this.config.debug) this.stats.update();
     if (this.camera) this.camera.update();
     if (this.world) this.world.update();
     if (this.controls) this.controls.update();
     if (this.renderer) this.renderer.update();
 
-    window.requestAnimationFrame(() => {
-      this.update();
-    });
+    // Use setTimeout to occasionally skip frames (debug mode only)
+    if (this.config.debug && deltaTime < 16) {
+      setTimeout(() => {
+        window.requestAnimationFrame(() => this.update());
+      }, 16 - deltaTime);
+    } else {
+      window.requestAnimationFrame(() => this.update());
+    }
   }
 }

@@ -34,7 +34,6 @@ export default function Home() {
             carousel={dataLeaderboards.carousel}
           />
 
-          {/* <Video url={data.video.url} text={data.video.text} /> */}
           <VideoCanvas
             videoSrc={data.video.url}
             text={data.video.text}
@@ -50,8 +49,6 @@ export default function Home() {
             headline={data.semasio.headline}
             subtext={data.semasio.subtext}
           />
-
-          {/* <Attention /> */}
 
           <HeroEnds text={data.end.text} />
         </PageContent>

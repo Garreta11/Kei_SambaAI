@@ -9,7 +9,6 @@ const Header = () => {
         width={38}
         height={36}
         alt='samba-logo'
-        priority
       />
     </div>
   );

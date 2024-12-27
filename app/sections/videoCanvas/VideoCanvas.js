@@ -12,7 +12,7 @@ const VideoCanvas = ({ videoSrc, text, subtext }) => {
   const blurContainerRef = useRef(null);
   const textRef = useRef(null);
 
-  const [visibleCells, setVisibleCells] = useState(2); // Initial number of visible cells
+  const [visibleCells, setVisibleCells] = useState(4); // Initial number of visible cells
 
   useEffect(() => {
     videoRef.current.pause();
@@ -59,7 +59,7 @@ const VideoCanvas = ({ videoSrc, text, subtext }) => {
             const mappedProgress = progress * 2;
 
             const maxCells = 200; // Maximum number of cells
-            const minCells = 2; // Minimum number of cells
+            const minCells = 4; // Minimum number of cells
             let newCellCount = Math.floor(
               minCells + mappedProgress * (maxCells - minCells)
             );
@@ -96,14 +96,15 @@ const VideoCanvas = ({ videoSrc, text, subtext }) => {
               gsap.to(item, { backdropFilter: `blur(${0}px)` });
             });
 
+            if (videoRef.current.paused) {
+              videoRef.current.play();
+            }
+          }
+          if (progress > 0.5) {
             gsap.to(containerRef.current, {
               filter: `blur(${mapValue(progress, 0.5, 1, 0, 100)}px)`,
               scale: mapValue(progress, 0.5, 1, 1, 0),
             });
-
-            if (videoRef.current.paused) {
-              videoRef.current.play();
-            }
           }
         },
       }

@@ -115,7 +115,7 @@ const Semasio = ({ headline, subtext }) => {
   }, []);
 
   useEffect(() => {
-    const ammountToScroll = 16 * window.innerHeight;
+    const ammountToScroll = 8 * window.innerHeight;
     ScrollTrigger.matchMedia({
       // Large Screens
       '(min-width: 1024px)': function () {

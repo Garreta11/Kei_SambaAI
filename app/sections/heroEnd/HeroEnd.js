@@ -1,6 +1,5 @@
 'use client';
-import { useEffect, useRef, useContext } from 'react';
-import { DataContext } from '@/app/context';
+import { useEffect, useRef } from 'react';
 import styles from './hero.module.scss';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
@@ -15,8 +14,6 @@ const HeroEnd = ({ text }) => {
   const outputRef = useRef(null);
   const contentRef = useRef(null);
 
-  const { setLoading, loading } = useContext(DataContext);
-
   useEffect(() => {
     // Wait until the container element is available
     if (containerRef.current) {
@@ -24,12 +21,11 @@ const HeroEnd = ({ text }) => {
         targetElement: containerRef.current,
         videoElement: videoRef.current,
       });
-      setLoading(true);
     }
 
     // Check if the Experience instance is ready before proceeding with GSAP animations
     if (outputRef.current) {
-      const ammountToScroll = 1 * window.innerHeight;
+      const ammountToScroll = 2 * window.innerHeight;
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: heroRef.current,
@@ -37,15 +33,11 @@ const HeroEnd = ({ text }) => {
           end: '+=' + ammountToScroll,
           scrub: true,
           pin: true,
-          /* snap: {
-            snapTo: [0, 1], // Two states: 0 (start) and 1 (end)
-            duration: 5,
-          }, */
           onEnter: () => {
-            //outputRef.current.renderer.isPaused = false;
+            outputRef.current.renderer.isPaused = false;
           },
           onLeaveBack: () => {
-            //outputRef.current.renderer.isPaused = true;
+            outputRef.current.renderer.isPaused = true;
           },
         },
       });
@@ -60,44 +52,39 @@ const HeroEnd = ({ text }) => {
         }
       );
 
-      if (outputRef.current) {
-        timeline.add('start');
-        timeline
-          .fromTo(
-            outputRef.current.camera.instance.position,
-            {
-              z: -0.5,
-            },
-            {
-              z: 6,
-            },
-            'start'
-          )
-          .fromTo(
-            outputRef.current.world.sphere.material.uniforms.uFresnelOffset,
-            {
-              value: 5,
-            },
-            {
-              value: 0.971,
-            },
-            'start'
-          );
-      }
+      timeline.add('start');
+      timeline.fromTo(
+        outputRef.current.camera.instance.position,
+        {
+          z: 0,
+        },
+        {
+          z: 6,
+        },
+        'start'
+      );
+      timeline.fromTo(
+        outputRef.current.world.sphere.material.uniforms.uFresnelOffset,
+        {
+          value: 5,
+        },
+        {
+          value: 0.971,
+        },
+        'start'
+      );
     }
 
     // Cleanup ScrollTrigger when component is unmounted
     return () => ScrollTrigger.getAll().forEach((st) => st.kill());
-  }, [setLoading]); // Only run the effect when Experience is ready
+  }, []); // Only run the effect when Experience is ready
 
   return (
     <div className={`section ${styles.hero}`} ref={heroRef} id='hero-end'>
       <div className={styles.hero__canvas} ref={containerRef}></div>
-      {loading && (
-        <div className={styles.hero__content} ref={contentRef}>
-          <h1 className={styles.hero__content__title}>{text}</h1>
-        </div>
-      )}
+      <div className={styles.hero__content} ref={contentRef}>
+        <h1 className={styles.hero__content__title}>{text}</h1>
+      </div>
 
       <video
         ref={videoRef}

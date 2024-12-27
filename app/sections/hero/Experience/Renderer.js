@@ -33,8 +33,6 @@ export default class Renderer {
     this.instance.setClearColor(this.clearColor, 0);
     this.instance.setSize(this.config.width, this.config.height);
     this.instance.setPixelRatio(this.config.pixelRatio);
-
-    this.context = this.instance.getContext();
   }
 
   update() {

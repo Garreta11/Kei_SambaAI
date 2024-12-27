@@ -18,7 +18,7 @@ export default class Wall {
   }
 
   setGeometry() {
-    this.geometry = new THREE.SphereGeometry(0.5, 32, 32);
+    this.geometry = new THREE.SphereGeometry(0.5, 16, 16);
   }
 
   setTexture() {
@@ -35,7 +35,6 @@ export default class Wall {
   setMaterial() {
     this.material = new THREE.MeshBasicMaterial({
       map: this.texture,
-      wireframe: false,
       side: THREE.BackSide,
     });
   }
