@@ -6,10 +6,11 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
-const VideoCanvas = ({ videoSrc }) => {
+const VideoCanvas = ({ videoSrc, text, subtext }) => {
   const containerRef = useRef(null);
   const videoRef = useRef(null);
   const blurContainerRef = useRef(null);
+  const textRef = useRef(null);
 
   const [visibleCells, setVisibleCells] = useState(2); // Initial number of visible cells
 
@@ -42,6 +43,13 @@ const VideoCanvas = ({ videoSrc }) => {
 
           // Only update when progress is smaller than 0.5
           if (progress < 0.5) {
+            // hide text
+            gsap.to(textRef.current, {
+              y: -progress * 2000,
+              filter: `blur(${mapValue(progress, 0, 0.5, 0, 100)}px)`,
+              opacity: mapValue(progress, 0, 0.5, 1, 0),
+            });
+
             // Map progress from [0, 0.5] to [0, 1]
             const mappedProgress = progress * 2;
 
@@ -139,6 +147,10 @@ const VideoCanvas = ({ videoSrc }) => {
         {Array.from({ length: visibleCells }).map((_, index) => (
           <div key={index} className={styles.videoCanvas__blur__item} />
         ))}
+      </div>
+
+      <div className={styles.videoCanvas__content} ref={textRef}>
+        <p className={styles.videoCanvas__content__text}>{text}</p>
       </div>
     </div>
   );

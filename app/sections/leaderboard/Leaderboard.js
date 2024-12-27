@@ -195,7 +195,7 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
                           >
                             {item.title}
                           </p>
-                          <p>{item.platform}</p>
+                          <Logo platform={item.platform} />
                         </div>
                         <Image
                           className={
@@ -238,6 +238,36 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
       </div>
     </div>
   );
+};
+
+const Logo = ({ platform }) => {
+  if (platform === 'Netflix') {
+    return (
+      <Image
+        src='/netflix.png' // Replace with the actual path to the Netflix logo
+        alt='Netflix Logo'
+        width={77} // Adjust width and height as needed
+        height={22}
+      />
+    );
+  } else if (platform === 'HBO Max') {
+    return (
+      <Image
+        src='/hbomax.png' // Replace with the actual path to the HBO MAX logo
+        alt='HBO MAX Logo'
+        width={81} // Adjust width and height as needed
+        height={14}
+      />
+    );
+  } else {
+    return (
+      <p
+        className={styles.leaderboard__gallery__wrapper__item__header__platform}
+      >
+        {platform}
+      </p>
+    );
+  }
 };
 
 export default Leaderboard;

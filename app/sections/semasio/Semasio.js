@@ -4,15 +4,20 @@ import styles from './semasio.module.scss';
 import TitleReveal from '@/app/components/titleReveal/TitleReveal';
 import TextReveal from '@/app/components/textReveal/TextReveal';
 
-import SplitType from 'split-type';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 gsap.registerPlugin(ScrollTrigger);
 
 const Semasio = ({ headline, subtext }) => {
+  const row1Ref = useRef();
+  const row2Ref = useRef();
+  const row3Ref = useRef();
+  const gridRef = useRef();
   const semasioRef = useRef();
-  const contentRef = useRef();
+  const wrapperRef = useRef();
+  const boxesRef = useRef();
+
   const itemsRef = useRef();
   const slidersRef = useRef();
   const subContentRef = useRef();
@@ -24,28 +29,28 @@ const Semasio = ({ headline, subtext }) => {
       ref: useRef(),
       dotRef: useRef(),
       textRef: useRef(),
-      text: 'Investing',
+      text: 'Car Culture',
       dotColor: 'blue',
     },
     {
       ref: useRef(),
       dotRef: useRef(),
       textRef: useRef(),
-      text: 'Stock Market',
+      text: 'Concept Cars',
       dotColor: 'blue',
     },
     {
       ref: useRef(),
       dotRef: useRef(),
       textRef: useRef(),
-      text: 'Real State',
+      text: 'Motorcycles',
       dotColor: 'pink',
     },
     {
       ref: useRef(),
       dotRef: useRef(),
       textRef: useRef(),
-      text: 'Finance',
+      text: 'Formula 1',
       dotColor: 'blue',
     },
     {
@@ -59,7 +64,7 @@ const Semasio = ({ headline, subtext }) => {
       ref: useRef(),
       dotRef: useRef(),
       textRef: useRef(),
-      text: 'Crypto',
+      text: 'Vintage Restoration',
       dotColor: 'blue',
     },
   ]);
@@ -69,8 +74,7 @@ const Semasio = ({ headline, subtext }) => {
       ref: useRef(),
       text: 'Sentiment',
       triangleRef: useRef(),
-      trianglePos: '40%',
-      triangleStartPos: '90%',
+      trianglePos: '50%',
       triangleEndPos: '90%',
     },
     {
@@ -78,15 +82,13 @@ const Semasio = ({ headline, subtext }) => {
       text: 'Behavious',
       triangleRef: useRef(),
       trianglePos: '30%',
-      triangleStartPos: '20%',
-      triangleEndPos: '50%',
+      triangleEndPos: '55%',
     },
     {
       ref: useRef(),
       text: 'Preferences',
       triangleRef: useRef(),
       trianglePos: '20%',
-      triangleStartPos: '10%',
       triangleEndPos: '70%',
     },
   ]);
@@ -114,94 +116,72 @@ const Semasio = ({ headline, subtext }) => {
 
   useEffect(() => {
     const ammountToScroll = 32 * window.innerHeight;
-
     ScrollTrigger.matchMedia({
       // Large Screens
       '(min-width: 1024px)': function () {
         const timeline = gsap.timeline({
           scrollTrigger: {
-            trigger: contentRef.current,
+            trigger: wrapperRef.current,
             start: 'top top',
             end: '+=' + ammountToScroll,
             pin: true,
             scrub: true,
-            snap: {
-              snapTo: [0.87, 0.92, 0.959, 1], // Two states: 0 (start) and 1 (end)
-            },
             onLeave: () => {
               navigateToNextSection();
             },
           },
         });
 
-        // Show boxes
-        items.current.forEach((item, index) => {
-          // show boxes
-          timeline.fromTo(
-            item.ref.current,
-            {
-              autoAlpha: 0,
-              y: -100,
-              x: 0,
-            },
-            {
-              autoAlpha: 1,
-              y: 0,
-              x: index * 50,
-            }
-          );
-
-          // typing text
-          const text = new SplitType(item.textRef.current, { types: 'chars' });
-          timeline.from(text.chars, {
-            opacity: 0,
-            stagger: 0.1,
-          });
+        // Animate rows
+        timeline.from(row1Ref.current, {
+          opacity: 0,
+          y: window.innerWidth / 2,
+        });
+        timeline.from(row2Ref.current, {
+          opacity: 0,
+          y: window.innerWidth / 2,
+        });
+        timeline.from(row3Ref.current, {
+          opacity: 0,
+          y: window.innerWidth / 2,
         });
 
-        // Small boxes and sliders appear
-        timeline.add('show-two');
-        items.current.forEach((item, index) => {
-          timeline.to(
-            item.ref.current,
-            {
-              fontSize: '16px',
-              padding: '10px',
-              minWidth: '462px',
-              scale: 1,
-              x: 0,
-            },
-            'show-two'
-          );
-          timeline.fromTo(
-            item.dotRef.current,
-            {
-              opacity: 0,
-            },
-            {
-              opacity: 1,
-            },
-            'show-two'
-          );
-        });
+        // Animate Automative
+        timeline.add('show-automative');
         timeline.to(
-          itemsRef.current,
+          '.grid-item-low',
           {
-            width: '50%',
+            opacity: 0,
           },
-          'show-two'
+          'show-automative'
         );
         timeline.to(
-          slidersRef.current,
+          '.grid-item-main',
           {
-            width: '50%',
+            scale: 3,
+          },
+          'show-automative'
+        );
+
+        // Animate show boxes
+        timeline.add('show-boxes');
+        timeline.to(
+          gridRef.current,
+          {
+            opacity: 0,
+          },
+          'show-boxes'
+        );
+        timeline.to(
+          boxesRef.current,
+          {
             opacity: 1,
           },
-          'show-two'
+          'show-boxes'
         );
 
-        // move triangels sliders #2 & remove pink items
-        timeline.add('triangles2');
+        // Animate triangles
+        timeline.add('triangles');
         items.current.forEach((item, index) => {
           if (item.dotColor === 'pink') {
             timeline.to(
@@ -215,7 +195,7 @@ const Semasio = ({ headline, subtext }) => {
                 height: 0,
                 borderWidth: 0,
               },
-              'triangles2'
+              'triangles'
             );
           }
         });
@@ -225,18 +205,25 @@ const Semasio = ({ headline, subtext }) => {
             {
               left: item.triangleEndPos,
             },
-            'triangles2'
+            'triangles'
           );
         });
 
-        // show image
-        timeline.add('showImage');
+        // Animate image
+        timeline.add('show-image');
         timeline.to(
           imageRef.current,
           {
             maxWidth: window.innerWidth,
           },
-          'showImage'
+          'show-image'
+        );
+        timeline.to(
+          boxesRef.current,
+          {
+            gap: 0,
+          },
+          'show-image'
         );
         timeline.to(
           slidersRef.current,
@@ -246,84 +233,79 @@ const Semasio = ({ headline, subtext }) => {
             opacity: 0,
             borderWidth: 0,
           },
-          'showImage'
+          'show-image'
         );
         timeline.to(
           itemsRef.current,
           {
             width: 'auto',
           },
-          'showImage'
+          'show-image'
         );
       },
-
-      // Small Screens
       '(max-width: 1023px)': function () {
         const timeline = gsap.timeline({
           scrollTrigger: {
-            trigger: contentRef.current,
+            trigger: wrapperRef.current,
             start: 'top top',
             end: '+=' + ammountToScroll,
             pin: true,
             scrub: true,
-            snap: {
-              snapTo: [0.87, 0.92, 0.959, 1], // Two states: 0 (start) and 1 (end)
-            },
             onLeave: () => {
               navigateToNextSection();
             },
           },
         });
-
-        // show boxes
-        items.current.forEach((item, index) => {
-          // show boxes
-          timeline.fromTo(
-            item.ref.current,
-            {
-              autoAlpha: 0,
-              y: -100,
-              x: 0,
-            },
-            {
-              autoAlpha: 1,
-              y: 0,
-            }
-          );
-
-          // typing text
-          const text = new SplitType(item.textRef.current, { types: 'chars' });
-          timeline.from(text.chars, {
-            opacity: 0,
-            stagger: 0.1,
-          });
+        // Animate rows
+        timeline.from(row1Ref.current, {
+          opacity: 0,
+          y: window.innerWidth / 2,
+        });
+        timeline.from(row2Ref.current, {
+          opacity: 0,
+          y: window.innerWidth / 2,
+        });
+        timeline.from(row3Ref.current, {
+          opacity: 0,
+          y: window.innerWidth / 2,
         });
 
-        timeline.add('show-two');
-        items.current.forEach((item, index) => {
-          timeline.fromTo(
-            item.dotRef.current,
-            {
-              opacity: 0,
-            },
-            {
-              opacity: 1,
-            },
-            'show-two'
-          );
-        });
-
-        // show sliders
+        // Animate Automative
+        timeline.add('show-automative');
         timeline.to(
-          slidersRef.current,
+          '.grid-item-low',
+          {
+            opacity: 0,
+          },
+          'show-automative'
+        );
+        timeline.to(
+          '.grid-item-main',
+          {
+            scale: 3,
+          },
+          'show-automative'
+        );
+
+        // Animate show boxes
+        timeline.add('show-boxes');
+        timeline.to(
+          gridRef.current,
+          {
+            opacity: 0,
+          },
+          'show-boxes'
+        );
+        timeline.to(
+          boxesRef.current,
           {
             opacity: 1,
           },
-          'show-two'
+          'show-boxes'
         );
 
-        // move triangels sliders #2 & remove pink items
-        timeline.add('triangles2');
+        // Animate triangles
+        timeline.add('triangles');
         items.current.forEach((item, index) => {
           if (item.dotColor === 'pink') {
             timeline.to(
@@ -337,7 +319,7 @@ const Semasio = ({ headline, subtext }) => {
                 height: 0,
                 borderWidth: 0,
               },
-              'triangles2'
+              'triangles'
             );
           }
         });
@@ -347,18 +329,25 @@ const Semasio = ({ headline, subtext }) => {
             {
               left: item.triangleEndPos,
             },
-            'triangles2'
+            'triangles'
           );
         });
 
-        // show image
-        timeline.add('showImage');
+        // Animate image
+        timeline.add('show-image');
         timeline.to(
           imageRef.current,
           {
-            maxHeight: window.innerHeight,
+            maxHeight: window.innerWidth,
           },
-          'showImage'
+          'show-image'
+        );
+        timeline.to(
+          boxesRef.current,
+          {
+            gap: 0,
+          },
+          'show-image'
         );
         timeline.to(
           slidersRef.current,
@@ -367,12 +356,15 @@ const Semasio = ({ headline, subtext }) => {
             padding: 0,
             opacity: 0,
             borderWidth: 0,
-            marginTop: 0,
           },
-          'showImage'
+          'show-image'
         );
       },
     });
+
+    return () => {
+      ScrollTrigger.killAll(); // Clean up
+    };
   }, []);
 
   const navigateToNextSection = () => {
@@ -397,58 +389,361 @@ const Semasio = ({ headline, subtext }) => {
   return (
     <div className={`section ${styles.semasio}`} ref={semasioRef}>
       <TitleReveal text={headline} className={styles.semasio__headline} />
-      <div className={styles.semasio__wrapper} ref={contentRef}>
+      <div className={styles.semasio__wrapper} ref={wrapperRef}>
         <TextReveal text={subtext} className={styles.semasio__subtext} />
 
-        <div className={styles.semasio__content} ref={subContentRef}>
-          <div ref={itemsRef} className={styles.semasio__content__items}>
-            {items.current.map((item, index) => (
+        <div className={styles.semasio__wrapper__content}>
+          <div className={styles.semasio__wrapper__content__grid} ref={gridRef}>
+            <div
+              ref={row1Ref}
+              className={styles.semasio__wrapper__content__grid__row}
+            >
               <div
-                key={index}
-                ref={item.ref}
-                className={styles.semasio__content__items__item}
+                className={`${styles.semasio__wrapper__content__grid__row__item} grid-item-low`}
               >
-                <div
-                  ref={item.dotRef}
-                  className={`${styles.semasio__content__items__item__dot} ${
-                    item.dotColor === 'blue'
-                      ? styles.semasio__content__items__item__dot__blue
-                      : styles.semasio__content__items__item__dot__pink
-                  }`}
+                <Image
+                  src='/semasio/energy.png'
+                  width={88}
+                  height={82}
+                  alt='energy'
                 />
-                <p ref={item.textRef}>{item.text}</p>
+                <p
+                  className={
+                    styles.semasio__wrapper__content__grid__row__item__text
+                  }
+                >
+                  Energy
+                </p>
               </div>
-            ))}
+              <div
+                className={`${styles.semasio__wrapper__content__grid__row__item} grid-item-low`}
+              >
+                <Image
+                  src='/semasio/cpg.png'
+                  width={88}
+                  height={106}
+                  alt='cpg'
+                />
+                <p
+                  className={
+                    styles.semasio__wrapper__content__grid__row__item__text
+                  }
+                >
+                  cpg
+                </p>
+              </div>
+              <div
+                className={`${styles.semasio__wrapper__content__grid__row__item} grid-item-low`}
+              >
+                <Image
+                  src='/semasio/software.png'
+                  width={50.6}
+                  height={87.39}
+                  alt='software'
+                />
+                <p
+                  className={
+                    styles.semasio__wrapper__content__grid__row__item__text
+                  }
+                >
+                  software
+                </p>
+              </div>
+              <div
+                className={`${styles.semasio__wrapper__content__grid__row__item} grid-item-low`}
+              >
+                <Image
+                  src='/semasio/retail.png'
+                  width={77.78}
+                  height={87.39}
+                  alt='retail'
+                />
+                <p
+                  className={
+                    styles.semasio__wrapper__content__grid__row__item__text
+                  }
+                >
+                  retail
+                </p>
+              </div>
+              <div
+                className={`${styles.semasio__wrapper__content__grid__row__item} grid-item-low`}
+              >
+                <Image
+                  src='/semasio/finance.png'
+                  width={87.39}
+                  height={59.78}
+                  alt='finance'
+                />
+                <p
+                  className={
+                    styles.semasio__wrapper__content__grid__row__item__text
+                  }
+                >
+                  finance
+                </p>
+              </div>
+            </div>
+            <div
+              ref={row2Ref}
+              className={styles.semasio__wrapper__content__grid__row}
+            >
+              <div
+                className={`${styles.semasio__wrapper__content__grid__row__item} grid-item-low`}
+              >
+                <Image
+                  src='/semasio/healthcare.png'
+                  width={58.28}
+                  height={87.39}
+                  alt='healthcare'
+                />
+                <p
+                  className={
+                    styles.semasio__wrapper__content__grid__row__item__text
+                  }
+                >
+                  healthcare
+                </p>
+              </div>
+              <div
+                className={`${styles.semasio__wrapper__content__grid__row__item} grid-item-low`}
+              >
+                <Image
+                  src='/semasio/manufacturing.png'
+                  width={87.39}
+                  height={77.11}
+                  alt='manufacturing'
+                />
+                <p
+                  className={
+                    styles.semasio__wrapper__content__grid__row__item__text
+                  }
+                >
+                  manufacturing
+                </p>
+              </div>
+              <div
+                className={`${styles.semasio__wrapper__content__grid__row__item} grid-item-main`}
+              >
+                <Image
+                  src='/semasio/automative.png'
+                  width={87.39}
+                  height={78.19}
+                  alt='automative'
+                />
+                <p
+                  className={
+                    styles.semasio__wrapper__content__grid__row__item__text
+                  }
+                >
+                  automative
+                </p>
+              </div>
+              <div
+                className={`${styles.semasio__wrapper__content__grid__row__item} grid-item-low`}
+              >
+                <Image
+                  src='/semasio/telecom.png'
+                  width={87.39}
+                  height={87.39}
+                  alt='telecom'
+                />
+                <p
+                  className={
+                    styles.semasio__wrapper__content__grid__row__item__text
+                  }
+                >
+                  telecom
+                </p>
+              </div>
+              <div
+                className={`${styles.semasio__wrapper__content__grid__row__item} grid-item-low`}
+              >
+                <Image
+                  src='/semasio/services.png'
+                  width={87.39}
+                  height={69.92}
+                  alt='services'
+                />
+                <p
+                  className={
+                    styles.semasio__wrapper__content__grid__row__item__text
+                  }
+                >
+                  services
+                </p>
+              </div>
+            </div>
+            <div
+              ref={row3Ref}
+              className={styles.semasio__wrapper__content__grid__row}
+            >
+              <div
+                className={`${styles.semasio__wrapper__content__grid__row__item} grid-item-low`}
+              >
+                <Image
+                  src='/semasio/realstate.png'
+                  width={87.39}
+                  height={86.42}
+                  alt='realstate'
+                />
+                <p
+                  className={
+                    styles.semasio__wrapper__content__grid__row__item__text
+                  }
+                >
+                  real state
+                </p>
+              </div>
+              <div
+                className={`${styles.semasio__wrapper__content__grid__row__item} grid-item-low`}
+              >
+                <Image
+                  src='/semasio/media.png'
+                  width={87.39}
+                  height={66.59}
+                  alt='media'
+                />
+                <p
+                  className={
+                    styles.semasio__wrapper__content__grid__row__item__text
+                  }
+                >
+                  media
+                </p>
+              </div>
+              <div
+                className={`${styles.semasio__wrapper__content__grid__row__item} grid-item-low`}
+              >
+                <Image
+                  src='/semasio/travel.png'
+                  width={87.39}
+                  height={99.5}
+                  alt='travel'
+                />
+                <p
+                  className={
+                    styles.semasio__wrapper__content__grid__row__item__text
+                  }
+                >
+                  travel
+                </p>
+              </div>
+              <div
+                className={`${styles.semasio__wrapper__content__grid__row__item} grid-item-low`}
+              >
+                <Image
+                  src='/semasio/agriculture.png'
+                  width={86.77}
+                  height={87.39}
+                  alt='agriculture'
+                />
+                <p
+                  className={
+                    styles.semasio__wrapper__content__grid__row__item__text
+                  }
+                >
+                  agriculture
+                </p>
+              </div>
+              <div
+                className={`${styles.semasio__wrapper__content__grid__row__item} grid-item-low`}
+              >
+                <Image
+                  src='/semasio/education.png'
+                  width={87.39}
+                  height={87.39}
+                  alt='education'
+                />
+                <p
+                  className={
+                    styles.semasio__wrapper__content__grid__row__item__text
+                  }
+                >
+                  education
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div ref={slidersRef} className={styles.semasio__content__sliders}>
-            {sliders.current.map((slider, index) => (
-              <div
-                key={index}
-                ref={slider.ref}
-                className={styles.semasio__content__sliders__item}
-              >
-                <p className={styles.semasio__content__sliders__item__title}>
-                  {slider.text}
-                </p>
+          <div
+            className={styles.semasio__wrapper__content__boxes}
+            ref={boxesRef}
+          >
+            <div
+              ref={itemsRef}
+              className={styles.semasio__wrapper__content__boxes__items}
+            >
+              {items.current.map((item, index) => (
                 <div
-                  className={styles.semasio__content__sliders__item__wrapper}
+                  key={index}
+                  ref={item.ref}
+                  className={
+                    styles.semasio__wrapper__content__boxes__items__item
+                  }
                 >
                   <div
-                    className={styles.semasio__content__sliders__item__slider}
+                    ref={item.dotRef}
+                    className={`${
+                      styles.semasio__wrapper__content__boxes__items__item__dot
+                    } ${
+                      item.dotColor === 'blue'
+                        ? styles.semasio__wrapper__content__boxes__items__item__dot__blue
+                        : styles.semasio__wrapper__content__boxes__items__item__dot__pink
+                    }`}
                   />
-                  <div
-                    ref={slider.triangleRef}
-                    className={styles.semasio__content__sliders__item__triangle}
-                    style={{ left: slider.trianglePos }}
-                  />
+                  <p ref={item.textRef}>{item.text}</p>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
 
-          <div ref={imageRef} className={styles.semasio__content__image}>
-            <Image src={imageSrc} width={748} height={464} alt='semasio' />
+            <div
+              ref={slidersRef}
+              className={styles.semasio__wrapper__content__boxes__sliders}
+            >
+              {sliders.current.map((slider, index) => (
+                <div
+                  key={index}
+                  ref={slider.ref}
+                  className={
+                    styles.semasio__wrapper__content__boxes__sliders__item
+                  }
+                >
+                  <p
+                    className={
+                      styles.semasio__wrapper__content__boxes__sliders__item__title
+                    }
+                  >
+                    {slider.text}
+                  </p>
+                  <div
+                    className={
+                      styles.semasio__wrapper__content__boxes__sliders__item__wrapper
+                    }
+                  >
+                    <div
+                      className={
+                        styles.semasio__wrapper__content__boxes__sliders__item__slider
+                      }
+                    />
+                    <div
+                      ref={slider.triangleRef}
+                      className={
+                        styles.semasio__wrapper__content__boxes__sliders__item__triangle
+                      }
+                      style={{ left: slider.trianglePos }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div
+              ref={imageRef}
+              className={styles.semasio__wrapper__content__boxes__image}
+            >
+              <Image src={imageSrc} width={748} height={464} alt='semasio' />
+            </div>
           </div>
         </div>
       </div>

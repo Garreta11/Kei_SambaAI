@@ -1,11 +1,11 @@
 {
   "carousel": {
-    "title": "POPULAR IN THE LAST 7 DAYS",
+    "title": "Viewership Leaderboard: Popular In the Last 7 Days",
     "categories": [
       "Streaming",
-      "Sport",
+      "Sports",
       "News",
-      "Advertisements"
+      "Ads"
     ],
     "items": [
       {
@@ -38,7 +38,7 @@
       },
       {
         "title": "The Penguin S1",
-        "platform": "Netflix",
+        "platform": "Disney",
         "category": "Streaming",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
@@ -291,7 +291,7 @@
       {
         "title": "The Lincoln Lawyer",
         "platform": "HBO Max",
-        "category": "Sport",
+        "category": "Sports",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
         "imgUrl": "/carousel-item2-placeholder.jpg",
@@ -319,7 +319,7 @@
       {
         "title": "The Lincoln Lawyer",
         "platform": "HBO Max",
-        "category": "Sport",
+        "category": "Sports",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
         "imgUrl": "/carousel-item2-placeholder.jpg",
@@ -347,7 +347,7 @@
       {
         "title": "The Lincoln Lawyer",
         "platform": "HBO Max",
-        "category": "Sport",
+        "category": "Sports",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
         "imgUrl": "/carousel-item2-placeholder.jpg",
@@ -375,7 +375,7 @@
       {
         "title": "The Lincoln Lawyer",
         "platform": "HBO Max",
-        "category": "Sport",
+        "category": "Sports",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
         "imgUrl": "/carousel-item2-placeholder.jpg",
@@ -403,7 +403,7 @@
       {
         "title": "The Lincoln Lawyer",
         "platform": "HBO Max",
-        "category": "Sport",
+        "category": "Sports",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
         "imgUrl": "/carousel-item2-placeholder.jpg",
@@ -431,7 +431,7 @@
       {
         "title": "The Lincoln Lawyer",
         "platform": "HBO Max",
-        "category": "Sport",
+        "category": "Sports",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
         "imgUrl": "/carousel-item2-placeholder.jpg",
@@ -459,7 +459,7 @@
       {
         "title": "The Lincoln Lawyer",
         "platform": "HBO Max",
-        "category": "Sport",
+        "category": "Sports",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
         "imgUrl": "/carousel-item2-placeholder.jpg",
@@ -487,7 +487,7 @@
       {
         "title": "The Lincoln Lawyer",
         "platform": "HBO Max",
-        "category": "Sport",
+        "category": "Sports",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
         "imgUrl": "/carousel-item2-placeholder.jpg",
@@ -515,7 +515,7 @@
       {
         "title": "The Lincoln Lawyer",
         "platform": "HBO Max",
-        "category": "Sport",
+        "category": "Sports",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
         "imgUrl": "/carousel-item2-placeholder.jpg",
@@ -543,7 +543,7 @@
       {
         "title": "The Lincoln Lawyer",
         "platform": "HBO Max",
-        "category": "Sport",
+        "category": "Sports",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
         "imgUrl": "/carousel-item2-placeholder.jpg",
@@ -851,7 +851,7 @@
       {
         "title": "The Penguin S1",
         "platform": "Netflix",
-        "category": "Advertisements",
+        "category": "Ads",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
         "imgUrl": "/carousel-item-placeholder.jpg",
@@ -879,7 +879,7 @@
       {
         "title": "The Penguin S1",
         "platform": "Netflix",
-        "category": "Advertisements",
+        "category": "Ads",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
         "imgUrl": "/carousel-item-placeholder.jpg",
@@ -907,7 +907,7 @@
       {
         "title": "The Penguin S1",
         "platform": "Netflix",
-        "category": "Advertisements",
+        "category": "Ads",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
         "imgUrl": "/carousel-item-placeholder.jpg",
@@ -935,7 +935,7 @@
       {
         "title": "The Penguin S1",
         "platform": "Netflix",
-        "category": "Advertisements",
+        "category": "Ads",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
         "imgUrl": "/carousel-item-placeholder.jpg",
@@ -963,7 +963,7 @@
       {
         "title": "The Penguin S1",
         "platform": "Netflix",
-        "category": "Advertisements",
+        "category": "Ads",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
         "imgUrl": "/carousel-item-placeholder.jpg",
@@ -991,7 +991,7 @@
       {
         "title": "The Penguin S1",
         "platform": "Netflix",
-        "category": "Advertisements",
+        "category": "Ads",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
         "imgUrl": "/carousel-item-placeholder.jpg",
@@ -1019,7 +1019,7 @@
       {
         "title": "The Penguin S1",
         "platform": "Netflix",
-        "category": "Advertisements",
+        "category": "Ads",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
         "imgUrl": "/carousel-item-placeholder.jpg",
@@ -1047,7 +1047,7 @@
       {
         "title": "The Penguin S1",
         "platform": "Netflix",
-        "category": "Advertisements",
+        "category": "Ads",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
         "imgUrl": "/carousel-item-placeholder.jpg",
@@ -1075,7 +1075,7 @@
       {
         "title": "The Penguin S1",
         "platform": "Netflix",
-        "category": "Advertisements",
+        "category": "Ads",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
         "imgUrl": "/carousel-item-placeholder.jpg",
@@ -1103,7 +1103,7 @@
       {
         "title": "The Penguin S1",
         "platform": "Netflix",
-        "category": "Advertisements",
+        "category": "Ads",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
         "imgUrl": "/carousel-item-placeholder.jpg",

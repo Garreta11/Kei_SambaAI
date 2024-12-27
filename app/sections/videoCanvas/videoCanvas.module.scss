@@ -1,3 +1,5 @@
+@import '../../breakpoints';
+
 .videoCanvas {
   width: 100%;
   height: 100vh;
@@ -21,6 +23,31 @@
 
     &__item {
       backdrop-filter: blur(100px);
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    @include mobile-query {
+      padding: 20px;
+    }
+    &__text {
+      max-width: 1262px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 32px;
+      font-weight: 200;
+      @include mobile-query {
+        font-size: 25px;
+      }
     }
   }
 }

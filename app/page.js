@@ -33,20 +33,25 @@ export default function Home() {
             subtext={data.leaderboard.subtext}
             carousel={dataLeaderboards.carousel}
           />
-          <Semasio
-            headline={data.semasio.headline}
-            subtext={data.semasio.subtext}
-          />
 
           {/* <Video url={data.video.url} text={data.video.text} /> */}
-          <VideoCanvas videoSrc={data.video.url} />
+          <VideoCanvas
+            videoSrc={data.video.url}
+            text={data.video.text}
+            subtext={data.video.subtext}
+          />
 
           <Layers
             headline={data.layers.headline}
             subtext={data.layers.subtext}
           />
 
-          <Attention />
+          <Semasio
+            headline={data.semasio.headline}
+            subtext={data.semasio.subtext}
+          />
+
+          {/* <Attention /> */}
 
           <HeroEnds text={data.end.text} />
         </PageContent>

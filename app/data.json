@@ -1,6 +1,6 @@
 {
   "hero": {
-    "title": "Samba AI is the Heartbeat of Global Video",
+    "title": "Unlock hidden video insights with Samba AI's lens.",
     "number": 34009,
     "text": "Videos processed in the last 24 hours"
   },
@@ -11,25 +11,26 @@
       "EVERY MOMENT.",
       "INDEXED LIVE."
     ],
-    "subtext": "We index everything happening across linear, cable, and streaming video - all in real-time"
+    "subtext": "We index everything happening across linear and streaming video - all in real-time."
   },
   "semasio": {
-    "headline": "3 Billion+ Web Pages. The Entire Internet's worth of video One Unified Intelligence Platform.",
-    "subtext": "With Samba's acquisition of Semasio, we now have one of the most extensive maps of user attention in the world"
+    "headline": "Contextual insights & targeting for the open web, including over 2.5 billion webpages scanned monthly.",
+    "subtext": "With the acquisition of Semasio, Samba now has the most extensive map of user intention in the world across the open web and TV."
   },
   "video": {
     "url": "/video-template.mp4",
-    "text": "See What AI Sees: Each Scene, Brand, and Moment Decoded with DeepACR"
+    "text": "See What AI Sees: Every Scene, Brand, and Moment Decoded",
+    "subtext": "Samba has led the industry for years by live-decoding video with our pioneering content recognition technology, and now Samba AI has a deeper unprecedented understanding of video context."
   },
   "layers": {
     "headline": "The world's most advanced AI intent prediction engine",
-    "subtext": "Samba's AI identifies users intention like never before by mapping the all video watching history to the advertising graph"
+    "subtext": "Samba AI identifies and activates user intention like never before by mapping video viewership directly to the advertising graph."
   },
   "track": {
     "headline": "Track every ad, across every market, while it's happening",
     "subtext": "No one knows video advertising like Samba, our actionable insights and statistics help you put your message in just the right place."
   },
   "end": {
-    "text": "How will you leverage the world's most advanced video intelligence platform?"
+    "text": "Smarter advertising starts here: Samba AI effectively finds your target audience and measures results."
   }
 }
