@@ -29,6 +29,7 @@ export default class Experience {
       console.warn("Missing 'targetElement' property");
       return;
     }
+    this.videoWall = _options.videoElement;
 
     this.time = new Time();
     this.sizes = new Sizes();
@@ -42,7 +43,7 @@ export default class Experience {
     this.setScene();
     this.setCamera();
     this.setRenderer();
-    // this.setControls();
+    this.setControls();
     // this.setResources();
     this.setWorld();
 

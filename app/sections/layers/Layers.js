@@ -96,24 +96,26 @@ const Layers = ({ headline, subtext }) => {
 
         // timeline
         const ammountToScroll = 8 * window.innerHeight;
-        const timeline = gsap
-          .timeline({
-            scrollTrigger: {
-              trigger: layersRef.current,
-              start: 'top top',
-              end: '+=' + ammountToScroll,
-              scrub: true,
-              pin: true,
-              snap: {
-                snapTo: [0, 0.115, 0.23, 0.394, 0.586, 0.748, 1],
-              },
-              onLeave: () => {
-                navigateToNextSection();
-              },
+        const timeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: layersRef.current,
+            start: 'top top',
+            end: '+=' + ammountToScroll,
+            scrub: true,
+            pin: true,
+            snap: {
+              snapTo: [0, 0.115, 0.23, 0.394, 0.586, 0.748, 1],
+              // duration: { min: 0.2, max: 3 },
+              duration: 0.85,
+              ease: 'power1.inOut',
             },
-          })
-          .add('layer');
+            onLeave: () => {
+              navigateToNextSection();
+            },
+          },
+        });
 
+        timeline.addLabel('start');
         // Initial transformation: Apply perspective and rotation during scroll
         layers.current.forEach((layer, index) => {
           timeline.to(
@@ -132,6 +134,7 @@ const Layers = ({ headline, subtext }) => {
         // Individual animation: Reset each layer to `rotateY(0)`
         layers.current.forEach((layer, index) => {
           timeline.add(`section${index}`);
+          // timeline.addLabel(`section${index}`);
           timeline.to(
             layer.ref.current,
             {

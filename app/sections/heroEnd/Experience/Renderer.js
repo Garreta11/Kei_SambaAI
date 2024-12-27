@@ -10,7 +10,7 @@ export default class Renderer {
     this.sizes = this.experience.sizes;
     this.debug = this.experience.debug;
 
-    this.isPaused = true;
+    this.isPaused = false;
 
     if (this.debug) {
       this.debugFolder = this.debug.addFolder({

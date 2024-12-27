@@ -1,5 +1,6 @@
 import Experience from './Experience';
 import Sphere from './Sphere';
+import Wall from './Wall';
 
 export default class World {
   constructor() {
@@ -9,10 +10,15 @@ export default class World {
     this.camera = this.experience.camera;
     this.resources = this.experience.resources;
     this.setSphere();
+    this.setWall();
   }
 
   setSphere() {
     this.sphere = new Sphere();
+  }
+
+  setWall() {
+    this.wall = new Wall();
   }
 
   update() {

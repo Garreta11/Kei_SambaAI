@@ -7,6 +7,7 @@ import TextReveal from '@/app/components/textReveal/TextReveal';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Image from 'next/image';
+import next from 'next';
 gsap.registerPlugin(ScrollTrigger);
 
 const Semasio = ({ headline, subtext }) => {
@@ -20,7 +21,6 @@ const Semasio = ({ headline, subtext }) => {
 
   const itemsRef = useRef();
   const slidersRef = useRef();
-  const subContentRef = useRef();
   const imageRef = useRef();
   const [imageSrc, setImageSrc] = useState('/semasio.png');
 
@@ -115,7 +115,7 @@ const Semasio = ({ headline, subtext }) => {
   }, []);
 
   useEffect(() => {
-    const ammountToScroll = 32 * window.innerHeight;
+    const ammountToScroll = 16 * window.innerHeight;
     ScrollTrigger.matchMedia({
       // Large Screens
       '(min-width: 1024px)': function () {

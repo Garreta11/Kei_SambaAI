@@ -15,6 +15,7 @@ const VideoCanvas = ({ videoSrc, text, subtext }) => {
   const [visibleCells, setVisibleCells] = useState(2); // Initial number of visible cells
 
   useEffect(() => {
+    videoRef.current.pause();
     const ammountToScroll = 8 * window.innerHeight;
 
     // Create the timeline
@@ -30,6 +31,10 @@ const VideoCanvas = ({ videoSrc, text, subtext }) => {
         },
         onLeave: () => {
           navigateToNextSection();
+          videoRef.current.pause();
+        },
+        onEnterBack: () => {
+          videoRef.current.play();
         },
       },
     });
@@ -80,19 +85,25 @@ const VideoCanvas = ({ videoSrc, text, subtext }) => {
               filter: `blur(0px)`,
               scale: 1,
             });
+
+            // video current time
+            const targetTime = progress * videoRef.current.duration;
+            videoRef.current.currentTime = targetTime;
           } else {
             // Apply opacity to blur items based on mapped progress
             const blurItems = blurContainerRef.current.children;
             Array.from(blurItems).forEach((item) => {
               gsap.to(item, { backdropFilter: `blur(${0}px)` });
             });
-          }
 
-          if (progress > 0.5) {
             gsap.to(containerRef.current, {
               filter: `blur(${mapValue(progress, 0.5, 1, 0, 100)}px)`,
               scale: mapValue(progress, 0.5, 1, 1, 0),
             });
+
+            if (videoRef.current.paused) {
+              videoRef.current.play();
+            }
           }
         },
       }
@@ -104,9 +115,9 @@ const VideoCanvas = ({ videoSrc, text, subtext }) => {
     };
   }, []);
 
-  function mapValue(value, inMin, inMax, outMin, outMax) {
+  const mapValue = (value, inMin, inMax, outMin, outMax) => {
     return ((value - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
-  }
+  };
 
   const navigateToNextSection = () => {
     const currentSection = containerRef.current;

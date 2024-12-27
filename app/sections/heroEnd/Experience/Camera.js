@@ -19,7 +19,7 @@ export default class Camera {
       1000
     );
     this.instance.rotation.reorder('YXZ');
-    this.instance.position.set(0, 0, 6);
+    this.instance.position.set(0, 0, -0.5);
 
     this.scene.add(this.instance);
   }

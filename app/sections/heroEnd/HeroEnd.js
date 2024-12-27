@@ -8,8 +8,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 import Experience from './Experience/Experience';
 
-const HeroEnd = ({ title, number, text }) => {
+const HeroEnd = ({ text }) => {
   const heroRef = useRef(null);
+  const videoRef = useRef();
   const containerRef = useRef(null);
   const outputRef = useRef(null);
   const contentRef = useRef(null);
@@ -21,6 +22,7 @@ const HeroEnd = ({ title, number, text }) => {
     if (containerRef.current) {
       outputRef.current = new Experience({
         targetElement: containerRef.current,
+        videoElement: videoRef.current,
       });
       setLoading(true);
     }
@@ -35,15 +37,15 @@ const HeroEnd = ({ title, number, text }) => {
           end: '+=' + ammountToScroll,
           scrub: true,
           pin: true,
-          snap: {
+          /* snap: {
             snapTo: [0, 1], // Two states: 0 (start) and 1 (end)
-            delay: 0, // No delay
-          },
+            duration: 5,
+          }, */
           onEnter: () => {
-            outputRef.current.renderer.isPaused = false;
+            //outputRef.current.renderer.isPaused = false;
           },
           onLeaveBack: () => {
-            outputRef.current.renderer.isPaused = true;
+            //outputRef.current.renderer.isPaused = true;
           },
         },
       });
@@ -59,12 +61,12 @@ const HeroEnd = ({ title, number, text }) => {
       );
 
       if (outputRef.current) {
+        timeline.add('start');
         timeline
-          .add('start')
           .fromTo(
             outputRef.current.camera.instance.position,
             {
-              z: 1,
+              z: -0.5,
             },
             {
               z: 6,
@@ -82,23 +84,6 @@ const HeroEnd = ({ title, number, text }) => {
             'start'
           );
       }
-
-      if (contentRef.current) {
-        timeline.fromTo(
-          contentRef.current,
-          {
-            filter: 'blur(100px)',
-            paddingTop: 0,
-            paddingBottom: 0,
-          },
-          {
-            filter: 'blur(0px)',
-            paddingTop: 150,
-            paddingBottom: 80,
-          },
-          'start'
-        );
-      }
     }
 
     // Cleanup ScrollTrigger when component is unmounted
@@ -113,6 +98,18 @@ const HeroEnd = ({ title, number, text }) => {
           <h1 className={styles.hero__content__title}>{text}</h1>
         </div>
       )}
+
+      <video
+        ref={videoRef}
+        loop={true}
+        muted
+        crossOrigin='anonymous'
+        playsInline
+        style={{ display: 'none' }}
+        onCanPlay={() => videoRef.current.play()}
+      >
+        <source src='wall.mp4' type='video/mp4;' />
+      </video>
     </div>
   );
 };

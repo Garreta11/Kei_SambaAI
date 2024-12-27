@@ -11,6 +11,7 @@ import Glitch from '@/app/components/glitch/Glitch';
 
 const Hero = ({ title, number, text }) => {
   const heroRef = useRef(null);
+  const videoRef = useRef();
   const containerRef = useRef(null);
   const outputRef = useRef(null);
   const contentRef = useRef(null);
@@ -22,6 +23,7 @@ const Hero = ({ title, number, text }) => {
     if (containerRef.current) {
       outputRef.current = new Experience({
         targetElement: containerRef.current,
+        videoElement: videoRef.current,
       });
       setLoading(true);
     }
@@ -37,7 +39,7 @@ const Hero = ({ title, number, text }) => {
           end: '+=' + ammountToScroll,
           scrub: true,
           pin: true,
-          onUpdate: () => {
+          /* onUpdate: () => {
             const scrollTop =
               window.pageYOffset || document.documentElement.scrollTop;
             if (scrollTop > lastScrollTop) {
@@ -48,7 +50,7 @@ const Hero = ({ title, number, text }) => {
               window.scrollTo({ top: 0, left: 0, behavior: 'smooth' }); // Scroll to top of the page
             }
             lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-          },
+          }, */
           onEnter: () => {
             outputRef.current.renderer.isPaused = false;
           },
@@ -67,12 +69,12 @@ const Hero = ({ title, number, text }) => {
       });
 
       if (outputRef.current) {
+        timeline.add('start');
         timeline
-          .add('start')
           .to(
             outputRef.current.camera.instance.position,
             {
-              z: 1,
+              z: -0.1,
             },
             'start'
           )
@@ -148,6 +150,18 @@ const Hero = ({ title, number, text }) => {
           </div>
         </div>
       )}
+
+      <video
+        ref={videoRef}
+        loop={true}
+        muted
+        crossOrigin='anonymous'
+        playsInline
+        style={{ display: 'none' }}
+        onCanPlay={() => videoRef.current.play()}
+      >
+        <source src='wall.mp4' type='video/mp4;' />
+      </video>
     </div>
   );
 };
