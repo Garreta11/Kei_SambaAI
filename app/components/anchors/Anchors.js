@@ -50,6 +50,14 @@ const Anchors = () => {
         targetTop = window.scrollY + rect.top;
       }
 
+      if (
+        targetSection.id == 'leaderboard' ||
+        targetSection.id == 'semasio' ||
+        targetSection.id == 'layers'
+      ) {
+        targetTop -= window.innerHeight / 4;
+      }
+
       window.scrollTo({
         top: targetTop,
         behavior: 'smooth',

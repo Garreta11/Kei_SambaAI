@@ -42,6 +42,9 @@ const Hero = ({ title, number, text }) => {
         end: `+=${ammountToScroll}`,
         scrub: true,
         pin: true,
+        snap: {
+          snapTo: [0, 0.363, 1],
+        },
         onEnter: () => (outputRef.current.renderer.isPaused = false),
         onLeave: () => {
           outputRef.current.renderer.isPaused = true;
@@ -72,21 +75,33 @@ const Hero = ({ title, number, text }) => {
   };
 
   const navigateToNextSection = () => {
-    const allSections = document.querySelectorAll('.section');
     const currentSection = heroRef.current;
+    const allSections = document.querySelectorAll('.section');
+    let nextSection = null;
 
-    const nextSection = Array.from(allSections).find(
-      (section, index) => section === currentSection && allSections[index + 1]
-    );
-
-    if (nextSection) {
-      const yPosition =
-        nextSection.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({
-        top: yPosition - window.innerHeight / 4,
-        behavior: 'smooth',
-      });
+    for (let i = 0; i < allSections.length; i++) {
+      if (allSections[i] === currentSection && allSections[i + 1]) {
+        nextSection = allSections[i + 1];
+        break;
+      }
     }
+
+    const scrollToSection = () => {
+      let targetTop;
+      if (nextSection) {
+        const yPosition =
+          nextSection.getBoundingClientRect().top + window.scrollY;
+        targetTop = yPosition - window.innerHeight / 4;
+        window.scrollTo({
+          top: targetTop,
+          behavior: 'smooth',
+        });
+      }
+    };
+
+    setTimeout(() => {
+      scrollToSection();
+    }, 1000);
   };
 
   useEffect(() => {

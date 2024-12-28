@@ -368,26 +368,35 @@ const Semasio = ({ headline, subtext }) => {
   }, []);
 
   const navigateToNextSection = () => {
-    const currentSection = semasioRef.current;
-    const allSections = document.querySelectorAll('.section');
-    let nextSection = null;
+    const targetTop =
+      document.documentElement.scrollHeight - window.innerHeight;
+    const duration = 3000; // Scroll duration in milliseconds
 
-    for (let i = 0; i < allSections.length; i++) {
-      if (allSections[i] === currentSection && allSections[i + 1]) {
-        nextSection = allSections[i + 1];
-        break;
+    const startTop = window.scrollY;
+    const distance = targetTop - startTop;
+    const startTime = performance.now();
+
+    const animateScroll = (currentTime) => {
+      const elapsedTime = currentTime - startTime;
+      const progress = Math.min(elapsedTime / duration, 1); // Clamp progress to 1
+
+      const easeInOutQuad = (t) =>
+        t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+
+      const easedProgress = easeInOutQuad(progress);
+
+      window.scrollTo(0, startTop + distance * easedProgress);
+
+      if (progress < 1) {
+        requestAnimationFrame(animateScroll);
       }
-    }
+    };
 
-    if (nextSection) {
-      nextSection.scrollIntoView({
-        behavior: 'smooth',
-      });
-    }
+    requestAnimationFrame(animateScroll);
   };
 
   return (
-    <div className={`section ${styles.semasio}`} ref={semasioRef}>
+    <div className={`section ${styles.semasio}`} ref={semasioRef} id='semasio'>
       <TitleReveal text={headline} className={styles.semasio__headline} />
       <div className={styles.semasio__wrapper} ref={wrapperRef}>
         <TextReveal text={subtext} className={styles.semasio__subtext} />

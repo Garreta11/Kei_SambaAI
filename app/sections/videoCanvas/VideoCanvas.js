@@ -132,18 +132,44 @@ const VideoCanvas = ({ videoSrc, text, subtext }) => {
       }
     }
 
-    if (nextSection) {
-      const yPosition =
-        nextSection.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({
-        top: yPosition - window.innerHeight / 4,
-        behavior: 'smooth',
-      });
-    }
+    const scrollToSection = () => {
+      if (nextSection) {
+        const yPosition =
+          nextSection.getBoundingClientRect().top + window.scrollY;
+        const startTop = window.scrollY;
+        const distance = yPosition - startTop;
+        const duration = 2000; // Duration in milliseconds
+        const startTime = performance.now();
+
+        const animateScroll = (currentTime) => {
+          const elapsedTime = currentTime - startTime;
+          const progress = Math.min(elapsedTime / duration, 1); // Clamp progress to 1
+
+          const easeInOutQuad = (t) =>
+            t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+
+          const easedProgress = easeInOutQuad(progress);
+
+          window.scrollTo(0, startTop + distance * easedProgress);
+
+          if (progress < 1) {
+            requestAnimationFrame(animateScroll);
+          }
+        };
+
+        requestAnimationFrame(animateScroll);
+      }
+    };
+
+    scrollToSection();
   };
 
   return (
-    <div className={`section ${styles.videoCanvas}`} ref={containerRef}>
+    <div
+      className={`section ${styles.videoCanvas}`}
+      ref={containerRef}
+      id='video'
+    >
       <video
         ref={videoRef}
         controls={false}

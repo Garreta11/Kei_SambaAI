@@ -289,17 +289,7 @@ const Layers = ({ headline, subtext }) => {
   }, []);
 
   const navigateToNextSection = () => {
-    const nextSection = document.getElementById('attention');
-    if (nextSection) {
-      const yPosition =
-        nextSection.getBoundingClientRect().top + window.scrollY;
-      //nextSection.scrollIntoView({ behavior: 'smooth' });
-      window.scrollTo({
-        top: yPosition,
-        behavior: 'smooth',
-      });
-    }
-    /* const currentSection = sectionRef.current;
+    const currentSection = sectionRef.current;
     const allSections = document.querySelectorAll('.section');
     let nextSection = null;
 
@@ -310,19 +300,40 @@ const Layers = ({ headline, subtext }) => {
       }
     }
 
-    if (nextSection) {
-      const yPosition =
-        nextSection.getBoundingClientRect().top + window.scrollY;
-      //nextSection.scrollIntoView({ behavior: 'smooth' });
-      window.scrollTo({
-        top: yPosition - window.innerHeight / 4,
-        behavior: 'smooth',
-      });
-    } */
+    const scrollToSection = () => {
+      if (nextSection) {
+        const yPosition =
+          nextSection.getBoundingClientRect().top + window.scrollY;
+        const startTop = window.scrollY;
+        const distance = yPosition - startTop;
+        const duration = 2000; // Duration in milliseconds
+        const startTime = performance.now();
+
+        const animateScroll = (currentTime) => {
+          const elapsedTime = currentTime - startTime;
+          const progress = Math.min(elapsedTime / duration, 1); // Clamp progress to 1
+
+          const easeInOutQuad = (t) =>
+            t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+
+          const easedProgress = easeInOutQuad(progress);
+
+          window.scrollTo(0, startTop + distance * easedProgress);
+
+          if (progress < 1) {
+            requestAnimationFrame(animateScroll);
+          }
+        };
+
+        requestAnimationFrame(animateScroll);
+      }
+    };
+
+    scrollToSection();
   };
 
   return (
-    <div className={`section ${styles.layers}`} ref={sectionRef}>
+    <div className={`section ${styles.layers}`} ref={sectionRef} id='layers'>
       <div className={styles.layers__headline}>
         <TitleReveal text={headline} />
       </div>
