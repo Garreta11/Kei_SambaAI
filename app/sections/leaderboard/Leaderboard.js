@@ -69,6 +69,7 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
       },
       opacity: 0,
       filter: 'blur(100px)',
+      ease: 'none',
     });
     gsap.from(titleRef.current, {
       scrollTrigger: {
@@ -79,6 +80,7 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
       },
       opacity: 0,
       filter: 'blur(100px)',
+      ease: 'none',
     });
 
     return () => ScrollTrigger.getAll().forEach((st) => st.kill());

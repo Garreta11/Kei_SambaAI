@@ -16,7 +16,7 @@ const VideoCanvas = ({ videoSrc, text, subtext }) => {
 
   useEffect(() => {
     videoRef.current.pause();
-    const ammountToScroll = 8 * window.innerHeight;
+    const ammountToScroll = 3 * window.innerHeight;
 
     // Create the timeline
     const timeline = gsap.timeline({
@@ -28,6 +28,8 @@ const VideoCanvas = ({ videoSrc, text, subtext }) => {
         pin: true,
         snap: {
           snapTo: [0, 0.5, 1],
+          delay: 0,
+          ease: 'none',
         },
         onLeave: () => {
           navigateToNextSection();
@@ -48,13 +50,6 @@ const VideoCanvas = ({ videoSrc, text, subtext }) => {
 
           // Only update when progress is smaller than 0.5
           if (progress < 0.5) {
-            // hide text
-            gsap.to(textRef.current, {
-              y: -progress * 2000,
-              filter: `blur(${mapValue(progress, 0, 0.5, 0, 100)}px)`,
-              opacity: mapValue(progress, 0, 0.5, 1, 0),
-            });
-
             // Map progress from [0, 0.5] to [0, 1]
             const mappedProgress = progress * 2;
 
@@ -78,22 +73,34 @@ const VideoCanvas = ({ videoSrc, text, subtext }) => {
             const blurItems = blurContainerRef.current.children;
             Array.from(blurItems).forEach((item) => {
               const opacity = 1 - mappedProgress; // Calculate opacity based on mapped progress
-              gsap.to(item, { backdropFilter: `blur(${opacity * 100}px)` });
+              gsap.to(item, {
+                backdropFilter: `blur(${opacity * 100}px)`,
+                ease: 'none',
+              });
             });
 
             gsap.to(containerRef.current, {
               filter: `blur(0px)`,
               scale: 1,
+              ease: 'none',
             });
 
             // video current time
             const targetTime = progress * videoRef.current.duration;
             videoRef.current.currentTime = targetTime;
           } else {
+            // hide text
+            gsap.to(textRef.current, {
+              y: -progress * 2000,
+              filter: `blur(${mapValue(progress, 0.5, 1, 0, 100)}px)`,
+              opacity: mapValue(progress, 0.5, 1, 1, 0),
+              ease: 'none',
+            });
+
             // Apply opacity to blur items based on mapped progress
             const blurItems = blurContainerRef.current.children;
             Array.from(blurItems).forEach((item) => {
-              gsap.to(item, { backdropFilter: `blur(${0}px)` });
+              gsap.to(item, { backdropFilter: `blur(${0}px)`, ease: 'none' });
             });
 
             if (videoRef.current.paused) {
@@ -104,6 +111,7 @@ const VideoCanvas = ({ videoSrc, text, subtext }) => {
             gsap.to(containerRef.current, {
               filter: `blur(${mapValue(progress, 0.5, 1, 0, 100)}px)`,
               scale: mapValue(progress, 0.5, 1, 1, 0),
+              ease: 'none',
             });
           }
         },
@@ -135,10 +143,10 @@ const VideoCanvas = ({ videoSrc, text, subtext }) => {
     const scrollToSection = () => {
       if (nextSection) {
         const yPosition =
-          nextSection.getBoundingClientRect().top + window.scrollY;
-        const startTop = window.scrollY;
-        const distance = yPosition - startTop;
-        const duration = 2000; // Duration in milliseconds
+          nextSection.getBoundingClientRect().top +
+          (1 * window.innerHeight) / 4 +
+          window.scrollY;
+        window.scrollY;
         const startTime = performance.now();
 
         const animateScroll = (currentTime) => {

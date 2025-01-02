@@ -79,7 +79,7 @@ const Semasio = ({ headline, subtext }) => {
     },
     {
       ref: useRef(),
-      text: 'Behavious',
+      text: 'Behaviors',
       triangleRef: useRef(),
       trianglePos: '30%',
       triangleEndPos: '55%',
@@ -115,7 +115,7 @@ const Semasio = ({ headline, subtext }) => {
   }, []);
 
   useEffect(() => {
-    const ammountToScroll = 8 * window.innerHeight;
+    const ammountToScroll = 3 * window.innerHeight;
     ScrollTrigger.matchMedia({
       // Large Screens
       '(min-width: 1024px)': function () {
@@ -136,14 +136,17 @@ const Semasio = ({ headline, subtext }) => {
         timeline.from(row1Ref.current, {
           opacity: 0,
           y: window.innerWidth / 2,
+          ease: 'none',
         });
         timeline.from(row2Ref.current, {
           opacity: 0,
           y: window.innerWidth / 2,
+          ease: 'none',
         });
         timeline.from(row3Ref.current, {
           opacity: 0,
           y: window.innerWidth / 2,
+          ease: 'none',
         });
 
         // Animate Automative
@@ -152,6 +155,7 @@ const Semasio = ({ headline, subtext }) => {
           '.grid-item-low',
           {
             opacity: 0,
+            ease: 'none',
           },
           'show-automative'
         );
@@ -159,6 +163,7 @@ const Semasio = ({ headline, subtext }) => {
           '.grid-item-main',
           {
             scale: 3,
+            ease: 'none',
           },
           'show-automative'
         );
@@ -169,6 +174,7 @@ const Semasio = ({ headline, subtext }) => {
           gridRef.current,
           {
             opacity: 0,
+            ease: 'none',
           },
           'show-boxes'
         );
@@ -176,6 +182,7 @@ const Semasio = ({ headline, subtext }) => {
           boxesRef.current,
           {
             opacity: 1,
+            ease: 'none',
           },
           'show-boxes'
         );
@@ -194,6 +201,7 @@ const Semasio = ({ headline, subtext }) => {
                 overflow: 'hidden',
                 height: 0,
                 borderWidth: 0,
+                ease: 'none',
               },
               'triangles'
             );
@@ -204,6 +212,7 @@ const Semasio = ({ headline, subtext }) => {
             item.triangleRef.current,
             {
               left: item.triangleEndPos,
+              ease: 'none',
             },
             'triangles'
           );
@@ -215,6 +224,7 @@ const Semasio = ({ headline, subtext }) => {
           imageRef.current,
           {
             maxWidth: window.innerWidth,
+            ease: 'none',
           },
           'show-image'
         );
@@ -222,6 +232,7 @@ const Semasio = ({ headline, subtext }) => {
           boxesRef.current,
           {
             gap: 0,
+            ease: 'none',
           },
           'show-image'
         );
@@ -232,6 +243,7 @@ const Semasio = ({ headline, subtext }) => {
             padding: 0,
             opacity: 0,
             borderWidth: 0,
+            ease: 'none',
           },
           'show-image'
         );
@@ -239,6 +251,7 @@ const Semasio = ({ headline, subtext }) => {
           itemsRef.current,
           {
             width: 'auto',
+            ease: 'none',
           },
           'show-image'
         );
@@ -538,14 +551,14 @@ const Semasio = ({ headline, subtext }) => {
                   src='/semasio/automative.png'
                   width={87.39}
                   height={78.19}
-                  alt='automative'
+                  alt='Automotive'
                 />
                 <p
                   className={
                     styles.semasio__wrapper__content__grid__row__item__text
                   }
                 >
-                  automative
+                  Automotive
                 </p>
               </div>
               <div

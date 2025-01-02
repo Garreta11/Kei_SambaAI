@@ -88,14 +88,16 @@ const Layers = ({ headline, subtext }) => {
             start: 'top 20%',
             end: 'top 10%',
             scrub: true,
+            ease: 'none',
           },
           x: 100,
           opacity: 0.0,
           filter: 'blur(100px)',
+          ease: 'none',
         });
 
         // timeline
-        const ammountToScroll = 8 * window.innerHeight;
+        const ammountToScroll = 3 * window.innerHeight;
         const timeline = gsap.timeline({
           scrollTrigger: {
             trigger: layersRef.current,
@@ -103,11 +105,11 @@ const Layers = ({ headline, subtext }) => {
             end: '+=' + ammountToScroll,
             scrub: true,
             pin: true,
+            ease: 'none',
             snap: {
               snapTo: [0, 0.115, 0.23, 0.394, 0.586, 0.748, 1],
-              // duration: { min: 0.2, max: 3 },
-              duration: 0.85,
-              ease: 'power1.inOut',
+              delay: 0,
+              ease: 'none',
             },
             onLeave: () => {
               navigateToNextSection();
@@ -126,6 +128,7 @@ const Layers = ({ headline, subtext }) => {
               left: -500,
               z: layer.translateZ,
               duration: 1,
+              ease: 'none',
             },
             0 // Apply simultaneously
           );
@@ -140,6 +143,7 @@ const Layers = ({ headline, subtext }) => {
             {
               rotateY: 0,
               duration: 1,
+              ease: 'none',
             },
             `section${index}`
           );
@@ -148,6 +152,7 @@ const Layers = ({ headline, subtext }) => {
             {
               opacity: 0,
               filter: 'blur(100px)',
+              ease: 'none',
             },
             `section${index}`
           );
@@ -156,6 +161,7 @@ const Layers = ({ headline, subtext }) => {
             {
               opacity: 0,
               filter: 'blur(100px)',
+              ease: 'none',
             },
             `section${index}`
           );
@@ -168,6 +174,7 @@ const Layers = ({ headline, subtext }) => {
                 left: -window.innerWidth / 2,
                 opacity: 0,
                 filter: 'blur(100px)',
+                ease: 'none',
               },
               `section${index}_1`
             );
@@ -175,6 +182,7 @@ const Layers = ({ headline, subtext }) => {
               layer.lineRef.current,
               {
                 opacity: 0,
+                ease: 'none',
               },
               `section${index}_1`
             );
@@ -196,7 +204,7 @@ const Layers = ({ headline, subtext }) => {
         });
 
         // timeline
-        const ammountToScroll = 8 * window.innerHeight;
+        const ammountToScroll = 3 * window.innerHeight;
         const timeline = gsap
           .timeline({
             scrollTrigger: {
@@ -227,6 +235,7 @@ const Layers = ({ headline, subtext }) => {
               minWidth: '100vw',
               // z: layer.translateZMobile,
               duration: 1,
+              ease: 'none',
             },
             'init'
           );
@@ -236,7 +245,12 @@ const Layers = ({ headline, subtext }) => {
         timeline.add('second');
         timeline.to(
           textsRef.current,
-          { width: '100%', overflow: 'visible', marginTop: '-80px' },
+          {
+            width: '100%',
+            overflow: 'visible',
+            marginTop: '-80px',
+            ease: 'none',
+          },
           'second'
         );
 
@@ -248,6 +262,7 @@ const Layers = ({ headline, subtext }) => {
             {
               opacity: 0,
               filter: 'blur(100px)',
+              ease: 'none',
             },
             `section${index}`
           );
@@ -259,29 +274,12 @@ const Layers = ({ headline, subtext }) => {
                 opacity: 0,
                 filter: 'blur(100px)',
                 x: -100,
+                ease: 'none',
               },
               `section${index}_1`
             );
           }
         });
-
-        // remove cards
-        /* timeline.add('last');
-        timeline.to(
-          cardsRef.current,
-          {
-            width: '0%',
-          },
-          'last'
-        );
-        timeline.to(
-          textsRef.current,
-          {
-            marginTop: 0,
-            width: '100%',
-          },
-          'last'
-        ); */
       },
     });
 
@@ -303,7 +301,9 @@ const Layers = ({ headline, subtext }) => {
     const scrollToSection = () => {
       if (nextSection) {
         const yPosition =
-          nextSection.getBoundingClientRect().top + window.scrollY;
+          nextSection.getBoundingClientRect().top -
+          (1 * window.innerHeight) / 4 +
+          window.scrollY;
         const startTop = window.scrollY;
         const distance = yPosition - startTop;
         const duration = 2000; // Duration in milliseconds
