@@ -43,7 +43,7 @@ const Hero = ({ title, number, text }) => {
         scrub: true,
         pin: true,
         snap: {
-          snapTo: [0, 0.363, 1],
+          snapTo: [0, 0.5, 1],
           delay: 0,
           ease: 'none',
         },
