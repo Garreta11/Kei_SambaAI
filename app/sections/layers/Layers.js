@@ -197,6 +197,8 @@ const Layers = ({ headline, subtext }) => {
             start: 'top 20%',
             end: 'top 10%',
             scrub: true,
+            delay: 0,
+            ease: 'none',
           },
           y: 100,
           opacity: 0.0,

@@ -4,9 +4,7 @@ import styles from './page.module.scss';
 import Hero from './sections/hero/Hero';
 import Leaderboard from './sections/leaderboard/Leaderboard';
 import Semasio from './sections/semasio/Semasio';
-import Video from './sections/video/Video';
 import Layers from './sections/layers/Layers';
-import TrackAdInsights from './sections/trackAdInsights/TrackAdInsights';
 
 // Import data from the JSON file
 import data from './data.json';
@@ -16,7 +14,6 @@ import PageWrapper from './components/pageWrapper/PageWrapper';
 import PageContent from './components/pageContent/PageContent';
 import VideoCanvas from './sections/videoCanvas/VideoCanvas';
 import HeroEnds from './sections/heroEnd/HeroEnd';
-import Attention from './sections/attention/Attention';
 
 export default function Home() {
   return (

@@ -146,11 +146,14 @@ const VideoCanvas = ({ videoSrc, text, subtext }) => {
           nextSection.getBoundingClientRect().top +
           (1 * window.innerHeight) / 4 +
           window.scrollY;
-        window.scrollY;
+        const startTop = window.scrollY;
+        const distance = yPosition - startTop;
+        const duration = 2000;
         const startTime = performance.now();
 
         const animateScroll = (currentTime) => {
           const elapsedTime = currentTime - startTime;
+
           const progress = Math.min(elapsedTime / duration, 1); // Clamp progress to 1
 
           const easeInOutQuad = (t) =>

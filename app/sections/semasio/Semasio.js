@@ -132,6 +132,10 @@ const Semasio = ({ headline, subtext }) => {
           },
         });
 
+        gsap.ticker.add(() => {
+          console.log(timeline.progress());
+        });
+
         // Animate rows
         timeline.from(row1Ref.current, {
           opacity: 0,

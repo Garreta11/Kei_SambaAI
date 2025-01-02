@@ -44,6 +44,8 @@ const Hero = ({ title, number, text }) => {
         pin: true,
         snap: {
           snapTo: [0, 0.363, 1],
+          delay: 0,
+          ease: 'none',
         },
         onEnter: () => (outputRef.current.renderer.isPaused = false),
         onLeave: () => {
@@ -60,7 +62,11 @@ const Hero = ({ title, number, text }) => {
 
     timeline
       .add('start')
-      .to(outputRef.current.camera.instance.position, { z: 0 }, 'start')
+      .to(
+        outputRef.current.camera.instance.position,
+        { z: 0, ease: 'none' },
+        'start'
+      )
       .to(
         outputRef.current.world.sphere.material.uniforms.uFresnelOffset,
         { value: 5 },
