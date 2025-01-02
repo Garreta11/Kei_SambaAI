@@ -18,7 +18,7 @@ export default class Wall {
   }
 
   setGeometry() {
-    this.geometry = new THREE.SphereGeometry(0.5, 16, 16);
+    this.geometry = new THREE.SphereGeometry(0.5, 128, 128);
   }
 
   setTexture() {
