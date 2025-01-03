@@ -12,8 +12,8 @@
         "title": "Squid Game",
         "platform": "Netflix",
         "category": "Streaming",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+296%",
+        "viewers": "32,462,000 monthly views",
         "imgUrl": "https://m.media-amazon.com/images/M/MV5BYTYzMTlmNDctNmVkNS00YzRlLWE5MjAtODdjZWRkYzRlNWVlXkEyXkFqcGc@._V1_.jpg",
         "data": {
           "labels": [
@@ -27,13 +27,13 @@
             "12/31"
           ],
           "data": [
-            53,
             33,
-            41,
+            53,
             65,
-            85,
             44,
-            32
+            41,
+            32,
+            85
           ]
         }
       },
@@ -41,8 +41,8 @@
         "title": "Yellowstone",
         "platform": "Amazon Prime Video",
         "category": "Streaming",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+84%",
+        "viewers": "+25,163,000 monthly views",
         "imgUrl": "https://m.media-amazon.com/images/M/MV5BYzE2ODQ0NmQtYmMxMS00MGRlLTgwOGEtYjRkN2FkYmZlN2JlXkEyXkFqcGc@._V1_.jpg",
         "data": {
           "labels": [
@@ -70,8 +70,8 @@
         "title": "The Big Bang Theory",
         "platform": "Amzon Prime Video",
         "category": "Streaming",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+65%",
+        "viewers": "21,745,000 monthly views",
         "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/504250/Primary",
         "data": {
           "labels": [
@@ -81,17 +81,16 @@
             "12/27",
             "12/28",
             "12/29",
-            "12/30",
-            "12/31"
+            "12/30"
           ],
           "data": [
-            53,
             33,
-            41,
-            65,
             85,
+            65,
+            53,
             44,
-            32
+            41,
+            92
           ]
         }
       },
@@ -99,8 +98,8 @@
         "title": "NCIS",
         "platform": "Amazon Prime Video",
         "category": "Streaming",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+90%",
+        "viewers": "20,721,000 monthly views",
         "imgUrl": "https://m.media-amazon.com/images/M/MV5BZGExNmI3NDMtMjYxYS00Y2ZmLTlkNmItMGNkNTQ1MzA1ZGM1XkEyXkFqcGc@._V1_.jpg",
         "data": {
           "labels": [
@@ -110,8 +109,7 @@
             "12/27",
             "12/28",
             "12/29",
-            "12/30",
-            "12/31"
+            "12/30"
           ],
           "data": [
             53,
@@ -128,8 +126,8 @@
         "title": "Virgin River",
         "platform": "Netflix",
         "category": "Streaming",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+200%",
+        "viewers": "20,229,000 monthly views",
         "imgUrl": "https://m.media-amazon.com/images/M/MV5BMWYyOTU0ZWMtMzEzOS00NWZlLTg2NzYtNTk5ZWQyZmVmOTk4XkEyXkFqcGc@._V1_.jpg",
         "data": {
           "labels": [
@@ -139,15 +137,14 @@
             "12/27",
             "12/28",
             "12/29",
-            "12/30",
-            "12/31"
+            "12/30"
           ],
           "data": [
+            85,
             53,
             33,
             41,
             65,
-            85,
             44,
             32
           ]
@@ -157,8 +154,8 @@
         "title": "Landman",
         "platform": null,
         "category": "Streaming",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+126%",
+        "viewers": "18,990,000 monthly views",
         "imgUrl": "https://m.media-amazon.com/images/M/MV5BNTRkY2ZkNzUtMzBlNC00NTc0LWE0ZDQtMWZiNGU5OWEyZGU4XkEyXkFqcGc@._V1_.jpg",
         "data": {
           "labels": [
@@ -168,15 +165,14 @@
             "12/27",
             "12/28",
             "12/29",
-            "12/30",
-            "12/31"
+            "12/30"
           ],
           "data": [
-            53,
             33,
+            85,
             41,
             65,
-            85,
+            53,
             44,
             32
           ]
@@ -186,8 +182,8 @@
         "title": "Law & Order: Special Victims Unit",
         "platform": "Amazon Prime Video",
         "category": "Streaming",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+66%",
+        "viewers": "18,353,000 monthly views",
         "imgUrl": "https://m.media-amazon.com/images/M/MV5BZmI0MDdiZGQtNGZlOC00NGE1LTg3MDItOGZkMGVjZDM3NGE0XkEyXkFqcGc@._V1_.jpg",
         "data": {
           "labels": [
@@ -197,15 +193,14 @@
             "12/27",
             "12/28",
             "12/29",
-            "12/30",
-            "12/31"
+            "12/30"
           ],
           "data": [
-            53,
+            99,
             33,
             41,
             65,
-            85,
+            10,
             44,
             32
           ]
@@ -215,8 +210,8 @@
         "title": "Chicago P.D.",
         "platform": "Amazon Prime Video",
         "category": "Streaming",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+42%",
+        "viewers": "15,254,000 monthly views",
         "imgUrl": "https://m.media-amazon.com/images/M/MV5BN2ZhMTljMTAtNGUxNC00NDMxLThiMDEtYjBiNzU3OGNmNmVlXkEyXkFqcGc@._V1_.jpg",
         "data": {
           "labels": [
@@ -226,12 +221,11 @@
             "12/27",
             "12/28",
             "12/29",
-            "12/30",
-            "12/31"
+            "12/30"
           ],
           "data": [
-            53,
-            33,
+            3,
+            10,
             41,
             65,
             85,
@@ -244,8 +238,8 @@
         "title": "Chicago Fire",
         "platform": "Amazon Prime Video",
         "category": "Streaming",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+34%",
+        "viewers": "14,488,000 monthly views",
         "imgUrl": "https://m.media-amazon.com/images/M/MV5BZDgwYjlhMGItMDQ3YS00OGQyLWFiMTQtYzkwNTUzNjE4NzIwXkEyXkFqcGc@._V1_.jpg",
         "data": {
           "labels": [
@@ -255,12 +249,11 @@
             "12/27",
             "12/28",
             "12/29",
-            "12/30",
-            "12/31"
+            "12/30"
           ],
           "data": [
-            53,
-            33,
+            99,
+            1,
             41,
             65,
             85,
@@ -273,8 +266,8 @@
         "title": "Modern Family",
         "platform": "Amazon Prime Video",
         "category": "Streaming",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+40%",
+        "viewers": "14,043,000 monthly views",
         "imgUrl": "https://m.media-amazon.com/images/M/MV5BYzFlOWFjNzQtODViNC00NzgzLThhZmItZTc1N2VlZDgwODUwXkEyXkFqcGc@._V1_.jpg",
         "data": {
           "labels": [
@@ -302,8 +295,8 @@
         "title": "NFL Football",
         "platform": null,
         "category": "Sports",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+24%",
+        "viewers": "486,274,000 monthly views",
         "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/9829021/Primary",
         "data": {
           "labels": [
@@ -313,14 +306,13 @@
             "12/27",
             "12/28",
             "12/29",
-            "12/30",
-            "12/31"
+            "12/30"
           ],
           "data": [
             53,
             33,
-            41,
-            65,
+            85,
+            99,
             85,
             44,
             32
@@ -331,8 +323,8 @@
         "title": "College Football",
         "platform": null,
         "category": "Sports",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+17%",
+        "viewers": "375,252,000 monthly views",
         "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/10152747/Primary",
         "data": {
           "labels": [
@@ -342,16 +334,15 @@
             "12/27",
             "12/28",
             "12/29",
-            "12/30",
-            "12/31"
+            "12/30"
           ],
           "data": [
             53,
             33,
-            41,
+            55,
             65,
             85,
-            44,
+            7,
             32
           ]
         }
@@ -360,8 +351,8 @@
         "title": "NBA Basketball",
         "platform": null,
         "category": "Sports",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+7%",
+        "viewers": "294,695,000 monthly views",
         "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/9969030/Primary",
         "data": {
           "labels": [
@@ -371,15 +362,14 @@
             "12/27",
             "12/28",
             "12/29",
-            "12/30",
-            "12/31"
+            "12/30"
           ],
           "data": [
+            85,
             53,
             33,
-            41,
             65,
-            85,
+            41,
             44,
             32
           ]
@@ -389,8 +379,8 @@
         "title": "Monday Night Football",
         "platform": null,
         "category": "Sports",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+5%",
+        "viewers": "121,168,000 monthly views",
         "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/9828978/Primary",
         "data": {
           "labels": [
@@ -400,13 +390,12 @@
             "12/27",
             "12/28",
             "12/29",
-            "12/30",
-            "12/31"
+            "12/30"
           ],
           "data": [
-            53,
-            33,
-            41,
+            66,
+            66,
+            66,
             65,
             85,
             44,
@@ -418,8 +407,8 @@
         "title": "Sunday Night Football",
         "platform": null,
         "category": "Sports",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+6%",
+        "viewers": "117,363,000 monthly views",
         "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/10614996/Primary",
         "data": {
           "labels": [
@@ -429,15 +418,14 @@
             "12/27",
             "12/28",
             "12/29",
-            "12/30",
-            "12/31"
+            "12/30"
           ],
           "data": [
-            53,
             33,
+            85,
             41,
             65,
-            85,
+            53,
             44,
             32
           ]
@@ -447,8 +435,8 @@
         "title": "College Basketball",
         "platform": null,
         "category": "Sports",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+1%",
+        "viewers": "92,450,000 monthly views",
         "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/10387789/Primary",
         "data": {
           "labels": [
@@ -458,15 +446,14 @@
             "12/27",
             "12/28",
             "12/29",
-            "12/30",
-            "12/31"
+            "12/30"
           ],
           "data": [
-            53,
             33,
+            85,
             41,
             65,
-            85,
+            53,
             44,
             32
           ]
@@ -476,8 +463,8 @@
         "title": "F\u00fatbol americano universitario",
         "platform": null,
         "category": "Sports",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+4%",
+        "viewers": "89,950,000 monthly views",
         "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/10371805/Primary",
         "data": {
           "labels": [
@@ -487,14 +474,13 @@
             "12/27",
             "12/28",
             "12/29",
-            "12/30",
-            "12/31"
+            "12/30"
           ],
           "data": [
-            53,
-            33,
-            41,
-            65,
+            99,
+            3,
+            78,
+            22,
             85,
             44,
             32
@@ -505,8 +491,8 @@
         "title": "NHL Hockey",
         "platform": null,
         "category": "Sports",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+1%",
+        "viewers": "65,102,000 monthly views",
         "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/9969735/Primary",
         "data": {
           "labels": [
@@ -516,16 +502,15 @@
             "12/27",
             "12/28",
             "12/29",
-            "12/30",
-            "12/31"
+            "12/30"
           ],
           "data": [
             53,
             33,
-            41,
+            44,
             65,
             85,
-            44,
+            41,
             32
           ]
         }
@@ -534,8 +519,8 @@
         "title": "2024-25 College Football Playoff",
         "platform": null,
         "category": "Sports",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+0.08%",
+        "viewers": "49,496,000 monthly views",
         "imgUrl": "/carousel-item2-placeholder.jpg",
         "data": {
           "labels": [
@@ -545,16 +530,15 @@
             "12/27",
             "12/28",
             "12/29",
-            "12/30",
-            "12/31"
+            "12/30"
           ],
           "data": [
-            53,
             33,
             41,
+            53,
             65,
-            85,
             44,
+            85,
             32
           ]
         }
@@ -563,8 +547,8 @@
         "title": "Ravens vs. Texans",
         "platform": null,
         "category": "Sports",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+3%",
+        "viewers": "43,378,000 monthly views",
         "imgUrl": "/carousel-item2-placeholder.jpg",
         "data": {
           "labels": [
@@ -574,15 +558,14 @@
             "12/27",
             "12/28",
             "12/29",
-            "12/30",
-            "12/31"
+            "12/30"
           ],
           "data": [
+            65,
+            85,
             53,
             33,
             41,
-            65,
-            85,
             44,
             32
           ]
@@ -592,8 +575,8 @@
         "title": "Dateline",
         "platform": null,
         "category": "News",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+2%",
+        "viewers": "54,089,000 monthly views",
         "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/2525755/Primary",
         "data": {
           "labels": [
@@ -621,8 +604,8 @@
         "title": "Good Morning America",
         "platform": null,
         "category": "News",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+2.37%",
+        "viewers": "47,900,000 monthly views",
         "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/4003/Primary",
         "data": {
           "labels": [
@@ -650,8 +633,8 @@
         "title": "Entertainment Tonight",
         "platform": null,
         "category": "News",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+0.67%",
+        "viewers": "43,950,000 monthly views",
         "imgUrl": "https://m.media-amazon.com/images/M/MV5BYmEzODg2ZjctZDIzMC00ZjE4LTg2M2UtMjI5ZmJhYWRmMjFkXkEyXkFqcGc@._V1_.jpg",
         "data": {
           "labels": [
@@ -679,8 +662,8 @@
         "title": "Today",
         "platform": null,
         "category": "News",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+2.52%",
+        "viewers": "4,360,000 monthly views",
         "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/2974/Primary",
         "data": {
           "labels": [
@@ -708,8 +691,8 @@
         "title": "SportsCenter",
         "platform": null,
         "category": "News",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+2.23%",
+        "viewers": "39,848,000 monthly views",
         "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/4383/Primary",
         "data": {
           "labels": [
@@ -737,8 +720,8 @@
         "title": "CBS Mornings",
         "platform": null,
         "category": "News",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+1.48%",
+        "viewers": "39,817,000 monthly views",
         "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/4780674/Primary",
         "data": {
           "labels": [
@@ -766,8 +749,8 @@
         "title": "Inside Edition",
         "platform": null,
         "category": "News",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+0.64%",
+        "viewers": "37,843,000 monthly views",
         "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/2946/Primary",
         "data": {
           "labels": [
@@ -793,10 +776,10 @@
       },
       {
         "title": "NBC Nightly News with Lester Holt",
-        "platform": null,
+        "platform": "NBC",
         "category": "News",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+1.5%",
+        "viewers": "34,686,000 monthly views",
         "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/2309245/Primary",
         "data": {
           "labels": [
@@ -824,8 +807,8 @@
         "title": "Live with Kelly and Mark",
         "platform": null,
         "category": "News",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+1.06%",
+        "viewers": "31,775,000 monthly views",
         "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/7512715/Primary",
         "data": {
           "labels": [
@@ -851,10 +834,10 @@
       },
       {
         "title": "ABC World News Tonight with David Muir",
-        "platform": null,
+        "platform": "ABC",
         "category": "News",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "increment": "+1.2%",
+        "viewers": "29,797,000 monthly views",
         "imgUrl": "https://m.media-amazon.com/images/M/MV5BNTQyYzQ2ZTYtMzQ0ZC00ZjllLTg1ODAtOGUxNDY0ZmVmYTE1XkEyXkFqcGc@._V1_.jpg",
         "data": {
           "labels": [

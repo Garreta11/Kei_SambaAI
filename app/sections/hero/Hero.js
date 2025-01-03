@@ -107,7 +107,7 @@ const Hero = ({ title, number, text }) => {
 
     setTimeout(() => {
       scrollToSection();
-    }, 1000);
+    }, 100);
   };
 
   useEffect(() => {

@@ -48,18 +48,10 @@ const VideoCanvas = ({ videoSrc, text, subtext }) => {
         onUpdate: () => {
           let progress = timeline.progress();
 
-          // Only update when progress is smaller than 0.5
-          if (progress < 0.5) {
-            // Map progress from [0, 0.5] to [0, 1]
-            const mappedProgress = progress * 2;
+          if (progress < 0.3) {
+            const mappedProgress = mapValue(progress, 0, 0.3, 0, 0.5);
 
-            const maxCells = 200; // Maximum number of cells
-            const minCells = 4; // Minimum number of cells
-            let newCellCount = Math.floor(
-              minCells + mappedProgress * (maxCells - minCells)
-            );
-
-            // Calculate rows and columns for a square grid
+            const newCellCount = mapValue(mappedProgress, 0, 0.5, 4, 300);
             const gridSize = Math.sqrt(newCellCount);
             const rows = Math.floor(gridSize);
             const columns = Math.ceil(newCellCount / (2 * rows));
@@ -79,41 +71,61 @@ const VideoCanvas = ({ videoSrc, text, subtext }) => {
               });
             });
 
+            // video current time
+            const targetTime = mappedProgress * videoRef.current.duration;
+            videoRef.current.currentTime = targetTime;
+
+            // reset scale
             gsap.to(containerRef.current, {
               filter: `blur(0px)`,
               scale: 1,
               ease: 'none',
             });
 
-            // video current time
-            const targetTime = progress * videoRef.current.duration;
-            videoRef.current.currentTime = targetTime;
-          } else {
-            // Apply opacity to blur items based on mapped progress
-            const blurItems = blurContainerRef.current.children;
-            Array.from(blurItems).forEach((item) => {
-              gsap.to(item, { backdropFilter: `blur(${0}px)`, ease: 'none' });
+            // reset text
+            gsap.to(textRef.current, {
+              y: 0,
+              filter: `blur(0px)`,
+              opacity: 1,
+              ease: 'none',
             });
-
+            // reset boxes pixels
+            gsap.to(blurContainerRef.current, {
+              opacity: 1,
+              ease: 'none',
+            });
+          } else if (progress < 0.7) {
             if (videoRef.current.paused) {
               videoRef.current.play();
             }
-          }
-          if (progress > 0.5) {
+
+            // hide text
+            gsap.to(textRef.current, {
+              y: -progress * 1000,
+              filter: `blur(${mapValue(progress, 0.3, 0.7, 0, 100)}px)`,
+              opacity: mapValue(progress, 0.3, 0.7, 1, 0),
+              ease: 'none',
+            });
+
+            // hide boxes pixels
+            gsap.to(blurContainerRef.current, {
+              opacity: 0,
+              ease: 'none',
+            });
+
+            // reset scale
             gsap.to(containerRef.current, {
-              filter: `blur(${mapValue(progress, 0.5, 1, 0, 100)}px)`,
-              scale: mapValue(progress, 0.5, 1, 1, 0),
+              filter: `blur(0px)`,
+              scale: 1,
+              ease: 'none',
+            });
+          } else {
+            gsap.to(containerRef.current, {
+              filter: `blur(${mapValue(progress, 0.7, 1, 0, 100)}px)`,
+              scale: mapValue(progress, 0.7, 1, 1, 0),
               ease: 'none',
             });
           }
-
-          // hide text
-          gsap.to(textRef.current, {
-            y: -progress * 1000,
-            filter: `blur(${mapValue(progress, 0, 0.5, 0, 100)}px)`,
-            opacity: mapValue(progress, 0, 0.5, 1, 0),
-            ease: 'none',
-          });
         },
       }
     );
