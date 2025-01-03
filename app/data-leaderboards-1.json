@@ -1,0 +1,1933 @@
+{
+  "carousel": {
+    "title": "Viewership Leaderboard: Popular In the Last 7 Days",
+    "categories": [
+      "Streaming",
+      "Sport",
+      "News",
+      "Advertisements"
+    ],
+    "items": {
+      "Streaming": [
+        {
+          "title": "Squid Game",
+          "content_id": "14400002596579",
+          "platforms": [
+            "Netflix"
+          ],
+          "households": 32462000,
+          "percent_total_hours_viewed": 2.960211336041967,
+          "category": "streaming",
+          "imgUrl": "https://m.media-amazon.com/images/M/MV5BYTYzMTlmNDctNmVkNS00YzRlLWE5MjAtODdjZWRkYzRlNWVlXkEyXkFqcGc@._V1_.jpg",
+          "record_id": 1,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "Yellowstone",
+          "content_id": "2233427818115",
+          "platforms": [
+            "Amazon Prime Video",
+            "Apple TV",
+            "DISH Anywhere",
+            "Fandango at Home",
+            "Hulu",
+            "Microsoft Movies & TV",
+            "Peacock",
+            "Verizon",
+            "Xfinity Stream"
+          ],
+          "households": 25163000,
+          "percent_total_hours_viewed": 0.8396663829796541,
+          "category": "streaming",
+          "imgUrl": "https://m.media-amazon.com/images/M/MV5BYzE2ODQ0NmQtYmMxMS00MGRlLTgwOGEtYjRkN2FkYmZlN2JlXkEyXkFqcGc@._V1_.jpg",
+          "record_id": 2,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "The Big Bang Theory",
+          "content_id": "2233384385755",
+          "platforms": [
+            "Amazon Prime Video",
+            "Apple TV",
+            "DISH Anywhere",
+            "Fandango at Home",
+            "Google Play Movies & TV",
+            "Max",
+            "Microsoft Movies & TV",
+            "Verizon",
+            "Xfinity Stream",
+            "YouTube Premium"
+          ],
+          "households": 21745000,
+          "percent_total_hours_viewed": 0.6542013809923107,
+          "category": "streaming",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/504250/Primary",
+          "record_id": 3,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "NCIS",
+          "content_id": "14400009096041",
+          "platforms": [
+            "Amazon Prime Video",
+            "Apple TV",
+            "DISH Anywhere",
+            "Fandango at Home",
+            "Microsoft Movies & TV",
+            "Netflix",
+            "Paramount+",
+            "The Roku Channel",
+            "Verizon",
+            "Xfinity Stream",
+            "YouTube Premium"
+          ],
+          "households": 20721000,
+          "percent_total_hours_viewed": 0.9000986030230353,
+          "category": "streaming",
+          "imgUrl": "https://m.media-amazon.com/images/M/MV5BZGExNmI3NDMtMjYxYS00Y2ZmLTlkNmItMGNkNTQ1MzA1ZGM1XkEyXkFqcGc@._V1_.jpg",
+          "record_id": 4,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "Virgin River",
+          "content_id": "14400020914156",
+          "platforms": [
+            "Netflix"
+          ],
+          "households": 20229000,
+          "percent_total_hours_viewed": 2.003300515245696,
+          "category": "streaming",
+          "imgUrl": "https://m.media-amazon.com/images/M/MV5BMWYyOTU0ZWMtMzEzOS00NWZlLTg2NzYtNTk5ZWQyZmVmOTk4XkEyXkFqcGc@._V1_.jpg",
+          "record_id": 5,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "Landman",
+          "content_id": "14400020761794",
+          "platforms": null,
+          "households": 18990000,
+          "percent_total_hours_viewed": 1.2573008193463788,
+          "category": "streaming",
+          "imgUrl": "https://m.media-amazon.com/images/M/MV5BNTRkY2ZkNzUtMzBlNC00NTc0LWE0ZDQtMWZiNGU5OWEyZGU4XkEyXkFqcGc@._V1_.jpg",
+          "record_id": 6,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "Law & Order: Special Victims Unit",
+          "content_id": "14400019363882",
+          "platforms": [
+            "Amazon Prime Video",
+            "Apple TV",
+            "DISH Anywhere",
+            "Disney+",
+            "Fandango at Home",
+            "Google Play Movies & TV",
+            "Hulu",
+            "Microsoft Movies & TV",
+            "Peacock",
+            "Verizon",
+            "Xfinity Stream",
+            "YouTube"
+          ],
+          "households": 18353000,
+          "percent_total_hours_viewed": 0.6574574352961544,
+          "category": "streaming",
+          "imgUrl": "https://m.media-amazon.com/images/M/MV5BZmI0MDdiZGQtNGZlOC00NGE1LTg3MDItOGZkMGVjZDM3NGE0XkEyXkFqcGc@._V1_.jpg",
+          "record_id": 7,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "Chicago P.D.",
+          "content_id": "2233386282008",
+          "platforms": [
+            "Amazon Prime Video",
+            "Apple TV",
+            "DISH Anywhere",
+            "Fandango at Home",
+            "Google Play Movies & TV",
+            "Microsoft Movies & TV",
+            "Peacock",
+            "Verizon",
+            "Xfinity Stream",
+            "YouTube"
+          ],
+          "households": 15254000,
+          "percent_total_hours_viewed": 0.41779083816289414,
+          "category": "streaming",
+          "imgUrl": "https://m.media-amazon.com/images/M/MV5BN2ZhMTljMTAtNGUxNC00NDMxLThiMDEtYjBiNzU3OGNmNmVlXkEyXkFqcGc@._V1_.jpg",
+          "record_id": 8,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "Chicago Fire",
+          "content_id": "14400018946723",
+          "platforms": [
+            "Amazon Prime Video",
+            "Apple TV",
+            "DIRECTV Stream",
+            "DISH Anywhere",
+            "Fandango at Home",
+            "Google Play Movies & TV",
+            "Microsoft Movies & TV",
+            "Peacock",
+            "Verizon",
+            "Xfinity Stream"
+          ],
+          "households": 14488000,
+          "percent_total_hours_viewed": 0.3404705827593332,
+          "category": "streaming",
+          "imgUrl": "https://m.media-amazon.com/images/M/MV5BZDgwYjlhMGItMDQ3YS00OGQyLWFiMTQtYzkwNTUzNjE4NzIwXkEyXkFqcGc@._V1_.jpg",
+          "record_id": 9,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "Modern Family",
+          "content_id": "14400017631415",
+          "platforms": [
+            "Amazon Prime Video",
+            "Apple TV",
+            "DISH Anywhere",
+            "Fandango at Home",
+            "Fubo TV",
+            "Google Play Movies & TV",
+            "Hulu",
+            "Microsoft Movies & TV",
+            "NBC",
+            "Optimum TV",
+            "Peacock",
+            "Spectrum On Demand",
+            "USA Network",
+            "Verizon",
+            "Xfinity Stream",
+            "YouTube",
+            "YouTube TV"
+          ],
+          "households": 14043000,
+          "percent_total_hours_viewed": 0.3969520832668929,
+          "category": "streaming",
+          "imgUrl": "https://m.media-amazon.com/images/M/MV5BYzFlOWFjNzQtODViNC00NzgzLThhZmItZTc1N2VlZDgwODUwXkEyXkFqcGc@._V1_.jpg",
+          "record_id": 10,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "SpongeBob SquarePants",
+          "content_id": "14400018168316",
+          "platforms": null,
+          "households": 12281000,
+          "percent_total_hours_viewed": 0.3804768249194167,
+          "category": "streaming",
+          "imgUrl": "https://m.media-amazon.com/images/M/MV5BYjJmMjBkZjMtZThiZS00Nzk3LWJlN2UtYmE5ZjkyNjJiZjgxXkEyXkFqcGc@._V1_.jpg",
+          "record_id": 11,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "Blue Bloods",
+          "content_id": "14400019694551",
+          "platforms": [
+            "Amazon Prime Video",
+            "Apple TV",
+            "CBS",
+            "DISH Anywhere",
+            "Fandango at Home",
+            "Fubo TV",
+            "Google Play Movies & TV",
+            "Microsoft Movies & TV",
+            "Optimum TV",
+            "Paramount+",
+            "Spectrum On Demand",
+            "The Roku Channel",
+            "Verizon",
+            "Xfinity Stream",
+            "YouTube TV"
+          ],
+          "households": 11794000,
+          "percent_total_hours_viewed": 0.43970820170550295,
+          "category": "streaming",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/1072711/Primary",
+          "record_id": 12,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "M*A*S*H",
+          "content_id": "14400020919769",
+          "platforms": null,
+          "households": 11177000,
+          "percent_total_hours_viewed": 0.31179707155383285,
+          "category": "streaming",
+          "imgUrl": "https://m.media-amazon.com/images/M/MV5BN2U1YTAyMjktOGRjZi00OWUzLTliMzItY2U0MjliNzNhOGFlXkEyXkFqcGc@._V1_.jpg",
+          "record_id": 13,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "Criminal Minds",
+          "content_id": "14400013687308",
+          "platforms": [
+            "Amazon Prime Video",
+            "Apple TV",
+            "Disney+",
+            "Fandango at Home",
+            "Hulu",
+            "Microsoft Movies & TV",
+            "Paramount+",
+            "The Roku Channel",
+            "Verizon",
+            "Xfinity Stream",
+            "YouTube Premium"
+          ],
+          "households": 11116000,
+          "percent_total_hours_viewed": 0.39246178987154057,
+          "category": "streaming",
+          "imgUrl": "https://m.media-amazon.com/images/M/MV5BNjJhMWNjNGYtMmQ2Ny00NTdlLTlkOTAtNDc2NjA4MmQyOWFhXkEyXkFqcGc@._V1_.jpg",
+          "record_id": 14,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "The Equalizer",
+          "content_id": "14400018839306",
+          "platforms": [
+            "Amazon Prime Video",
+            "Apple TV",
+            "DISH Anywhere",
+            "Fandango at Home",
+            "Google Play Movies & TV",
+            "Hulu",
+            "Microsoft Movies & TV",
+            "Netflix",
+            "Paramount+",
+            "The Roku Channel",
+            "Verizon",
+            "Xfinity Stream",
+            "YouTube Premium"
+          ],
+          "households": 10760000,
+          "percent_total_hours_viewed": 0.6629852984118226,
+          "category": "streaming",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/3591800/Primary",
+          "record_id": 15,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "Suits",
+          "content_id": "14400017274349",
+          "platforms": [
+            "Amazon Prime Video",
+            "Apple TV",
+            "Fandango at Home",
+            "Google Play Movies & TV",
+            "Microsoft Movies & TV",
+            "Netflix",
+            "Peacock",
+            "Verizon",
+            "Xfinity Stream"
+          ],
+          "households": 10757000,
+          "percent_total_hours_viewed": 0.32646787880147005,
+          "category": "streaming",
+          "imgUrl": "https://m.media-amazon.com/images/M/MV5BYmE4MmNjZjUtNTEyNy00NTZiLWE4NTktYjM2NjBhYzQ1N2IzXkEyXkFqcGc@._V1_.jpg",
+          "record_id": 16,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "Dexter",
+          "content_id": "14400020081381",
+          "platforms": [
+            "Amazon Prime Video",
+            "Apple TV",
+            "DISH Anywhere",
+            "Fandango at Home",
+            "Fubo TV",
+            "Google Play Movies & TV",
+            "Microsoft Movies & TV",
+            "Netflix",
+            "Optimum TV",
+            "Paramount+",
+            "Spectrum On Demand",
+            "The Roku Channel",
+            "Xfinity Stream",
+            "YouTube"
+          ],
+          "households": 10244000,
+          "percent_total_hours_viewed": 0.5987426283965737,
+          "category": "streaming",
+          "imgUrl": "https://m.media-amazon.com/images/M/MV5BMTQ3YmQ4YzMtOTkyZC00YmM5LThhZjEtM2E0MjFkNTc0OGJhXkEyXkFqcGc@._V1_.jpg",
+          "record_id": 17,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "Red One",
+          "content_id": "14400007873011",
+          "platforms": [
+            "Amazon Prime Video"
+          ],
+          "households": 10180000,
+          "percent_total_hours_viewed": 0.7645971492991813,
+          "category": "streaming",
+          "imgUrl": "https://m.media-amazon.com/images/M/MV5BZmFkMjE4NjQtZTVmZS00MDZjLWE2ZmEtZTkzODljNjhlNWUxXkEyXkFqcGc@._V1_.jpg",
+          "record_id": 18,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "The Office",
+          "content_id": "14400010589049",
+          "platforms": null,
+          "households": 10027000,
+          "percent_total_hours_viewed": 0.16963715064163223,
+          "category": "streaming",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/268755/Primary",
+          "record_id": 19,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "Perry Mason",
+          "content_id": "14400018142265",
+          "platforms": [
+            "Amazon Prime Video",
+            "Hulu",
+            "Paramount+",
+            "Pluto TV",
+            "The Roku Channel"
+          ],
+          "households": 9907000,
+          "percent_total_hours_viewed": 0.2298628395177998,
+          "category": "streaming",
+          "imgUrl": "https://m.media-amazon.com/images/M/MV5BZjY2ZjFhYzctMzBjYi00OWI5LThlZDctODRhYTI5ZDI3Zjk0XkEyXkFqcGc@._V1_.jpg",
+          "record_id": 20,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      ],
+      "News": [
+        {
+          "title": "Dateline",
+          "content_id": "2233396900905",
+          "platforms": null,
+          "households": 54089000,
+          "percent_total_hours_viewed": 1.5611888155843883,
+          "category": "news",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/2525755/Primary",
+          "record_id": 1,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "Good Morning America",
+          "content_id": "14400020876252",
+          "platforms": null,
+          "households": 47900000,
+          "percent_total_hours_viewed": 2.3782817365593383,
+          "category": "news",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/4003/Primary",
+          "record_id": 2,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "Entertainment Tonight",
+          "content_id": "14400020714725",
+          "platforms": null,
+          "households": 43950000,
+          "percent_total_hours_viewed": 0.6691738466398817,
+          "category": "news",
+          "imgUrl": "https://m.media-amazon.com/images/M/MV5BYmEzODg2ZjctZDIzMC00ZjE4LTg2M2UtMjI5ZmJhYWRmMjFkXkEyXkFqcGc@._V1_.jpg",
+          "record_id": 3,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "Today",
+          "content_id": "14400020887098",
+          "platforms": null,
+          "households": 43604000,
+          "percent_total_hours_viewed": 2.5298501453179596,
+          "category": "news",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/2974/Primary",
+          "record_id": 4,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "SportsCenter",
+          "content_id": "14400020907194",
+          "platforms": null,
+          "households": 39848000,
+          "percent_total_hours_viewed": 2.2355527103291837,
+          "category": "news",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/4383/Primary",
+          "record_id": 5,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "CBS Mornings",
+          "content_id": "14400020907789",
+          "platforms": null,
+          "households": 39817000,
+          "percent_total_hours_viewed": 1.4853301546938782,
+          "category": "news",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/4780674/Primary",
+          "record_id": 6,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "Inside Edition",
+          "content_id": "14400020815214",
+          "platforms": null,
+          "households": 37843000,
+          "percent_total_hours_viewed": 0.6414608453019005,
+          "category": "news",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/2946/Primary",
+          "record_id": 7,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "NBC Nightly News with Lester Holt",
+          "content_id": "360613",
+          "platforms": null,
+          "households": 34686000,
+          "percent_total_hours_viewed": 1.5077260443510312,
+          "category": "news",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/2309245/Primary",
+          "record_id": 8,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "Live with Kelly and Mark",
+          "content_id": "14400020848412",
+          "platforms": null,
+          "households": 31775000,
+          "percent_total_hours_viewed": 1.0613797485987735,
+          "category": "news",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/7512715/Primary",
+          "record_id": 9,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "ABC World News Tonight with David Muir",
+          "content_id": "1000000199279242",
+          "platforms": null,
+          "households": 29797000,
+          "percent_total_hours_viewed": 1.2254161717761636,
+          "category": "news",
+          "imgUrl": "https://m.media-amazon.com/images/M/MV5BNTQyYzQ2ZTYtMzQ0ZC00ZjllLTg1ODAtOGUxNDY0ZmVmYTE1XkEyXkFqcGc@._V1_.jpg",
+          "record_id": 10,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "Today 3rd Hour",
+          "content_id": "14400020885587",
+          "platforms": null,
+          "households": 25424000,
+          "percent_total_hours_viewed": 1.2432790649456136,
+          "category": "news",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/3256918/Primary",
+          "record_id": 11,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "Extra",
+          "content_id": "14400020711908",
+          "platforms": null,
+          "households": 25031000,
+          "percent_total_hours_viewed": 0.25306613993574967,
+          "category": "news",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/3214/Primary",
+          "record_id": 12,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "CBS Evening News with Norah O'Donnell",
+          "content_id": "8830509461710",
+          "platforms": null,
+          "households": 24772000,
+          "percent_total_hours_viewed": 0.7984083453944822,
+          "category": "news",
+          "imgUrl": null,
+          "record_id": 13,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "FOX & Friends",
+          "content_id": "362623",
+          "platforms": [
+            "DIRECTV Stream",
+            "Fox Nation"
+          ],
+          "households": 23408000,
+          "percent_total_hours_viewed": 1.6096961154697602,
+          "category": "news",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/62034/Primary",
+          "record_id": 14,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "48 Hours",
+          "content_id": "2233449840485",
+          "platforms": null,
+          "households": 22495000,
+          "percent_total_hours_viewed": 0.5171982926899287,
+          "category": "news",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/8112596/Primary",
+          "record_id": 15,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "FOX News Live",
+          "content_id": "8830514034080",
+          "platforms": null,
+          "households": 22064000,
+          "percent_total_hours_viewed": 1.709793775658616,
+          "category": "news",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/35057/Primary",
+          "record_id": 16,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "CNN News Central",
+          "content_id": "1000000197293590",
+          "platforms": null,
+          "households": 21617000,
+          "percent_total_hours_viewed": 1.0294313906387094,
+          "category": "news",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/7471223/Primary",
+          "record_id": 17,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "Today with Hoda & Jenna",
+          "content_id": "14400020885037",
+          "platforms": null,
+          "households": 20235000,
+          "percent_total_hours_viewed": 0.9521523622732863,
+          "category": "news",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/3256921/Primary",
+          "record_id": 18,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "America\u2019s Newsroom",
+          "content_id": "3332958703421",
+          "platforms": [
+            "DIRECTV Stream",
+            "Hulu"
+          ],
+          "households": 18727000,
+          "percent_total_hours_viewed": 1.4729423111051454,
+          "category": "news",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/4015000/Primary",
+          "record_id": 19,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "TMZ",
+          "content_id": "14400020691077",
+          "platforms": null,
+          "households": 18591000,
+          "percent_total_hours_viewed": 0.23232220484960953,
+          "category": "news",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/514282/Primary",
+          "record_id": 20,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      ],
+      "Sport": [
+        {
+          "title": "NFL Football",
+          "content_id": "14400020780572",
+          "platforms": null,
+          "households": 486274000,
+          "percent_total_hours_viewed": 24.069199574491,
+          "category": "sports",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/9829021/Primary",
+          "record_id": 1,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "College Football",
+          "content_id": "14400005345683",
+          "platforms": null,
+          "households": 375252000,
+          "percent_total_hours_viewed": 16.975774905811946,
+          "category": "sports",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/10152747/Primary",
+          "record_id": 2,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "NBA Basketball",
+          "content_id": "14400020863481",
+          "platforms": null,
+          "households": 294695000,
+          "percent_total_hours_viewed": 7.256743358557165,
+          "category": "sports",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/9969030/Primary",
+          "record_id": 3,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "Monday Night Football",
+          "content_id": "14400020321976",
+          "platforms": null,
+          "households": 121168000,
+          "percent_total_hours_viewed": 4.66779030703794,
+          "category": "sports",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/9828978/Primary",
+          "record_id": 4,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "Sunday Night Football",
+          "content_id": "14400020816133",
+          "platforms": null,
+          "households": 117363000,
+          "percent_total_hours_viewed": 6.25287232150388,
+          "category": "sports",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/10614996/Primary",
+          "record_id": 5,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "College Basketball",
+          "content_id": "14400020922304",
+          "platforms": null,
+          "households": 92450000,
+          "percent_total_hours_viewed": 1.3417502510618806,
+          "category": "sports",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/10387789/Primary",
+          "record_id": 6,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "F\u00fatbol americano universitario",
+          "content_id": "14400020897026",
+          "platforms": null,
+          "households": 89950000,
+          "percent_total_hours_viewed": 4.001792072511214,
+          "category": "sports",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/10371805/Primary",
+          "record_id": 7,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "NHL Hockey",
+          "content_id": "14400020876745",
+          "platforms": null,
+          "households": 65102000,
+          "percent_total_hours_viewed": 0.7771508483988291,
+          "category": "sports",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/9969735/Primary",
+          "record_id": 8,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "2024-25 College Football Playoff",
+          "content_id": "14400020876767",
+          "platforms": null,
+          "households": 49496000,
+          "percent_total_hours_viewed": 0.0884883613531763,
+          "category": "sports",
+          "imgUrl": null,
+          "record_id": 9,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "Ravens vs. Texans",
+          "content_id": "1000000072684301",
+          "platforms": null,
+          "households": 43378000,
+          "percent_total_hours_viewed": 2.593456360583807,
+          "category": "sports",
+          "imgUrl": null,
+          "record_id": 10,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "SportsCenter",
+          "content_id": "492638",
+          "platforms": null,
+          "households": 42243000,
+          "percent_total_hours_viewed": 1.4153356846485647,
+          "category": "sports",
+          "imgUrl": null,
+          "record_id": 11,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "Chiefs vs. Steelers",
+          "content_id": "1000000072684300",
+          "platforms": null,
+          "households": 41531000,
+          "percent_total_hours_viewed": 2.4215179852657958,
+          "category": "sports",
+          "imgUrl": null,
+          "record_id": 12,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "PGA Tour Golf",
+          "content_id": "14400020119897",
+          "platforms": null,
+          "households": 40725000,
+          "percent_total_hours_viewed": 0.9368145381626286,
+          "category": "sports",
+          "imgUrl": null,
+          "record_id": 13,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "Thursday Night Football",
+          "content_id": "14400020460697",
+          "platforms": null,
+          "households": 39163000,
+          "percent_total_hours_viewed": 0.9491716377946654,
+          "category": "sports",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/9828996/Primary",
+          "record_id": 14,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "NFL Gameday Kickoff",
+          "content_id": "34362840714",
+          "platforms": null,
+          "households": 35900000,
+          "percent_total_hours_viewed": 1.2437110120401103,
+          "category": "sports",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/2257728/Primary",
+          "record_id": 15,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "High School Football",
+          "content_id": "14400020824977",
+          "platforms": null,
+          "households": 27496000,
+          "percent_total_hours_viewed": 0.07223487621930356,
+          "category": "sports",
+          "imgUrl": null,
+          "record_id": 16,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "English Premier League Soccer",
+          "content_id": "14400020885847",
+          "platforms": null,
+          "households": 23488000,
+          "percent_total_hours_viewed": 1.1238109717366533,
+          "category": "sports",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/10364466/Primary",
+          "record_id": 17,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "FOX & Friends",
+          "content_id": "362623",
+          "platforms": [
+            "DIRECTV Stream",
+            "Fox Nation"
+          ],
+          "households": 23408000,
+          "percent_total_hours_viewed": 1.0164234353129864,
+          "category": "sports",
+          "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/62034/Primary",
+          "record_id": 18,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "FOX NFL Sunday",
+          "content_id": "362038",
+          "platforms": null,
+          "households": 20847000,
+          "percent_total_hours_viewed": 0.5427210408717625,
+          "category": "sports",
+          "imgUrl": "https://m.media-amazon.com/images/M/MV5BYzM0NTY0ZTctNzgxYS00NGZmLWE5YzAtNTRhZmJiNTcxMTA0XkEyXkFqcGc@._V1_.jpg",
+          "record_id": 19,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        },
+        {
+          "title": "GMFB Overtime",
+          "content_id": "14400020721347",
+          "platforms": null,
+          "households": 20565000,
+          "percent_total_hours_viewed": 0.13202977682142084,
+          "category": "sports",
+          "imgUrl": null,
+          "record_id": 20,
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      ]
+    }
+  }
+}

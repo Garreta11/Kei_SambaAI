@@ -126,14 +126,13 @@ const Semasio = ({ headline, subtext }) => {
             end: '+=' + ammountToScroll,
             pin: true,
             scrub: true,
+            snap: {
+              snapTo: [0.428, 0.7135, 0.857, 0.999],
+            },
             onLeave: () => {
               navigateToNextSection();
             },
           },
-        });
-
-        gsap.ticker.add(() => {
-          console.log(timeline.progress());
         });
 
         // Animate rows

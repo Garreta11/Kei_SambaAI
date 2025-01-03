@@ -225,13 +225,11 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
                           </p>
                           <Logo platform={item.platform} />
                         </div>
-                        <Image
+                        <img
                           className={
                             styles.leaderboard__gallery__wrapper__item__image
                           }
                           src={item.imgUrl}
-                          width={423}
-                          height={180}
                           alt={`carousel-item-${index}`}
                         />
                         <div

@@ -9,49 +9,22 @@
     ],
     "items": [
       {
-        "title": "The Penguin S1",
+        "title": "Squid Game",
         "platform": "Netflix",
         "category": "Streaming",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item-placeholder.jpg",
+        "imgUrl": "https://m.media-amazon.com/images/M/MV5BYTYzMTlmNDctNmVkNS00YzRlLWE5MjAtODdjZWRkYzRlNWVlXkEyXkFqcGc@._V1_.jpg",
         "data": {
           "labels": [
-            "11/24",
             "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
-          ],
-          "data": [
-            33,
-            53,
-            85,
-            41,
-            44,
-            65,
-            32
-          ]
-        }
-      },
-      {
-        "title": "The Penguin S1",
-        "platform": "Disney",
-        "category": "Streaming",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item-placeholder.jpg",
-        "data": {
-          "labels": [
-            "11/24",
-            "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
           ],
           "data": [
             53,
@@ -65,245 +38,515 @@
         }
       },
       {
-        "title": "The Penguin S1",
-        "platform": "Netflix",
+        "title": "Yellowstone",
+        "platform": "Amazon Prime Video",
         "category": "Streaming",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item-placeholder.jpg",
+        "imgUrl": "https://m.media-amazon.com/images/M/MV5BYzE2ODQ0NmQtYmMxMS00MGRlLTgwOGEtYjRkN2FkYmZlN2JlXkEyXkFqcGc@._V1_.jpg",
         "data": {
           "labels": [
-            "11/24",
             "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
           ],
           "data": [
             53,
             33,
-            32,
-            65,
-            85,
-            41,
-            44
-          ]
-        }
-      },
-      {
-        "title": "The Penguin S1",
-        "platform": "Netflix",
-        "category": "Streaming",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item-placeholder.jpg",
-        "data": {
-          "labels": [
-            "11/24",
-            "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
-          ],
-          "data": [
-            85,
-            33,
             41,
             65,
-            53,
+            85,
             44,
             32
           ]
         }
       },
       {
-        "title": "The Penguin S1",
-        "platform": "Netflix",
+        "title": "The Big Bang Theory",
+        "platform": "Amzon Prime Video",
         "category": "Streaming",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item-placeholder.jpg",
+        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/504250/Primary",
         "data": {
           "labels": [
-            "11/24",
             "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
           ],
           "data": [
             53,
+            33,
             41,
             65,
-            33,
-            44,
-            32,
-            85
-          ]
-        }
-      },
-      {
-        "title": "The Penguin S1",
-        "platform": "Netflix",
-        "category": "Streaming",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item-placeholder.jpg",
-        "data": {
-          "labels": [
-            "11/24",
-            "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
-          ],
-          "data": [
-            33,
             85,
-            41,
-            44,
-            65,
-            53,
-            32
-          ]
-        }
-      },
-      {
-        "title": "The Penguin S1",
-        "platform": "Netflix",
-        "category": "Streaming",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item-placeholder.jpg",
-        "data": {
-          "labels": [
-            "11/24",
-            "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
-          ],
-          "data": [
-            85,
-            33,
-            53,
-            65,
-            44,
-            41,
-            32
-          ]
-        }
-      },
-      {
-        "title": "The Penguin S1",
-        "platform": "Netflix",
-        "category": "Streaming",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item-placeholder.jpg",
-        "data": {
-          "labels": [
-            "11/24",
-            "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
-          ],
-          "data": [
-            33,
-            85,
-            41,
-            65,
-            53,
             44,
             32
           ]
         }
       },
       {
-        "title": "The Penguin S1",
-        "platform": "Netflix",
+        "title": "NCIS",
+        "platform": "Amazon Prime Video",
         "category": "Streaming",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item-placeholder.jpg",
+        "imgUrl": "https://m.media-amazon.com/images/M/MV5BZGExNmI3NDMtMjYxYS00Y2ZmLTlkNmItMGNkNTQ1MzA1ZGM1XkEyXkFqcGc@._V1_.jpg",
         "data": {
           "labels": [
-            "11/24",
             "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
           ],
           "data": [
             53,
             33,
             41,
             65,
-            44,
             85,
+            44,
             32
           ]
         }
       },
       {
-        "title": "The Penguin S1",
+        "title": "Virgin River",
         "platform": "Netflix",
         "category": "Streaming",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item-placeholder.jpg",
+        "imgUrl": "https://m.media-amazon.com/images/M/MV5BMWYyOTU0ZWMtMzEzOS00NWZlLTg2NzYtNTk5ZWQyZmVmOTk4XkEyXkFqcGc@._V1_.jpg",
         "data": {
           "labels": [
-            "11/24",
             "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
           ],
           "data": [
             53,
             33,
             41,
             65,
+            85,
             44,
-            32,
-            85
+            32
           ]
         }
       },
       {
-        "title": "The Lincoln Lawyer",
-        "platform": "HBO Max",
+        "title": "Landman",
+        "platform": null,
+        "category": "Streaming",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "https://m.media-amazon.com/images/M/MV5BNTRkY2ZkNzUtMzBlNC00NTc0LWE0ZDQtMWZiNGU5OWEyZGU4XkEyXkFqcGc@._V1_.jpg",
+        "data": {
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "Law & Order: Special Victims Unit",
+        "platform": "Amazon Prime Video",
+        "category": "Streaming",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "https://m.media-amazon.com/images/M/MV5BZmI0MDdiZGQtNGZlOC00NGE1LTg3MDItOGZkMGVjZDM3NGE0XkEyXkFqcGc@._V1_.jpg",
+        "data": {
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "Chicago P.D.",
+        "platform": "Amazon Prime Video",
+        "category": "Streaming",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "https://m.media-amazon.com/images/M/MV5BN2ZhMTljMTAtNGUxNC00NDMxLThiMDEtYjBiNzU3OGNmNmVlXkEyXkFqcGc@._V1_.jpg",
+        "data": {
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "Chicago Fire",
+        "platform": "Amazon Prime Video",
+        "category": "Streaming",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "https://m.media-amazon.com/images/M/MV5BZDgwYjlhMGItMDQ3YS00OGQyLWFiMTQtYzkwNTUzNjE4NzIwXkEyXkFqcGc@._V1_.jpg",
+        "data": {
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "Modern Family",
+        "platform": "Amazon Prime Video",
+        "category": "Streaming",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "https://m.media-amazon.com/images/M/MV5BYzFlOWFjNzQtODViNC00NzgzLThhZmItZTc1N2VlZDgwODUwXkEyXkFqcGc@._V1_.jpg",
+        "data": {
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "NFL Football",
+        "platform": null,
+        "category": "Sports",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/9829021/Primary",
+        "data": {
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "College Football",
+        "platform": null,
+        "category": "Sports",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/10152747/Primary",
+        "data": {
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "NBA Basketball",
+        "platform": null,
+        "category": "Sports",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/9969030/Primary",
+        "data": {
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "Monday Night Football",
+        "platform": null,
+        "category": "Sports",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/9828978/Primary",
+        "data": {
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "Sunday Night Football",
+        "platform": null,
+        "category": "Sports",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/10614996/Primary",
+        "data": {
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "College Basketball",
+        "platform": null,
+        "category": "Sports",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/10387789/Primary",
+        "data": {
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "F\u00fatbol americano universitario",
+        "platform": null,
+        "category": "Sports",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/10371805/Primary",
+        "data": {
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "NHL Hockey",
+        "platform": null,
+        "category": "Sports",
+        "increment": "+33%",
+        "viewers": "+27 Million monthly views",
+        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/9969735/Primary",
+        "data": {
+          "labels": [
+            "12/24",
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
+          ],
+          "data": [
+            53,
+            33,
+            41,
+            65,
+            85,
+            44,
+            32
+          ]
+        }
+      },
+      {
+        "title": "2024-25 College Football Playoff",
+        "platform": null,
         "category": "Sports",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
         "imgUrl": "/carousel-item2-placeholder.jpg",
         "data": {
           "labels": [
-            "11/24",
             "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
           ],
           "data": [
             53,
@@ -317,21 +560,22 @@
         }
       },
       {
-        "title": "The Lincoln Lawyer",
-        "platform": "HBO Max",
+        "title": "Ravens vs. Texans",
+        "platform": null,
         "category": "Sports",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
         "imgUrl": "/carousel-item2-placeholder.jpg",
         "data": {
           "labels": [
-            "11/24",
             "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
           ],
           "data": [
             53,
@@ -345,245 +589,22 @@
         }
       },
       {
-        "title": "The Lincoln Lawyer",
-        "platform": "HBO Max",
-        "category": "Sports",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item2-placeholder.jpg",
-        "data": {
-          "labels": [
-            "11/24",
-            "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
-          ],
-          "data": [
-            53,
-            33,
-            41,
-            65,
-            85,
-            44,
-            32
-          ]
-        }
-      },
-      {
-        "title": "The Lincoln Lawyer",
-        "platform": "HBO Max",
-        "category": "Sports",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item2-placeholder.jpg",
-        "data": {
-          "labels": [
-            "11/24",
-            "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
-          ],
-          "data": [
-            53,
-            33,
-            41,
-            65,
-            85,
-            44,
-            32
-          ]
-        }
-      },
-      {
-        "title": "The Lincoln Lawyer",
-        "platform": "HBO Max",
-        "category": "Sports",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item2-placeholder.jpg",
-        "data": {
-          "labels": [
-            "11/24",
-            "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
-          ],
-          "data": [
-            53,
-            33,
-            41,
-            65,
-            85,
-            44,
-            32
-          ]
-        }
-      },
-      {
-        "title": "The Lincoln Lawyer",
-        "platform": "HBO Max",
-        "category": "Sports",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item2-placeholder.jpg",
-        "data": {
-          "labels": [
-            "11/24",
-            "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
-          ],
-          "data": [
-            53,
-            33,
-            41,
-            65,
-            85,
-            44,
-            32
-          ]
-        }
-      },
-      {
-        "title": "The Lincoln Lawyer",
-        "platform": "HBO Max",
-        "category": "Sports",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item2-placeholder.jpg",
-        "data": {
-          "labels": [
-            "11/24",
-            "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
-          ],
-          "data": [
-            53,
-            33,
-            41,
-            65,
-            85,
-            44,
-            32
-          ]
-        }
-      },
-      {
-        "title": "The Lincoln Lawyer",
-        "platform": "HBO Max",
-        "category": "Sports",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item2-placeholder.jpg",
-        "data": {
-          "labels": [
-            "11/24",
-            "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
-          ],
-          "data": [
-            53,
-            33,
-            41,
-            65,
-            85,
-            44,
-            32
-          ]
-        }
-      },
-      {
-        "title": "The Lincoln Lawyer",
-        "platform": "HBO Max",
-        "category": "Sports",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item2-placeholder.jpg",
-        "data": {
-          "labels": [
-            "11/24",
-            "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
-          ],
-          "data": [
-            53,
-            33,
-            41,
-            65,
-            85,
-            44,
-            32
-          ]
-        }
-      },
-      {
-        "title": "The Lincoln Lawyer",
-        "platform": "HBO Max",
-        "category": "Sports",
-        "increment": "+33%",
-        "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item2-placeholder.jpg",
-        "data": {
-          "labels": [
-            "11/24",
-            "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
-          ],
-          "data": [
-            53,
-            33,
-            41,
-            65,
-            85,
-            44,
-            32
-          ]
-        }
-      },
-      {
-        "title": "Tulsa King",
-        "platform": "Netflix",
+        "title": "Dateline",
+        "platform": null,
         "category": "News",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item3-placeholder.jpg",
+        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/2525755/Primary",
         "data": {
           "labels": [
-            "11/24",
             "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
           ],
           "data": [
             53,
@@ -597,21 +618,22 @@
         }
       },
       {
-        "title": "Tulsa King",
-        "platform": "Netflix",
+        "title": "Good Morning America",
+        "platform": null,
         "category": "News",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item3-placeholder.jpg",
+        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/4003/Primary",
         "data": {
           "labels": [
-            "11/24",
             "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
           ],
           "data": [
             53,
@@ -625,21 +647,22 @@
         }
       },
       {
-        "title": "Tulsa King",
-        "platform": "Netflix",
+        "title": "Entertainment Tonight",
+        "platform": null,
         "category": "News",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item3-placeholder.jpg",
+        "imgUrl": "https://m.media-amazon.com/images/M/MV5BYmEzODg2ZjctZDIzMC00ZjE4LTg2M2UtMjI5ZmJhYWRmMjFkXkEyXkFqcGc@._V1_.jpg",
         "data": {
           "labels": [
-            "11/24",
             "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
           ],
           "data": [
             53,
@@ -653,21 +676,22 @@
         }
       },
       {
-        "title": "Tulsa King",
-        "platform": "Netflix",
+        "title": "Today",
+        "platform": null,
         "category": "News",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item3-placeholder.jpg",
+        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/2974/Primary",
         "data": {
           "labels": [
-            "11/24",
             "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
           ],
           "data": [
             53,
@@ -681,21 +705,22 @@
         }
       },
       {
-        "title": "Tulsa King",
-        "platform": "Netflix",
+        "title": "SportsCenter",
+        "platform": null,
         "category": "News",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item3-placeholder.jpg",
+        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/4383/Primary",
         "data": {
           "labels": [
-            "11/24",
             "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
           ],
           "data": [
             53,
@@ -709,21 +734,22 @@
         }
       },
       {
-        "title": "Tulsa King",
-        "platform": "Netflix",
+        "title": "CBS Mornings",
+        "platform": null,
         "category": "News",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item3-placeholder.jpg",
+        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/4780674/Primary",
         "data": {
           "labels": [
-            "11/24",
             "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
           ],
           "data": [
             53,
@@ -737,21 +763,22 @@
         }
       },
       {
-        "title": "Tulsa King",
-        "platform": "Netflix",
+        "title": "Inside Edition",
+        "platform": null,
         "category": "News",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item3-placeholder.jpg",
+        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/2946/Primary",
         "data": {
           "labels": [
-            "11/24",
             "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
           ],
           "data": [
             53,
@@ -765,21 +792,22 @@
         }
       },
       {
-        "title": "Tulsa King",
-        "platform": "Netflix",
+        "title": "NBC Nightly News with Lester Holt",
+        "platform": null,
         "category": "News",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item3-placeholder.jpg",
+        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/2309245/Primary",
         "data": {
           "labels": [
-            "11/24",
             "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
           ],
           "data": [
             53,
@@ -793,21 +821,22 @@
         }
       },
       {
-        "title": "Tulsa King",
-        "platform": "Netflix",
+        "title": "Live with Kelly and Mark",
+        "platform": null,
         "category": "News",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item3-placeholder.jpg",
+        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/7512715/Primary",
         "data": {
           "labels": [
-            "11/24",
             "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
           ],
           "data": [
             53,
@@ -821,21 +850,22 @@
         }
       },
       {
-        "title": "Tulsa King",
-        "platform": "Netflix",
+        "title": "ABC World News Tonight with David Muir",
+        "platform": null,
         "category": "News",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item3-placeholder.jpg",
+        "imgUrl": "https://m.media-amazon.com/images/M/MV5BNTQyYzQ2ZTYtMzQ0ZC00ZjllLTg1ODAtOGUxNDY0ZmVmYTE1XkEyXkFqcGc@._V1_.jpg",
         "data": {
           "labels": [
-            "11/24",
             "12/24",
-            "13/24",
-            "14/24",
-            "15/24",
-            "16/24",
-            "17/24"
+            "12/25",
+            "12/26",
+            "12/27",
+            "12/28",
+            "12/29",
+            "12/30",
+            "12/31"
           ],
           "data": [
             53,

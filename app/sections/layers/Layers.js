@@ -107,7 +107,7 @@ const Layers = ({ headline, subtext }) => {
             pin: true,
             ease: 'none',
             snap: {
-              snapTo: [0, 0.115, 0.23, 0.394, 0.586, 0.748, 1],
+              snapTo: [0, 0.115, 0.23, 0.394, 0.586, 0.748, 0.999],
               delay: 0,
               ease: 'none',
             },

@@ -43,7 +43,7 @@ const Hero = ({ title, number, text }) => {
         scrub: true,
         pin: true,
         snap: {
-          snapTo: [0, 0.5, 1],
+          snapTo: [0, 1],
           delay: 0,
           ease: 'none',
         },
@@ -97,7 +97,7 @@ const Hero = ({ title, number, text }) => {
       if (nextSection) {
         const yPosition =
           nextSection.getBoundingClientRect().top + window.scrollY;
-        targetTop = yPosition - window.innerHeight / 4;
+        targetTop = yPosition - window.innerHeight / 2;
         window.scrollTo({
           top: targetTop,
           behavior: 'smooth',

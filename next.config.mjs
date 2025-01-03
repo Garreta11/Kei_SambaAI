@@ -10,6 +10,9 @@ const nextConfig = {
     });
     return config;
   },
+  images: {
+    domains: ['m.media-amazon.com', 'labs.fyitelevision.com'], // Add the external hostname here
+  },
 };
 
 export default nextConfig;

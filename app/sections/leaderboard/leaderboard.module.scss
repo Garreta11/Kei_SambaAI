@@ -172,6 +172,9 @@
           margin-bottom: 18px;
           width: 100%;
           height: auto;
+          max-width: 423px;
+          max-height: 180px;
+          object-fit: cover;
         }
 
         &__viewers {

@@ -14,8 +14,8 @@ const TitleReveal = ({ text, className = null }) => {
     gsap.from(text.words, {
       scrollTrigger: {
         trigger: textRef.current,
-        start: 'top 70%',
-        end: 'top 50%',
+        start: 'top 80%',
+        end: 'top 70%',
         scrub: true,
       },
       y: 100,

@@ -143,9 +143,7 @@ const VideoCanvas = ({ videoSrc, text, subtext }) => {
     const scrollToSection = () => {
       if (nextSection) {
         const yPosition =
-          nextSection.getBoundingClientRect().top +
-          (1 * window.innerHeight) / 4 +
-          window.scrollY;
+          nextSection.getBoundingClientRect().top + window.scrollY;
         const startTop = window.scrollY;
         const distance = yPosition - startTop;
         const duration = 2000;
