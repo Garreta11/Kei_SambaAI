@@ -34,7 +34,7 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
         });
         const gallery = galleryWrapperRef.current;
         const galleryWidth = gallery.offsetWidth;
-        const ammountToScroll = galleryWidth - window.innerWidth;
+        const ammountToScroll = galleryWidth - window.innerWidth + 150;
         gsap.to(gallery, {
           x: -ammountToScroll,
           ease: 'none',
@@ -104,7 +104,7 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
           nextSection.getBoundingClientRect().top + window.scrollY;
         const startTop = window.scrollY;
         const distance = yPosition - startTop;
-        const duration = 2000; // Duration in milliseconds
+        const duration = 1000; // Duration in milliseconds
         const startTime = performance.now();
 
         const animateScroll = (currentTime) => {
