@@ -27,7 +27,7 @@ const VideoCanvas = ({ videoSrc, text, subtext }) => {
         scrub: true,
         pin: true,
         snap: {
-          snapTo: [0, 0.5, 1],
+          snapTo: [0.5, 1],
           delay: 0,
           ease: 'none',
         },
@@ -89,14 +89,6 @@ const VideoCanvas = ({ videoSrc, text, subtext }) => {
             const targetTime = progress * videoRef.current.duration;
             videoRef.current.currentTime = targetTime;
           } else {
-            // hide text
-            gsap.to(textRef.current, {
-              y: -progress * 2000,
-              filter: `blur(${mapValue(progress, 0.5, 1, 0, 100)}px)`,
-              opacity: mapValue(progress, 0.5, 1, 1, 0),
-              ease: 'none',
-            });
-
             // Apply opacity to blur items based on mapped progress
             const blurItems = blurContainerRef.current.children;
             Array.from(blurItems).forEach((item) => {
@@ -114,6 +106,14 @@ const VideoCanvas = ({ videoSrc, text, subtext }) => {
               ease: 'none',
             });
           }
+
+          // hide text
+          gsap.to(textRef.current, {
+            y: -progress * 1000,
+            filter: `blur(${mapValue(progress, 0, 0.5, 0, 100)}px)`,
+            opacity: mapValue(progress, 0, 0.5, 1, 0),
+            ease: 'none',
+          });
         },
       }
     );
