@@ -7,10 +7,10 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const VideoCanvas = ({ videoSrc, text, subtext }) => {
-  const containerRef = useRef(null);
-  const videoRef = useRef(null);
-  const blurContainerRef = useRef(null);
-  const textRef = useRef(null);
+  const containerRef = useRef();
+  const videoRef = useRef();
+  const blurContainerRef = useRef();
+  const textRef = useRef();
 
   const [visibleCells, setVisibleCells] = useState(4); // Initial number of visible cells
 
