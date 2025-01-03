@@ -41,6 +41,7 @@
 
     &__title {
       font-size: 32px;
+      margin-bottom:40px;
       opacity: 0;
       animation: fadeInTitle ease 0.5s 1s forwards;
       text-transform: uppercase;
@@ -48,6 +49,23 @@
       @include mobile-query {
         font-size: 16px;
       }
+    }
+    &__subtext {
+      font-size: 20px;
+      margin-bottom:12px;
+      font-weight: 200;
+
+      opacity: 0;
+      animation: fadeInTitle ease 0.5s 1.2s forwards;
+      @include mobile-query {
+        font-size: 14px;
+      }
+    }
+    &__subtext2 {
+      font-size: 28px;
+      margin-top:20px;
+      margin-bottom:10px;
+      
     }
   }
 }

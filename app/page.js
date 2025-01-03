@@ -47,7 +47,13 @@ export default function Home() {
             subtext={data.semasio.subtext}
           />
 
-          <HeroEnds text={data.end.text} />
+          <HeroEnds 
+            text={data.end.text}
+            subtext1={data.end.subtext1}
+            subtext2={data.end.subtext2}
+            subtext3={data.end.subtext3}
+            subtext4={data.end.subtext4}
+            subtext5={data.end.subtext5} />
         </PageContent>
       </PageWrapper>
     </div>

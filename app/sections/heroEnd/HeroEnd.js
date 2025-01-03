@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 import Experience from './Experience/Experience';
 
-const HeroEnd = ({ text }) => {
+const HeroEnd = ({ text,subtext1,subtext2,subtext3,subtext4,subtext5 }) => {
   const heroRef = useRef(null);
   const videoRef = useRef();
   const containerRef = useRef(null);
@@ -84,6 +84,11 @@ const HeroEnd = ({ text }) => {
       <div className={styles.hero__canvas} ref={containerRef}></div>
       <div className={styles.hero__content} ref={contentRef}>
         <h1 className={styles.hero__content__title}>{text}</h1>
+        <div className={styles.hero__content__subtext}>{subtext1}</div>
+        <div className={styles.hero__content__subtext}>{subtext2}</div>
+        <div className={styles.hero__content__subtext}>{subtext3}</div>
+        <div className={styles.hero__content__subtext2}>{subtext4}</div>
+        <div className={styles.hero__content__subtext}>{subtext5}</div>
       </div>
 
       <video
