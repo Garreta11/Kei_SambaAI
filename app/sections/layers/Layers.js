@@ -25,8 +25,8 @@ const Layers = ({ headline, subtext }) => {
       translateZ: 0,
       translateXFactorMobile: 40,
       translateYFactorMobile: 100,
-      title: 'Attention Graph',
-      text: 'We measure attention across all screens including TV, streaming and the web.',
+      title: 'ATTENTION GRAPH',
+      text: 'Across TV, streaming and the web.',
     },
     {
       ref: useRef(),
@@ -37,8 +37,8 @@ const Layers = ({ headline, subtext }) => {
       translateZ: -100,
       translateXFactorMobile: 90,
       translateYFactorMobile: 50,
-      title: 'Samba AI Video Decoding',
-      text: 'Our disruptive AI video decoding technology understands the context of the content you see with depth, nuance and accuracy.',
+      title: 'DEEP VIDEO ANALYSIS',
+      text: 'Decoding context of what you see.',
     },
     {
       ref: useRef(),
@@ -49,8 +49,8 @@ const Layers = ({ headline, subtext }) => {
       translateZ: -200,
       translateXFactorMobile: 140,
       translateYFactorMobile: 0,
-      title: 'Interest & Intention Profile',
-      text: 'We can build and serve a profile of user interest and intention that maps to specific advertising opportunities.',
+      title: 'INTENTION GRAPH',
+      text: 'User profile that maps to specific ad opportunities.',
     },
     {
       ref: useRef(),
@@ -61,8 +61,8 @@ const Layers = ({ headline, subtext }) => {
       translateZ: -300,
       translateXFactorMobile: 200,
       translateYFactorMobile: -50,
-      title: 'Screen Targeting',
-      text: 'Samba AI helps to target ads to the right person, on the right screen at the right time, with a contextual understanding of how the message should be delivered and why.',
+      title: 'ACTIONABLE',
+      text: 'Target ads to the right person and context.',
     },
     {
       ref: useRef(),
@@ -73,8 +73,8 @@ const Layers = ({ headline, subtext }) => {
       translateZ: -400,
       translateXFactorMobile: 270,
       translateYFactorMobile: -100,
-      title: 'Outcomes',
-      text: 'Samba AI measures and optimizes marketing performance in real-time for all media types to drive meaningful business outcomes.',
+      title: 'MEASURABLE',
+      text: 'Measure and optimize marketing performance.',
     },
   ]);
 
@@ -342,7 +342,7 @@ const Layers = ({ headline, subtext }) => {
 
       <div className={styles.layers__wrapper} ref={layersRef}>
         <TextReveal className={styles.layers__subtext} text={subtext} />
-
+        
         <div className={styles.layers__content} ref={contentRef}>
           <div className={styles.layers__cards} ref={cardsRef}>
             {layers.current.map((layer, index) => (

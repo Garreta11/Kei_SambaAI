@@ -209,7 +209,7 @@ const VideoCanvas = ({ videoSrc, text, subtext }) => {
       </div>
 
       <div className={styles.videoCanvas__content} ref={textRef}>
-        <p className={styles.videoCanvas__content__text}>{text}</p>
+        <p className={styles.videoCanvas__content__text} dangerouslySetInnerHTML={{ __html: text }} ></p>
       </div>
     </div>
   );

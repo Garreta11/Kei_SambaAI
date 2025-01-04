@@ -19,23 +19,21 @@
   },
   "video": {
     "url": "/f1.mp4",
-    "text": "See What AI Sees: Every Scene, Brand, and Moment Decoded",
+    "text": "See What Samba Sees<br> Every Scene, Brand, and Moment Decoded",
     "subtext": "Samba has led the industry for years by live-decoding video with our pioneering content recognition technology, and now Samba AI has a deeper unprecedented understanding of video context."
   },
   "layers": {
     "headline": "The world's most advanced AI intent prediction engine",
-    "subtext": "Samba AI identifies and activates user ATTENTION and activates their INTENTION by mapping video viewership directly to the advertising graph."
+    "subtext":  "Samba AI identifies user ATTENTION and INTENTION by mapping what people watch on TV to what they browse on the web"
+    
   },
   "track": {
     "headline": "Track every ad, across every market, while it's happening",
     "subtext": "No one knows video advertising like Samba, our actionable insights and statistics help you put your message in just the right place."
   },
   "end": {
-    "text": "Smarter advertising starts here:",
-    "subtext1": "Samba AI Finds Your Target Audience",
-    "subtext2": "Translates Their Attention to Intention",
-    "subtext3": "And Measures Results",
-    "subtext4": "Samba AI",
-    "subtext5": "Attention + Intention"
+    "text": "Samba AI: Attention + Intention",
+    "subtext1": "Smarter Advertising Starts Here"
+
   }
 }
