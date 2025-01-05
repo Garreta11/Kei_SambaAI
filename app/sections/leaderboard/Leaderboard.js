@@ -13,6 +13,17 @@ import TextReveal from '@/app/components/textReveal/TextReveal';
 gsap.registerPlugin(ScrollTrigger);
 
 const Leaderboard = ({ headlines, subtext, carousel }) => {
+  // Animation configuration variables
+  const SWAY_CONFIG = {
+    perspective: 2000,           // Perspective depth for 3D effect
+    velocitySensitivity: 500,   // Higher number = less sensitive to scroll speed
+    rotationAmount: 8,           // Higher number = more rotation
+    zMovement: 30,              // Higher number = more depth movement
+    duration: 0.6,              // Animation duration in seconds
+    scrubAmount: 0.5,           // How smooth the scrubbing is
+    returnDuration: 0.2         // How long it takes to return to flat state
+  };
+
   const leaderboardRef = useRef(null);
   const headlinesRef = useRef(null);
   const galleryRef = useRef();
@@ -29,13 +40,15 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
         // Toggle gallerySubwrapper visibility
         ScrollTrigger.create({
           trigger: headlinesRef.current,
-          start: 'top top', // Adjust if needed
+          start: 'top top',
           end: 'bottom-=100 top',
         });
         const gallery = galleryWrapperRef.current;
         const galleryWidth = gallery.offsetWidth;
         const ammountToScroll = galleryWidth - window.innerWidth + 150;
-        gsap.to(gallery, {
+        
+        // Main horizontal scroll animation
+        const mainScroll = gsap.to(gallery, {
           x: -ammountToScroll,
           ease: 'none',
           scrollTrigger: {
@@ -45,17 +58,92 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
             pin: true,
             scrub: true,
             onUpdate: (self) => {
-              const progress = self.progress; // 0 to 1
+              const progress = self.progress;
               const totalItems = itemRefs.current.length;
               const currentIndex = Math.round(progress * (totalItems - 1));
               setActiveCategory(
                 itemRefs.current[currentIndex].dataset.category
               );
+
+              // Get scroll velocity for all images
+              const velocity = Math.abs(self.getVelocity() / SWAY_CONFIG.velocitySensitivity);
+              const direction = self.direction;
+
+              // Apply sway to all images
+              itemRefs.current.forEach((itemRef) => {
+                if (!itemRef) return;
+                const image = itemRef.querySelector(`.${styles.leaderboard__gallery__wrapper__item__image}`);
+                if (!image) return;
+
+                gsap.to(image, {
+                  rotateY: -direction * velocity * SWAY_CONFIG.rotationAmount,
+                  z: velocity * SWAY_CONFIG.zMovement,
+                  duration: SWAY_CONFIG.duration,
+                  force3D: true,
+                  ease: "power1.out"
+                });
+              });
             },
             onLeave: () => {
               navigateToNextSection();
             },
+            onScrubComplete: () => {
+              // Return all images to flat state
+              itemRefs.current.forEach((itemRef) => {
+                if (!itemRef) return;
+                const image = itemRef.querySelector(`.${styles.leaderboard__gallery__wrapper__item__image}`);
+                if (!image) return;
+
+                gsap.to(image, {
+                  rotateY: 0,
+                  z: 0,
+                  duration: SWAY_CONFIG.returnDuration,
+                  ease: "power2.out"
+                });
+              });
+            }
           },
+        });
+
+        // Add sway animation to each image
+        itemRefs.current.forEach((itemRef) => {
+          if (!itemRef) return;
+          
+          const image = itemRef.querySelector(`.${styles.leaderboard__gallery__wrapper__item__image}`);
+          if (!image) return;
+
+          // First set the parent container's perspective
+          const itemContainer = itemRef.querySelector(`.${styles.leaderboard__gallery__wrapper__item__top}`);
+          gsap.set(itemContainer, {
+            perspective: 2000,
+            transformStyle: "preserve-3d"
+          });
+
+          // Then animate the image
+          gsap.to(image, {
+            transformPerspective: 2000,
+            transformStyle: "preserve-3d",
+            transformOrigin: "center center",
+            ease: "none",
+            scrollTrigger: {
+              trigger: itemRef,
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 0.5,
+              onUpdate: (self) => {
+                const velocity = Math.abs(self.getVelocity("x") / 1000); // Reduced sensitivity
+                const direction = self.direction;
+                
+                gsap.to(image, {
+                  rotateY: -direction * velocity * 8, // Reduced rotation amount
+                  z: velocity * 30, // Reduced z-movement
+                  duration: 0.8, // Slightly longer duration for smoother movement
+                  force3D: true,
+                  ease: "power1.out"
+                });
+              }
+            }
+          });
         });
       },
     });
@@ -71,6 +159,7 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
       filter: 'blur(100px)',
       ease: 'none',
     });
+    
     gsap.from(titleRef.current, {
       scrollTrigger: {
         trigger: galleryRef.current,
@@ -138,6 +227,11 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
       });
     }
   };
+  
+
+  
+
+
 
   return (
     <div
