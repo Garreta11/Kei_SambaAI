@@ -14,7 +14,7 @@
         "category": "Streaming",
         "increment": "+296%",
         "viewers": "32,462,000 monthly views",
-        "imgUrl": "https://m.media-amazon.com/images/M/MV5BYTYzMTlmNDctNmVkNS00YzRlLWE5MjAtODdjZWRkYzRlNWVlXkEyXkFqcGc@._V1_.jpg",
+        "imgUrl": "/leaderboard/streaming_squid.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -39,11 +39,11 @@
       },
       {
         "title": "Yellowstone",
-        "platform": "Amazon Prime Video",
+        "platform": "Paramount +",
         "category": "Streaming",
         "increment": "+84%",
         "viewers": "+25,163,000 monthly views",
-        "imgUrl": "https://m.media-amazon.com/images/M/MV5BYzE2ODQ0NmQtYmMxMS00MGRlLTgwOGEtYjRkN2FkYmZlN2JlXkEyXkFqcGc@._V1_.jpg",
+        "imgUrl": "/leaderboard/streaming_yellowstone.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -68,11 +68,11 @@
       },
       {
         "title": "The Big Bang Theory",
-        "platform": "Amzon Prime Video",
+        "platform": "HBO Max",
         "category": "Streaming",
         "increment": "+65%",
         "viewers": "21,745,000 monthly views",
-        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/504250/Primary",
+        "imgUrl": "/leaderboard/streaming_bigbang.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -96,11 +96,11 @@
       },
       {
         "title": "NCIS",
-        "platform": "Amazon Prime Video",
+        "platform": "Hulu",
         "category": "Streaming",
         "increment": "+90%",
         "viewers": "20,721,000 monthly views",
-        "imgUrl": "https://m.media-amazon.com/images/M/MV5BZGExNmI3NDMtMjYxYS00Y2ZmLTlkNmItMGNkNTQ1MzA1ZGM1XkEyXkFqcGc@._V1_.jpg",
+        "imgUrl": "/leaderboard/streaming_ncis.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -128,7 +128,7 @@
         "category": "Streaming",
         "increment": "+200%",
         "viewers": "20,229,000 monthly views",
-        "imgUrl": "https://m.media-amazon.com/images/M/MV5BMWYyOTU0ZWMtMzEzOS00NWZlLTg2NzYtNTk5ZWQyZmVmOTk4XkEyXkFqcGc@._V1_.jpg",
+        "imgUrl": "/leaderboard/streaming_virginriver.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -152,11 +152,11 @@
       },
       {
         "title": "Landman",
-        "platform": null,
+        "platform": "Paramount +",
         "category": "Streaming",
         "increment": "+126%",
         "viewers": "18,990,000 monthly views",
-        "imgUrl": "https://m.media-amazon.com/images/M/MV5BNTRkY2ZkNzUtMzBlNC00NTc0LWE0ZDQtMWZiNGU5OWEyZGU4XkEyXkFqcGc@._V1_.jpg",
+        "imgUrl": "/leaderboard/streaming_landman.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -180,11 +180,11 @@
       },
       {
         "title": "Law & Order: Special Victims Unit",
-        "platform": "Amazon Prime Video",
+        "platform": "Peacock",
         "category": "Streaming",
         "increment": "+66%",
         "viewers": "18,353,000 monthly views",
-        "imgUrl": "https://m.media-amazon.com/images/M/MV5BZmI0MDdiZGQtNGZlOC00NGE1LTg3MDItOGZkMGVjZDM3NGE0XkEyXkFqcGc@._V1_.jpg",
+        "imgUrl": "/leaderboard/streaming_svu.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -208,11 +208,11 @@
       },
       {
         "title": "Chicago P.D.",
-        "platform": "Amazon Prime Video",
+        "platform": "Peacock",
         "category": "Streaming",
         "increment": "+42%",
         "viewers": "15,254,000 monthly views",
-        "imgUrl": "https://m.media-amazon.com/images/M/MV5BN2ZhMTljMTAtNGUxNC00NDMxLThiMDEtYjBiNzU3OGNmNmVlXkEyXkFqcGc@._V1_.jpg",
+        "imgUrl": "/leaderboard/streaming_chicagopd.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -236,11 +236,11 @@
       },
       {
         "title": "Chicago Fire",
-        "platform": "Amazon Prime Video",
+        "platform": "Peacock",
         "category": "Streaming",
         "increment": "+34%",
         "viewers": "14,488,000 monthly views",
-        "imgUrl": "https://m.media-amazon.com/images/M/MV5BZDgwYjlhMGItMDQ3YS00OGQyLWFiMTQtYzkwNTUzNjE4NzIwXkEyXkFqcGc@._V1_.jpg",
+        "imgUrl": "/leaderboard/streaming_chicagofire.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -264,11 +264,11 @@
       },
       {
         "title": "Modern Family",
-        "platform": "Amazon Prime Video",
+        "platform": "Hulu",
         "category": "Streaming",
         "increment": "+40%",
         "viewers": "14,043,000 monthly views",
-        "imgUrl": "https://m.media-amazon.com/images/M/MV5BYzFlOWFjNzQtODViNC00NzgzLThhZmItZTc1N2VlZDgwODUwXkEyXkFqcGc@._V1_.jpg",
+        "imgUrl": "/leaderboard/streaming_modernfam.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -297,7 +297,7 @@
         "category": "Sports",
         "increment": "+24%",
         "viewers": "486,274,000 monthly views",
-        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/9829021/Primary",
+        "imgUrl": "/leaderboard/sports_nfl.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -325,7 +325,7 @@
         "category": "Sports",
         "increment": "+17%",
         "viewers": "375,252,000 monthly views",
-        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/10152747/Primary",
+        "imgUrl": "/leaderboard/sports_collegefootball.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -353,7 +353,7 @@
         "category": "Sports",
         "increment": "+7%",
         "viewers": "294,695,000 monthly views",
-        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/9969030/Primary",
+        "imgUrl": "/leaderboard/sports_nba.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -381,7 +381,7 @@
         "category": "Sports",
         "increment": "+5%",
         "viewers": "121,168,000 monthly views",
-        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/9828978/Primary",
+        "imgUrl": "/leaderboard/sports_mnf.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -409,7 +409,7 @@
         "category": "Sports",
         "increment": "+6%",
         "viewers": "117,363,000 monthly views",
-        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/10614996/Primary",
+        "imgUrl": "/leaderboard/sports_snf.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -437,7 +437,7 @@
         "category": "Sports",
         "increment": "+1%",
         "viewers": "92,450,000 monthly views",
-        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/10387789/Primary",
+        "imgUrl": "/leaderboard/sports_collegebasketball.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -465,7 +465,7 @@
         "category": "Sports",
         "increment": "+4%",
         "viewers": "89,950,000 monthly views",
-        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/10371805/Primary",
+        "imgUrl": "/leaderboard/sports_collegefootball.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -493,7 +493,7 @@
         "category": "Sports",
         "increment": "+1%",
         "viewers": "65,102,000 monthly views",
-        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/9969735/Primary",
+        "imgUrl": "/leaderboard/sports_hockey.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -521,7 +521,7 @@
         "category": "Sports",
         "increment": "+0.08%",
         "viewers": "49,496,000 monthly views",
-        "imgUrl": "/carousel-item2-placeholder.jpg",
+        "imgUrl": "/leaderboard/sports_collegefootplayoffs.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -549,7 +549,7 @@
         "category": "Sports",
         "increment": "+3%",
         "viewers": "43,378,000 monthly views",
-        "imgUrl": "/carousel-item2-placeholder.jpg",
+        "imgUrl": "/leaderboard/sports_ravenstexans.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -573,11 +573,11 @@
       },
       {
         "title": "Dateline",
-        "platform": null,
+        "platform": "NBC",
         "category": "News",
         "increment": "+2%",
         "viewers": "54,089,000 monthly views",
-        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/2525755/Primary",
+        "imgUrl": "/leaderboard/news_dateline.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -602,11 +602,11 @@
       },
       {
         "title": "Good Morning America",
-        "platform": null,
+        "platform": "ABC",
         "category": "News",
         "increment": "+2.37%",
         "viewers": "47,900,000 monthly views",
-        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/4003/Primary",
+        "imgUrl": "/leaderboard/news_gma.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -631,11 +631,11 @@
       },
       {
         "title": "Entertainment Tonight",
-        "platform": null,
+        "platform": "CBS",
         "category": "News",
         "increment": "+0.67%",
         "viewers": "43,950,000 monthly views",
-        "imgUrl": "https://m.media-amazon.com/images/M/MV5BYmEzODg2ZjctZDIzMC00ZjE4LTg2M2UtMjI5ZmJhYWRmMjFkXkEyXkFqcGc@._V1_.jpg",
+        "imgUrl": "/leaderboard/news_et.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -660,11 +660,11 @@
       },
       {
         "title": "Today",
-        "platform": null,
+        "platform": "NBC",
         "category": "News",
         "increment": "+2.52%",
         "viewers": "4,360,000 monthly views",
-        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/2974/Primary",
+        "imgUrl": "/leaderboard/news_today.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -689,11 +689,11 @@
       },
       {
         "title": "SportsCenter",
-        "platform": null,
+        "platform": "ESPN",
         "category": "News",
         "increment": "+2.23%",
         "viewers": "39,848,000 monthly views",
-        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/4383/Primary",
+        "imgUrl": "/leaderboard/news_sportscenter.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -718,11 +718,11 @@
       },
       {
         "title": "CBS Mornings",
-        "platform": null,
+        "platform": "CBS",
         "category": "News",
         "increment": "+1.48%",
         "viewers": "39,817,000 monthly views",
-        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/4780674/Primary",
+        "imgUrl": "/leaderboard/news_cbsmorn.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -747,11 +747,11 @@
       },
       {
         "title": "Inside Edition",
-        "platform": null,
+        "platform": "CBS",
         "category": "News",
         "increment": "+0.64%",
         "viewers": "37,843,000 monthly views",
-        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/2946/Primary",
+        "imgUrl": "/leaderboard/news_insideed.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -780,7 +780,7 @@
         "category": "News",
         "increment": "+1.5%",
         "viewers": "34,686,000 monthly views",
-        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/2309245/Primary",
+        "imgUrl": "/leaderboard/news_nbcLester.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -805,11 +805,11 @@
       },
       {
         "title": "Live with Kelly and Mark",
-        "platform": null,
+        "platform": "ABC",
         "category": "News",
         "increment": "+1.06%",
         "viewers": "31,775,000 monthly views",
-        "imgUrl": "http://labs.fyitelevision.com/fyimediaservices/v_3_3_6_1/Program.svc/144/7512715/Primary",
+        "imgUrl": "/leaderboard/news_kellymark.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -838,7 +838,7 @@
         "category": "News",
         "increment": "+1.2%",
         "viewers": "29,797,000 monthly views",
-        "imgUrl": "https://m.media-amazon.com/images/M/MV5BNTQyYzQ2ZTYtMzQ0ZC00ZjllLTg1ODAtOGUxNDY0ZmVmYTE1XkEyXkFqcGc@._V1_.jpg",
+        "imgUrl": "/leaderboard/news_abcMuir.jpg",
         "data": {
           "labels": [
             "12/24",
@@ -862,12 +862,12 @@
         }
       },
       {
-        "title": "The Penguin S1",
-        "platform": "Netflix",
+        "title": "Tasty Bliss",
+        "platform": "Burger King",
         "category": "Ads",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item-placeholder.jpg",
+        "imgUrl": "/leaderboard/ads_burgerking.jpg",
         "data": {
           "labels": [
             "11/24",
@@ -890,12 +890,12 @@
         }
       },
       {
-        "title": "The Penguin S1",
-        "platform": "Netflix",
+        "title": "Skincare Starts in the Laundry Room",
+        "platform": "Tide",
         "category": "Ads",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item-placeholder.jpg",
+        "imgUrl": "/leaderboard/ads_tide.jpg",
         "data": {
           "labels": [
             "11/24",
@@ -918,12 +918,12 @@
         }
       },
       {
-        "title": "The Penguin S1",
-        "platform": "Netflix",
+        "title": "Clearance Event",
+        "platform": "Target",
         "category": "Ads",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item-placeholder.jpg",
+        "imgUrl": "/leaderboard/ads_target.jpg",
         "data": {
           "labels": [
             "11/24",
@@ -946,12 +946,12 @@
         }
       },
       {
-        "title": "The Penguin S1",
-        "platform": "Netflix",
+        "title": "Add Some Magic",
+        "platform": "McCormick",
         "category": "Ads",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item-placeholder.jpg",
+        "imgUrl": "/leaderboard/ads_mccormick.jpg",
         "data": {
           "labels": [
             "11/24",
@@ -974,12 +974,12 @@
         }
       },
       {
-        "title": "The Penguin S1",
-        "platform": "Netflix",
+        "title": "Wrapped in Gold",
+        "platform": "Ferrero Rocher",
         "category": "Ads",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item-placeholder.jpg",
+        "imgUrl": "/leaderboard/ads_ferrero.jpg",
         "data": {
           "labels": [
             "11/24",
@@ -1002,12 +1002,12 @@
         }
       },
       {
-        "title": "The Penguin S1",
-        "platform": "Netflix",
+        "title": "Relieves Dryness",
+        "platform": "CeraVe",
         "category": "Ads",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item-placeholder.jpg",
+        "imgUrl": "/leaderboard/ads_cerave.jpg",
         "data": {
           "labels": [
             "11/24",
@@ -1030,12 +1030,12 @@
         }
       },
       {
-        "title": "The Penguin S1",
-        "platform": "Netflix",
+        "title": "Half the Price",
+        "platform": "Gold Bond",
         "category": "Ads",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item-placeholder.jpg",
+        "imgUrl": "/leaderboard/ads_goldbond.jpg",
         "data": {
           "labels": [
             "11/24",
@@ -1058,12 +1058,12 @@
         }
       },
       {
-        "title": "The Penguin S1",
-        "platform": "Netflix",
+        "title": "Tastes Better When Dipping",
+        "platform": "Daisy",
         "category": "Ads",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item-placeholder.jpg",
+        "imgUrl": "/leaderboard/ads_daisy.jpg",
         "data": {
           "labels": [
             "11/24",
@@ -1086,12 +1086,12 @@
         }
       },
       {
-        "title": "The Penguin S1",
-        "platform": "Netflix",
+        "title": "Not Santa",
+        "platform": "Verizon",
         "category": "Ads",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item-placeholder.jpg",
+        "imgUrl": "/leaderboard/ads_verizon.jpg",
         "data": {
           "labels": [
             "11/24",
@@ -1114,12 +1114,12 @@
         }
       },
       {
-        "title": "The Penguin S1",
-        "platform": "Netflix",
+        "title": "Bringing the Heat",
+        "platform": "Subway",
         "category": "Ads",
         "increment": "+33%",
         "viewers": "+27 Million monthly views",
-        "imgUrl": "/carousel-item-placeholder.jpg",
+        "imgUrl": "/leaderboard/ads_subway.jpg",
         "data": {
           "labels": [
             "11/24",
