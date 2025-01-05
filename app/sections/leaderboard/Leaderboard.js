@@ -285,7 +285,34 @@ const Logo = ({ platform }) => {
         height={14}
       />
     );
-  } else {
+  } else if (platform === 'Peacock') {
+    return (
+      <Image
+        src='/logo-peacock.png' // Replace with the actual path to the HBO MAX logo
+        alt='Peacock Logo'
+        width={80} // Adjust width and height as needed
+        height={26}
+      />
+    );
+  } else if (platform === 'Hulu') {
+    return (
+      <Image
+        src='/logo-hulu.png' // Replace with the actual path to the HBO MAX logo
+        alt='hulu Logo'
+        width={82} // Adjust width and height as needed
+        height={27}
+      />
+    );
+  } else if (platform === 'Paramount +') {
+    return (
+      <Image
+        src='/logo-paramount.png' // Replace with the actual path to the HBO MAX logo
+        alt='Paramount Logo'
+        width={90} // Adjust width and height as needed
+        height={21}
+      />
+    );
+  }else {
     return (
       <p
         className={styles.leaderboard__gallery__wrapper__item__header__platform}
