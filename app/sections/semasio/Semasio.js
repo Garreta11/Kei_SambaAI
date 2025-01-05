@@ -36,7 +36,7 @@ const Semasio = ({ headline, subtext }) => {
       ref: useRef(),
       dotRef: useRef(),
       textRef: useRef(),
-      text: 'Concept Cars',
+      text: 'Electric Vehicles',
       dotColor: 'blue',
     },
     {
@@ -72,21 +72,21 @@ const Semasio = ({ headline, subtext }) => {
   const sliders = useRef([
     {
       ref: useRef(),
-      text: 'Sentiment',
+      text: 'Electrification',
       triangleRef: useRef(),
       trianglePos: '50%',
       triangleEndPos: '90%',
     },
     {
       ref: useRef(),
-      text: 'Behaviors',
+      text: 'Luxury',
       triangleRef: useRef(),
       trianglePos: '30%',
       triangleEndPos: '55%',
     },
     {
       ref: useRef(),
-      text: 'Preferences',
+      text: 'Performance',
       triangleRef: useRef(),
       trianglePos: '20%',
       triangleEndPos: '70%',
