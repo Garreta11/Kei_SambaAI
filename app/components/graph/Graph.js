@@ -35,6 +35,8 @@ const Graph = ({ dataset }) => {
         ticks: {
           display: false, // Remove labels on y-axis
         },
+        min: 0, // Force y-axis to start at 0
+        //suggestedMax: 100, // Optional: you can set a max value if you want
       },
     },
   };
