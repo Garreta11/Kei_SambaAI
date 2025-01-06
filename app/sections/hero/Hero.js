@@ -127,7 +127,7 @@ const Hero = ({ title, number, text }) => {
       <div className={styles.hero__content} ref={contentRef}>
         <h1 className={styles.hero__content__title}>{title}</h1>
         <div className={styles.hero__content__data}>
-          <Glitch className={styles.hero__content__data__number}>
+          <Glitch className={styles.hero__content__data__number} initialNumber={32009} maxNumber={48000}>
             {number}
           </Glitch>
           <p className={styles.hero__content__data__text}>{text}</p>

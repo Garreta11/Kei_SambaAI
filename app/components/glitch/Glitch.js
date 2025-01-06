@@ -1,31 +1,52 @@
 'use client';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './glitch.module.scss';
-import SplitType from 'split-type';
 
-const Glitch = ({ children, className }) => {
-  const textRef = useRef();
-  useEffect(() => {
-    const GLITCH_CHARS = '0123456789'.split('');
-
-    const text = new SplitType(textRef.current, { types: 'chars' });
-    const CHARS = text.chars;
-    for (let c = 0; c < CHARS.length; c++) {
-      // We are going to inline 10 CSS variables
-      for (let g = 0; g < 10; g++) {
-        CHARS[c].style.setProperty(
-          `--char-${g}`,
-          `"${GLITCH_CHARS[Math.floor(Math.random() * GLITCH_CHARS.length)]}"`
-        );
-        CHARS[c].style.setProperty('--count', Math.random() * 10 + 1);
-        CHARS[c].setAttribute('data-char', CHARS[c].innerHTML);
-      }
+function createNumberIncrementer(initialNumber, maxNumber) {
+  let currentNumber = initialNumber;
+  
+  function increment() {
+    const randomIncrement = Math.floor(Math.random() * 100) + 1;
+    currentNumber += randomIncrement;
+    
+    if (currentNumber > maxNumber) {
+      currentNumber = initialNumber;
     }
-  }, []);
+    
+    // Format the number with thousands separators
+    const formattedNumber = currentNumber.toLocaleString('en-US');
+    return formattedNumber;
+  }
+  
+  function startIncrementing(callback) {
+    return setInterval(() => {
+      const newNumber = increment();
+      callback(newNumber);
+    }, 1000);
+  }
+  
+  return {
+    increment,
+    startIncrementing
+  };
+}
+
+const Glitch = ({ children, className, initialNumber = 0, maxNumber = 1000 }) => {
+  const [number, setNumber] = useState(initialNumber.toLocaleString('en-US'));
+  const textRef = useRef();
+
+  useEffect(() => {
+    const incrementer = createNumberIncrementer(initialNumber, maxNumber);
+    const interval = incrementer.startIncrementing((newNumber) => {
+      setNumber(newNumber);
+    });
+
+    return () => clearInterval(interval);
+  }, [initialNumber, maxNumber]);
 
   return (
     <p ref={textRef} className={`${className} ${styles.glitch}`}>
-      {children}
+      {number}
     </p>
   );
 };

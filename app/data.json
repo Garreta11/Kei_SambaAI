@@ -1,6 +1,6 @@
 {
   "hero": {
-    "title": "Unlock hidden video insights with Samba AI's lens.",
+    "title": "Unlock insights into video and consumer intent with Samba AI.",
     "number": "34,009",
     "text": "Videos processed in the last 24 hours"
   },
@@ -11,20 +11,20 @@
       "EVERY MOMENT.",
       "INDEXED LIVE."
     ],
-    "subtext": "We index everything happening across linear and streaming video - all in real-time."
+    "subtext": "We index everything across linear and streaming video - in real-time."
   },
   "semasio": {
     "headline": "Contextual insights & targeting for the open web, including over 2.5 billion webpages scanned monthly.",
-    "subtext": "With the acquisition of Semasio, Samba now has the most extensive map of user intention in the world across the open web and TV."
+    "subtext": "With the acquisition of Semasio, Samba now has the most extensive map of Consumer Attention and Intention, from TV to Streaming to the Open Web."
   },
   "video": {
     "url": "/f1.mp4",
-    "text": "See What Samba Sees<br> Every Scene, Brand, and Moment Decoded",
+    "text": "See What Samba Sees:<br> Every scene, every moment, every brand<br> Extremely accurate, actionable and valuable data with global scale",
     "subtext": "Samba has led the industry for years by live-decoding video with our pioneering content recognition technology, and now Samba AI has a deeper unprecedented understanding of video context."
   },
   "layers": {
     "headline": "The world's most advanced AI intent prediction engine",
-    "subtext":  "Samba AI identifies user ATTENTION and INTENTION by mapping what people watch on TV to what they browse on the web"
+    "subtext":  "Samba AI identifies user ATTENTION and INTENTION by mapping what people watch with what they browse on the web"
     
   },
   "track": {
