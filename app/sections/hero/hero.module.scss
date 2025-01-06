@@ -36,6 +36,7 @@
       font-weight: 200;
       opacity: 0;
       animation: fadeInTitle ease 0.5s 1s forwards;
+      text-align:center;
 
       @include mobile-query {
         font-size: 16px;

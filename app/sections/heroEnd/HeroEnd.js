@@ -83,7 +83,7 @@ const HeroEnd = ({ text,subtext1 }) => {
     <div className={`section ${styles.hero}`} ref={heroRef} id='hero-end'>
       <div className={styles.hero__canvas} ref={containerRef}></div>
       <div className={styles.hero__content} ref={contentRef}>
-        <h1 className={styles.hero__content__title}>{text}</h1>
+        <h1 className={styles.hero__content__title} dangerouslySetInnerHTML={{ __html: text }}></h1>
         <div className={styles.hero__content__subtext}>{subtext1}</div>
       </div>
 
