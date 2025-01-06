@@ -247,7 +247,7 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
       <div className={styles.leaderboard__wrapper} ref={galleryRef}>
         <div className={styles.leaderboard__wrapper__header}>
           <TextReveal text={subtext} className={styles.leaderboard__subtext} />
-          <p className={`${styles.leaderboard__title}`} ref={titleRef}>
+          <p className={`${styles.leaderboard__title}`} ref={titleRef} id="leaderTitle">
             {carousel.title}
           </p>
         </div>
