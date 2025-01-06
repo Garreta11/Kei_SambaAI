@@ -434,7 +434,7 @@
         "category": "Sports",
         "increment": "+1%",
         "viewers": "92,450,000 monthly views",
-        "imgUrl": "/leaderboard/sports_collegebasketball.jpg",
+        "imgUrl": "/leaderboard/sports_collegeBasketball.jpg",
         "data": {
           "labels": [
             "01/01",
@@ -771,7 +771,7 @@
         "category": "News",
         "increment": "+1.5%",
         "viewers": "34,686,000 monthly views",
-        "imgUrl": "/leaderboard/news_nbcLester.jpg",
+        "imgUrl": "/leaderboard/news_nbclester.jpg",
         "data": {
           "labels": [
             "01/01",
