@@ -283,75 +283,46 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
               ref={galleryWrapperRef}
             >
               {carousel.items
-                .filter((item) => item.category === activeCategory)
-                .map((item, index) => {
-                  const formattedIndex = String(index + 1).padStart(2, '0');
-                  return (
-                    <div
-                      key={index}
-                      ref={(el) => (itemRefs.current[index] = el)}
-                      className={`${styles.leaderboard__gallery__wrapper__item}`}
-                      data-category={item.category}
-                    >
-                      <div
-                        className={
-                          styles.leaderboard__gallery__wrapper__item__top
-                        }
-                      >
-                        <p
-                          className={
-                            styles.leaderboard__gallery__wrapper__item__index
-                          }
-                        >
-                          {formattedIndex}
+              .filter((item) => item.category === activeCategory)
+              .map((item, index) => {
+                const formattedIndex = String(index + 1).padStart(2, '0');
+                return (
+                  <div
+                    key={index}
+                    ref={(el) => (itemRefs.current[index] = el)}
+                    className={`${styles.leaderboard__gallery__wrapper__item}`}
+                    data-category={item.category}
+                  >
+                    <div className={styles.leaderboard__gallery__wrapper__item__top}>
+                      <p className={styles.leaderboard__gallery__wrapper__item__index}>
+                        {formattedIndex}
+                      </p>
+                      <div className={styles.leaderboard__gallery__wrapper__item__header}>
+                        <p className={styles.leaderboard__gallery__wrapper__item__header__title}>
+                          {item.title}
                         </p>
-                        <div
-                          className={
-                            styles.leaderboard__gallery__wrapper__item__header
-                          }
-                        >
-                          <p
-                            className={
-                              styles.leaderboard__gallery__wrapper__item__header__title
-                            }
-                          >
-                            {item.title}
-                          </p>
-                          <Logo platform={item.platform} />
-                        </div>
-                        <img
-                          className={
-                            styles.leaderboard__gallery__wrapper__item__image
-                          }
-                          src={item.imgUrl}
-                          alt={`carousel-item-${index}`}
-                        />
-                        <div
-                          className={
-                            styles.leaderboard__gallery__wrapper__item__viewers
-                          }
-                        >
-                          <p
-                            className={
-                              styles.leaderboard__gallery__wrapper__item__viewers__increment
-                            }
-                          >
+                        <Logo platform={item.platform} />
+                      </div>
+                      <img
+                        className={styles.leaderboard__gallery__wrapper__item__image}
+                        src={item.imgUrl}
+                        alt={`carousel-item-${index}`}
+                      />
+                      {item.category !== "Ads" && (
+                        <div className={styles.leaderboard__gallery__wrapper__item__viewers}>
+                          <p className={styles.leaderboard__gallery__wrapper__item__viewers__increment}>
                             {item.increment}
                           </p>
-                          <p
-                            className={
-                              styles.leaderboard__gallery__wrapper__item__viewers__text
-                            }
-                          >
+                          <p className={styles.leaderboard__gallery__wrapper__item__viewers__text}>
                             {item.viewers}
                           </p>
                         </div>
-                      </div>
-
-                      {item.data && <Graph dataset={item.data} />}
+                      )}
                     </div>
-                  );
-                })}
+                    {item.category !== "Ads" && item.data && <Graph dataset={item.data} />}
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
