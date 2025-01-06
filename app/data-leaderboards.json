@@ -13,7 +13,7 @@
         "platform": "Netflix",
         "category": "Streaming",
         "increment": "+296%",
-        "viewers": "32,462,000 monthly views",
+        "viewers": "32,462,000 weekly views",
         "imgUrl": "/leaderboard/streaming_squid.jpg",
         "data": {
           "labels": [
@@ -41,7 +41,7 @@
         "platform": "Paramount +",
         "category": "Streaming",
         "increment": "+84%",
-        "viewers": "+25,163,000 monthly views",
+        "viewers": "+25,163,000 weekly views",
         "imgUrl": "/leaderboard/streaming_yellowstone.jpg",
         "data": {
           "labels": [
@@ -69,7 +69,7 @@
         "platform": "HBO Max",
         "category": "Streaming",
         "increment": "+65%",
-        "viewers": "21,745,000 monthly views",
+        "viewers": "21,745,000 weekly views",
         "imgUrl": "/leaderboard/streaming_bigbang.jpg",
         "data": {
           "labels": [
@@ -97,7 +97,7 @@
         "platform": "Hulu",
         "category": "Streaming",
         "increment": "+90%",
-        "viewers": "20,721,000 monthly views",
+        "viewers": "20,721,000 weekly views",
         "imgUrl": "/leaderboard/streaming_ncis.jpg",
         "data": {
           "labels": [
@@ -125,7 +125,7 @@
         "platform": "Netflix",
         "category": "Streaming",
         "increment": "+200%",
-        "viewers": "20,229,000 monthly views",
+        "viewers": "20,229,000 weekly views",
         "imgUrl": "/leaderboard/streaming_virginriver.jpg",
         "data": {
           "labels": [
@@ -153,7 +153,7 @@
         "platform": "Paramount +",
         "category": "Streaming",
         "increment": "+126%",
-        "viewers": "18,990,000 monthly views",
+        "viewers": "18,990,000 weekly views",
         "imgUrl": "/leaderboard/streaming_landman.jpg",
         "data": {
           "labels": [
@@ -181,7 +181,7 @@
         "platform": "Peacock",
         "category": "Streaming",
         "increment": "+66%",
-        "viewers": "18,353,000 monthly views",
+        "viewers": "18,353,000 weekly views",
         "imgUrl": "/leaderboard/streaming_svu.jpg",
         "data": {
           "labels": [
@@ -209,7 +209,7 @@
         "platform": "Peacock",
         "category": "Streaming",
         "increment": "+42%",
-        "viewers": "15,254,000 monthly views",
+        "viewers": "15,254,000 weekly views",
         "imgUrl": "/leaderboard/streaming_chicagopd.jpg",
         "data": {
           "labels": [
@@ -237,7 +237,7 @@
         "platform": "Peacock",
         "category": "Streaming",
         "increment": "+34%",
-        "viewers": "14,488,000 monthly views",
+        "viewers": "14,488,000 weekly views",
         "imgUrl": "/leaderboard/streaming_chicagofire.jpg",
         "data": {
           "labels": [
@@ -265,7 +265,7 @@
         "platform": "Hulu",
         "category": "Streaming",
         "increment": "+40%",
-        "viewers": "14,043,000 monthly views",
+        "viewers": "14,043,000 weekly views",
         "imgUrl": "/leaderboard/streaming_modernfam.jpg",
         "data": {
           "labels": [
@@ -293,7 +293,7 @@
         "platform": null,
         "category": "Sports",
         "increment": "+24%",
-        "viewers": "486,274,000 monthly views",
+        "viewers": "486,274,000 weekly views",
         "imgUrl": "/leaderboard/sports_nfl.jpg",
         "data": {
           "labels": [
@@ -321,7 +321,7 @@
         "platform": null,
         "category": "Sports",
         "increment": "+17%",
-        "viewers": "375,252,000 monthly views",
+        "viewers": "375,252,000 weekly views",
         "imgUrl": "/leaderboard/sports_collegefootball.jpg",
         "data": {
           "labels": [
@@ -349,7 +349,7 @@
         "platform": null,
         "category": "Sports",
         "increment": "+7%",
-        "viewers": "294,695,000 monthly views",
+        "viewers": "294,695,000 weekly views",
         "imgUrl": "/leaderboard/sports_nba.jpg",
         "data": {
           "labels": [
@@ -377,7 +377,7 @@
         "platform": null,
         "category": "Sports",
         "increment": "+5%",
-        "viewers": "121,168,000 monthly views",
+        "viewers": "121,168,000 weekly views",
         "imgUrl": "/leaderboard/sports_mnf.jpg",
         "data": {
           "labels": [
@@ -405,7 +405,7 @@
         "platform": null,
         "category": "Sports",
         "increment": "+6%",
-        "viewers": "117,363,000 monthly views",
+        "viewers": "117,363,000 weekly views",
         "imgUrl": "/leaderboard/sports_snf.jpg",
         "data": {
           "labels": [
@@ -433,7 +433,7 @@
         "platform": null,
         "category": "Sports",
         "increment": "+1%",
-        "viewers": "92,450,000 monthly views",
+        "viewers": "92,450,000 weekly views",
         "imgUrl": "/leaderboard/sports_collegeBasketball.jpg",
         "data": {
           "labels": [
@@ -461,7 +461,7 @@
         "platform": null,
         "category": "Sports",
         "increment": "+4%",
-        "viewers": "89,950,000 monthly views",
+        "viewers": "89,950,000 weekly views",
         "imgUrl": "/leaderboard/sports_collegefootball.jpg",
         "data": {
           "labels": [
@@ -489,7 +489,7 @@
         "platform": null,
         "category": "Sports",
         "increment": "+1%",
-        "viewers": "65,102,000 monthly views",
+        "viewers": "65,102,000 weekly views",
         "imgUrl": "/leaderboard/sports_hockey.jpg",
         "data": {
           "labels": [
@@ -517,7 +517,7 @@
         "platform": null,
         "category": "Sports",
         "increment": "+0.08%",
-        "viewers": "49,496,000 monthly views",
+        "viewers": "49,496,000 weekly views",
         "imgUrl": "/leaderboard/sports_collegefootplayoffs.jpg",
         "data": {
           "labels": [
@@ -545,7 +545,7 @@
         "platform": null,
         "category": "Sports",
         "increment": "+3%",
-        "viewers": "43,378,000 monthly views",
+        "viewers": "43,378,000 weekly views",
         "imgUrl": "/leaderboard/sports_ravenstexans.jpg",
         "data": {
           "labels": [
@@ -573,7 +573,7 @@
         "platform": "NBC",
         "category": "News",
         "increment": "+2%",
-        "viewers": "54,089,000 monthly views",
+        "viewers": "54,089,000 weekly views",
         "imgUrl": "/leaderboard/news_dateline.jpg",
         "data": {
           "labels": [
@@ -602,7 +602,7 @@
         "platform": "ABC",
         "category": "News",
         "increment": "+2.37%",
-        "viewers": "47,900,000 monthly views",
+        "viewers": "47,900,000 weekly views",
         "imgUrl": "/leaderboard/news_gma.jpg",
         "data": {
           "labels": [
@@ -630,7 +630,7 @@
         "platform": "CBS",
         "category": "News",
         "increment": "+0.67%",
-        "viewers": "43,950,000 monthly views",
+        "viewers": "43,950,000 weekly views",
         "imgUrl": "/leaderboard/news_et.jpg",
         "data": {
           "labels": [
@@ -658,7 +658,7 @@
         "platform": "NBC",
         "category": "News",
         "increment": "+2.52%",
-        "viewers": "4,360,000 monthly views",
+        "viewers": "43,600,000 weekly views",
         "imgUrl": "/leaderboard/news_today.jpg",
         "data": {
           "labels": [
@@ -686,7 +686,7 @@
         "platform": "ESPN",
         "category": "News",
         "increment": "+2.23%",
-        "viewers": "39,848,000 monthly views",
+        "viewers": "39,848,000 weekly views",
         "imgUrl": "/leaderboard/news_sportscenter.jpg",
         "data": {
           "labels": [
@@ -714,7 +714,7 @@
         "platform": "CBS",
         "category": "News",
         "increment": "+1.48%",
-        "viewers": "39,817,000 monthly views",
+        "viewers": "39,817,000 weekly views",
         "imgUrl": "/leaderboard/news_cbsmorn.jpg",
         "data": {
           "labels": [
@@ -742,7 +742,7 @@
         "platform": "CBS",
         "category": "News",
         "increment": "+0.64%",
-        "viewers": "37,843,000 monthly views",
+        "viewers": "37,843,000 weekly views",
         "imgUrl": "/leaderboard/news_insideed.jpg",
         "data": {
           "labels": [
@@ -770,7 +770,7 @@
         "platform": "NBC",
         "category": "News",
         "increment": "+1.5%",
-        "viewers": "34,686,000 monthly views",
+        "viewers": "34,686,000 weekly views",
         "imgUrl": "/leaderboard/news_nbclester.jpg",
         "data": {
           "labels": [
@@ -798,7 +798,7 @@
         "platform": "ABC",
         "category": "News",
         "increment": "+1.06%",
-        "viewers": "31,775,000 monthly views",
+        "viewers": "31,775,000 weekly views",
         "imgUrl": "/leaderboard/news_kellymark.jpg",
         "data": {
           "labels": [
@@ -826,7 +826,7 @@
         "platform": "ABC",
         "category": "News",
         "increment": "+1.2%",
-        "viewers": "29,797,000 monthly views",
+        "viewers": "29,797,000 weekly views",
         "imgUrl": "/leaderboard/news_abcMuir.jpg",
         "data": {
           "labels": [
@@ -854,7 +854,7 @@
         "platform": "Burger King",
         "category": "Ads",
         "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "viewers": "+27 Million weekly views",
         "imgUrl": "/leaderboard/ads_burgerking.jpg",
         "data": {
           "labels": [
@@ -882,7 +882,7 @@
         "platform": "Tide",
         "category": "Ads",
         "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "viewers": "+27 Million weekly views",
         "imgUrl": "/leaderboard/ads_tide.jpg",
         "data": {
           "labels": [
@@ -910,7 +910,7 @@
         "platform": "Target",
         "category": "Ads",
         "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "viewers": "+27 Million weekly views",
         "imgUrl": "/leaderboard/ads_target.jpg",
         "data": {
           "labels": [
@@ -938,7 +938,7 @@
         "platform": "McCormick",
         "category": "Ads",
         "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "viewers": "+27 Million weekly views",
         "imgUrl": "/leaderboard/ads_mccormick.jpg",
         "data": {
           "labels": [
@@ -966,7 +966,7 @@
         "platform": "Ferrero Rocher",
         "category": "Ads",
         "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "viewers": "+27 Million weekly views",
         "imgUrl": "/leaderboard/ads_ferrero.jpg",
         "data": {
           "labels": [
@@ -994,7 +994,7 @@
         "platform": "CeraVe",
         "category": "Ads",
         "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "viewers": "+27 Million weekly views",
         "imgUrl": "/leaderboard/ads_cerave.jpg",
         "data": {
           "labels": [
@@ -1022,7 +1022,7 @@
         "platform": "Gold Bond",
         "category": "Ads",
         "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "viewers": "+27 Million weekly views",
         "imgUrl": "/leaderboard/ads_goldbond.jpg",
         "data": {
           "labels": [
@@ -1050,7 +1050,7 @@
         "platform": "Daisy",
         "category": "Ads",
         "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "viewers": "+27 Million weekly views",
         "imgUrl": "/leaderboard/ads_daisy.jpg",
         "data": {
           "labels": [
@@ -1078,7 +1078,7 @@
         "platform": "Verizon",
         "category": "Ads",
         "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "viewers": "+27 Million weekly views",
         "imgUrl": "/leaderboard/ads_verizon.jpg",
         "data": {
           "labels": [
@@ -1106,7 +1106,7 @@
         "platform": "Subway",
         "category": "Ads",
         "increment": "+33%",
-        "viewers": "+27 Million monthly views",
+        "viewers": "+27 Million weekly views",
         "imgUrl": "/leaderboard/ads_subway.jpg",
         "data": {
           "labels": [
