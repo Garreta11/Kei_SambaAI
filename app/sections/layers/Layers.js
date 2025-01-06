@@ -87,7 +87,7 @@ const Layers = ({ headline, subtext }) => {
             trigger: layersRef.current,
             start: 'top 20%',
             end: 'top 10%',
-            scrub: false,
+            scrub: true,
             ease: 'none',
           },
           x: 100,
@@ -103,7 +103,7 @@ const Layers = ({ headline, subtext }) => {
             trigger: layersRef.current,
             start: 'top top',
             end: '+=' + ammountToScroll,
-            scrub: false,
+            scrub: true,
             pin: true,
             ease: 'none',
             snap: {
@@ -127,7 +127,7 @@ const Layers = ({ headline, subtext }) => {
               x: layer.translateXFactor,
               left: -500,
               z: layer.translateZ,
-              duration: .1,
+              duration: 1,
               ease: 'none',
             },
             0 // Apply simultaneously
@@ -142,7 +142,7 @@ const Layers = ({ headline, subtext }) => {
             layer.ref.current,
             {
               rotateY: 0,
-              duration: .1,
+              duration: 1,
               ease: 'none',
             },
             `section${index}`
@@ -308,7 +308,7 @@ const Layers = ({ headline, subtext }) => {
           window.scrollY;
         const startTop = window.scrollY;
         const distance = yPosition - startTop;
-        const duration = 1000; // Duration in milliseconds
+        const duration = 2000; // Duration in milliseconds
         const startTime = performance.now();
 
         const animateScroll = (currentTime) => {
