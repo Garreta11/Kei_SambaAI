@@ -308,7 +308,7 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
                         src={item.imgUrl}
                         alt={`carousel-item-${index}`}
                       />
-                      {item.category !== "Ads" && (
+                      {/* item.category !== "Ads" && (
                         <div className={styles.leaderboard__gallery__wrapper__item__viewers}>
                           <p className={styles.leaderboard__gallery__wrapper__item__viewers__increment}>
                             {item.increment}
@@ -317,9 +317,9 @@ const Leaderboard = ({ headlines, subtext, carousel }) => {
                             {item.viewers}
                           </p>
                         </div>
-                      )}
+                      ) */}
                     </div>
-                    {item.category !== "Ads" && item.data && <Graph dataset={item.data} />}
+                     {/* item.category !== "Ads" && item.data && <Graph dataset={item.data} /> */} 
                   </div>
                 );
               })}
@@ -366,6 +366,15 @@ const Logo = ({ platform }) => {
         alt='hulu Logo'
         width={82} // Adjust width and height as needed
         height={27}
+      />
+    );
+  }else if (platform === 'Prime Video') {
+    return (
+      <Image
+        src='/logo-primevideo.png' // Replace with the actual path to the HBO MAX logo
+        alt='Prime Video Logo'
+        width={75} // Adjust width and height as needed
+        height={25}
       />
     );
   } else if (platform === 'Paramount +') {

@@ -9,63 +9,7 @@
     ],
     "items": [
       {
-        "title": "Landman S1",
-        "platform": "Paramount +",
-        "category": "Streaming",
-        "increment": "+126%",
-        "viewers": "4,747,500 weekly views",
-        "imgUrl": "/leaderboard/streaming_landman.jpg",
-        "data": {
-          "labels": [
-            "01/01",
-            "01/02",
-            "01/03",
-            "01/04",
-            "01/05",
-            "01/06",
-            "01/07"
-          ],
-          "data": [
-            32,
-            19,
-            62,
-            89,
-            11,
-            91,
-            72
-          ]
-        }
-      },
-      {
-        "title": "Carry-On",
-        "platform": "Netflix",
-        "category": "Streaming",
-        "increment": "+84%",
-        "viewers": "6,290,750 weekly views",
-        "imgUrl": "/leaderboard/streaming_carryon.jpg",
-        "data": {
-          "labels": [
-            "01/01",
-            "01/02",
-            "01/03",
-            "01/04",
-            "01/05",
-            "01/06",
-            "01/07"
-          ],
-          "data": [
-            8,
-            73,
-            75,
-            42,
-            21,
-            50,
-            84
-          ]
-        }
-      },
-      {
-        "title": "Squid Game S2",
+        "title": "Squid Game",
         "platform": "Netflix",
         "category": "Streaming",
         "increment": "+296%",
@@ -93,12 +37,40 @@
         }
       },
       {
-        "title": "The Six Triple Eight",
-        "platform": "Netflix",
+        "title": "Yellowstone",
+        "platform": "Paramount +",
+        "category": "Streaming",
+        "increment": "+84%",
+        "viewers": "6,290,750 weekly views",
+        "imgUrl": "/leaderboard/streaming_yellowstone.jpg",
+        "data": {
+          "labels": [
+            "01/01",
+            "01/02",
+            "01/03",
+            "01/04",
+            "01/05",
+            "01/06",
+            "01/07"
+          ],
+          "data": [
+            8,
+            73,
+            75,
+            42,
+            21,
+            50,
+            84
+          ]
+        }
+      },
+      {
+        "title": "The Big Bang Theory",
+        "platform": "HBO Max",
         "category": "Streaming",
         "increment": "+65%",
         "viewers": "5,436,250 weekly views",
-        "imgUrl": "/leaderboard/streaming_sixtripleeight.jpg",
+        "imgUrl": "/leaderboard/streaming_bigbang.jpg",
         "data": {
           "labels": [
             "01/01",
@@ -121,12 +93,12 @@
         }
       },
       {
-        "title": "Red One",
-        "platform": "Prime Video",
+        "title": "NCIS",
+        "platform": "Hulu",
         "category": "Streaming",
         "increment": "+90%",
         "viewers": "5,180,250 weekly views",
-        "imgUrl": "/leaderboard/streaming_redone.jpg",
+        "imgUrl": "/leaderboard/streaming_ncis.jpg",
         "data": {
           "labels": [
             "01/01",
@@ -149,7 +121,7 @@
         }
       },
       {
-        "title": "Virgin River S6",
+        "title": "Virgin River",
         "platform": "Netflix",
         "category": "Streaming",
         "increment": "+200%",
@@ -177,12 +149,40 @@
         }
       },
       {
-        "title": "Godzilla x Kong: The New Empire",
-        "platform": "Netflix",
+        "title": "Landman",
+        "platform": "Paramount +",
+        "category": "Streaming",
+        "increment": "+126%",
+        "viewers": "4,747,500 weekly views",
+        "imgUrl": "/leaderboard/streaming_landman.jpg",
+        "data": {
+          "labels": [
+            "01/01",
+            "01/02",
+            "01/03",
+            "01/04",
+            "01/05",
+            "01/06",
+            "01/07"
+          ],
+          "data": [
+            32,
+            19,
+            62,
+            89,
+            11,
+            91,
+            72
+          ]
+        }
+      },
+      {
+        "title": "Law & Order: Special Victims Unit",
+        "platform": "Peacock",
         "category": "Streaming",
         "increment": "+66%",
         "viewers": "4,588,250 weekly views",
-        "imgUrl": "/leaderboard/streaming_godzilla.jpg",
+        "imgUrl": "/leaderboard/streaming_svu.jpg",
         "data": {
           "labels": [
             "01/01",
@@ -205,12 +205,12 @@
         }
       },
       {
-        "title": "Your Friend: Nate Bargazte",
-        "platform": "Netflix",
+        "title": "Chicago P.D.",
+        "platform": "Peacock",
         "category": "Streaming",
         "increment": "+42%",
         "viewers": "3,813,500 weekly views",
-        "imgUrl": "/leaderboard/streaming_bargatze.jpg",
+        "imgUrl": "/leaderboard/streaming_chicagopd.jpg",
         "data": {
           "labels": [
             "01/01",
@@ -233,12 +233,12 @@
         }
       },
       {
-        "title": "Dexter: Original Sin S1",
-        "platform": "Paramount +",
+        "title": "Chicago Fire",
+        "platform": "Peacock",
         "category": "Streaming",
         "increment": "+34%",
         "viewers": "3,622,000 weekly views",
-        "imgUrl": "/leaderboard/streaming_dexter.jpg",
+        "imgUrl": "/leaderboard/streaming_chicagofire.jpg",
         "data": {
           "labels": [
             "01/01",
@@ -261,12 +261,12 @@
         }
       },
       {
-        "title": "It Ends With Us",
-        "platform": "Netflix",
+        "title": "Modern Family",
+        "platform": "Hulu",
         "category": "Streaming",
         "increment": "+40%",
         "viewers": "3,510,750 weekly views",
-        "imgUrl": "/leaderboard/streaming_itends.jpg",
+        "imgUrl": "/leaderboard/streaming_modernfam.jpg",
         "data": {
           "labels": [
             "01/01",
